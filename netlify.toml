@@ -5,20 +5,13 @@
 [functions]
   directory = ".output/server"
 
-# SPA fallback for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
 # API routes handled by Netlify Functions
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/server/api/:splat"
   status = 200
 
-# Fallback for all other routes
+# All other routes handled by Netlify Functions (SSR)
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/server"
