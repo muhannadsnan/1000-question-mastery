@@ -1,18 +1,3 @@
 [build]
   command = "npm run build"
-  publish = ".output/public"
-
-[functions]
-  directory = ".output/server"
-
-# API routes handled by Netlify Functions
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/server/api/:splat"
-  status = 200
-
-# All other routes handled by Netlify Functions (SSR)
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
-  status = 200
+  publish = "dist"

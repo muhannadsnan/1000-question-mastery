@@ -211,18 +211,25 @@ npm run preview
 
 ## Deployment
 
-The app is fully static and can be deployed to:
+### Netlify (Recommended)
+
+The app is configured for Netlify with SSR support:
+
+1. Connect GitHub repo to Netlify
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+
+The `netlify.toml` handles all configuration automatically.
+
+### Other Platforms
 
 - **Vercel**: `vercel deploy`
-- **Netlify**: Connect GitHub repo
 - **GitHub Pages**: Use `nuxt generate`
 - **Any static host**: Upload `dist/` folder
 
 ```bash
 # Generate static site
 npm run generate
-
-# Output in .output/public/
 ```
 
 ## Browser Support
