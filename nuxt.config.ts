@@ -6,6 +6,11 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
 
+  // Netlify deployment preset
+  nitro: {
+    preset: 'netlify',
+  },
+
   app: {
     head: {
       title: '1000 Question Mastery',
