@@ -1,0 +1,245 @@
+{
+  "ageGroup": "adults",
+  "questions": [
+    {
+      "id": "d1-001",
+      "text": "How many continents are there on Earth?",
+      "options": ["5", "6", "7", "8"],
+      "correctIndex": 2,
+      "difficulty": 1,
+      "category": "geography"
+    },
+    {
+      "id": "d1-002",
+      "text": "What is the chemical symbol for water?",
+      "options": ["H2O", "CO2", "NaCl", "O2"],
+      "correctIndex": 0,
+      "difficulty": 1,
+      "category": "science"
+    },
+    {
+      "id": "d1-003",
+      "text": "Who wrote 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+      "correctIndex": 1,
+      "difficulty": 1,
+      "category": "literature"
+    },
+    {
+      "id": "d2-001",
+      "text": "What is the largest planet in our solar system?",
+      "options": ["Saturn", "Neptune", "Jupiter", "Uranus"],
+      "correctIndex": 2,
+      "difficulty": 2,
+      "category": "science"
+    },
+    {
+      "id": "d2-002",
+      "text": "In which year did World War II end?",
+      "options": ["1943", "1944", "1945", "1946"],
+      "correctIndex": 2,
+      "difficulty": 2,
+      "category": "history"
+    },
+    {
+      "id": "d2-003",
+      "text": "What is the capital of Japan?",
+      "options": ["Seoul", "Beijing", "Tokyo", "Bangkok"],
+      "correctIndex": 2,
+      "difficulty": 2,
+      "category": "geography"
+    },
+    {
+      "id": "d3-001",
+      "text": "What is the boiling point of water in Celsius?",
+      "options": ["90°C", "100°C", "110°C", "120°C"],
+      "correctIndex": 1,
+      "difficulty": 3,
+      "category": "science"
+    },
+    {
+      "id": "d3-002",
+      "text": "Who painted the Mona Lisa?",
+      "options": ["Michelangelo", "Raphael", "Leonardo da Vinci", "Botticelli"],
+      "correctIndex": 2,
+      "difficulty": 3,
+      "category": "art"
+    },
+    {
+      "id": "d3-003",
+      "text": "What is the capital of Australia?",
+      "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+      "correctIndex": 2,
+      "difficulty": 3,
+      "category": "geography"
+    },
+    {
+      "id": "d4-001",
+      "text": "What is the chemical symbol for gold?",
+      "options": ["Go", "Gd", "Au", "Ag"],
+      "correctIndex": 2,
+      "difficulty": 4,
+      "category": "science"
+    },
+    {
+      "id": "d4-002",
+      "text": "Who was the first person to walk on the moon?",
+      "options": ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "John Glenn"],
+      "correctIndex": 2,
+      "difficulty": 4,
+      "category": "history"
+    },
+    {
+      "id": "d4-003",
+      "text": "What is the square root of 144?",
+      "options": ["10", "11", "12", "14"],
+      "correctIndex": 2,
+      "difficulty": 4,
+      "category": "math"
+    },
+    {
+      "id": "d5-001",
+      "text": "What is the powerhouse of the cell?",
+      "options": ["Nucleus", "Ribosome", "Mitochondria", "Golgi apparatus"],
+      "correctIndex": 2,
+      "difficulty": 5,
+      "category": "science"
+    },
+    {
+      "id": "d5-002",
+      "text": "In what year was the Berlin Wall torn down?",
+      "options": ["1987", "1988", "1989", "1990"],
+      "correctIndex": 2,
+      "difficulty": 5,
+      "category": "history"
+    },
+    {
+      "id": "d5-003",
+      "text": "Who composed 'The Four Seasons'?",
+      "options": ["Bach", "Mozart", "Vivaldi", "Beethoven"],
+      "correctIndex": 2,
+      "difficulty": 5,
+      "category": "music"
+    },
+    {
+      "id": "d6-001",
+      "text": "What is the largest organ in the human body?",
+      "options": ["Liver", "Brain", "Skin", "Heart"],
+      "correctIndex": 2,
+      "difficulty": 6,
+      "category": "science"
+    },
+    {
+      "id": "d6-002",
+      "text": "Who was the first woman to win a Nobel Prize?",
+      "options": ["Rosalind Franklin", "Marie Curie", "Dorothy Hodgkin", "Ada Lovelace"],
+      "correctIndex": 1,
+      "difficulty": 6,
+      "category": "history"
+    },
+    {
+      "id": "d6-003",
+      "text": "What is the longest river in the world?",
+      "options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+      "correctIndex": 1,
+      "difficulty": 6,
+      "category": "geography"
+    },
+    {
+      "id": "d7-001",
+      "text": "Who wrote 'The Republic'?",
+      "options": ["Aristotle", "Socrates", "Plato", "Cicero"],
+      "correctIndex": 2,
+      "difficulty": 7,
+      "category": "philosophy"
+    },
+    {
+      "id": "d7-002",
+      "text": "What is the half-life of Carbon-14 (approximately)?",
+      "options": ["2,730 years", "5,730 years", "8,730 years", "11,730 years"],
+      "correctIndex": 1,
+      "difficulty": 7,
+      "category": "science"
+    },
+    {
+      "id": "d7-003",
+      "text": "In which year was the Magna Carta signed?",
+      "options": ["1066", "1215", "1492", "1603"],
+      "correctIndex": 1,
+      "difficulty": 7,
+      "category": "history"
+    },
+    {
+      "id": "d8-001",
+      "text": "What is the Treaty of Westphalia known for establishing?",
+      "options": ["Colonial trade routes", "Modern state sovereignty", "The Holy Roman Empire", "Maritime law"],
+      "correctIndex": 1,
+      "difficulty": 8,
+      "category": "history"
+    },
+    {
+      "id": "d8-002",
+      "text": "What does the Heisenberg Uncertainty Principle state?",
+      "options": ["Energy cannot be created or destroyed", "Matter and energy are equivalent", "Position and momentum cannot both be precisely measured", "Light behaves as both wave and particle"],
+      "correctIndex": 2,
+      "difficulty": 8,
+      "category": "science"
+    },
+    {
+      "id": "d8-003",
+      "text": "Who painted 'Guernica'?",
+      "options": ["Salvador Dali", "Pablo Picasso", "Joan Miro", "Diego Rivera"],
+      "correctIndex": 1,
+      "difficulty": 8,
+      "category": "art"
+    },
+    {
+      "id": "d9-001",
+      "text": "Who composed 'The Rite of Spring'?",
+      "options": ["Sergei Prokofiev", "Igor Stravinsky", "Dmitri Shostakovich", "Pyotr Tchaikovsky"],
+      "correctIndex": 1,
+      "difficulty": 9,
+      "category": "music"
+    },
+    {
+      "id": "d9-002",
+      "text": "What is the Riemann Hypothesis concerned with?",
+      "options": ["The distribution of prime numbers", "The curvature of space-time", "The nature of infinity", "The structure of DNA"],
+      "correctIndex": 0,
+      "difficulty": 9,
+      "category": "math"
+    },
+    {
+      "id": "d9-003",
+      "text": "What is the Chandrasekhar limit?",
+      "options": ["Maximum mass of a white dwarf star", "Speed limit in space", "Temperature of a black hole", "Distance light travels in one year"],
+      "correctIndex": 0,
+      "difficulty": 9,
+      "category": "science"
+    },
+    {
+      "id": "d10-001",
+      "text": "In what year was the Edict of Nantes revoked?",
+      "options": ["1598", "1648", "1685", "1715"],
+      "correctIndex": 2,
+      "difficulty": 10,
+      "category": "history"
+    },
+    {
+      "id": "d10-002",
+      "text": "What is the name of the mathematical proof showing that there are more real numbers than natural numbers?",
+      "options": ["Euclid's Theorem", "Cantor's Diagonal Argument", "Fermat's Last Theorem", "Godel's Incompleteness Theorem"],
+      "correctIndex": 1,
+      "difficulty": 10,
+      "category": "math"
+    },
+    {
+      "id": "d10-003",
+      "text": "Who wrote 'Being and Time'?",
+      "options": ["Jean-Paul Sartre", "Martin Heidegger", "Friedrich Nietzsche", "Edmund Husserl"],
+      "correctIndex": 1,
+      "difficulty": 10,
+      "category": "philosophy"
+    }
+  ]
+}
