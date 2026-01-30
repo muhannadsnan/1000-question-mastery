@@ -2,16 +2,16 @@
 
 ## Question Structure
 
-Each question is a JSON object with the following format:
+Each question is a TypeScript object with the following format:
 
-```json
+```typescript
 {
-  "id": "550e8400-e29b-41d4-a716-446655440000",
-  "text": "What is the capital of France?",
-  "options": ["London", "Paris", "Berlin", "Madrid"],
-  "correctIndex": 1,
-  "difficulty": 2,
-  "category": "geography"
+  id: '1000001',
+  text: 'What color is a banana?',
+  options: ['Red', 'Yellow', 'Blue', 'Green'],
+  correctIndex: 1,
+  difficulty: 1,
+  category: 'colors'
 }
 ```
 
@@ -19,12 +19,68 @@ Each question is a JSON object with the following format:
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `id` | UUID string | Unique identifier |
+| `id` | string | Unique identifier (see ID Format below) |
 | `text` | string | The question (supports basic HTML for formatting) |
 | `options` | string[4] | Exactly 4 answer options |
 | `correctIndex` | 0-3 | Index of correct answer in options array |
 | `difficulty` | 1-10 | Difficulty level |
 | `category` | string | Topic category |
+
+## Question ID Format
+
+IDs follow the format: `{age_group}{6-digit-sequence}`
+
+```
+1000001  →  Age group 1 (littleKids), Question 1
+1001000  →  Age group 1 (littleKids), Question 1000
+1010000  →  Age group 1 (littleKids), Question 10000
+2000001  →  Age group 2 (kids), Question 1
+```
+
+**Age group codes:**
+| Code | Age Group | Ages |
+|------|-----------|------|
+| `1` | littleKids | 3-7 years |
+| `2` | kids | 8-12 years |
+| `3` | teens | 13-17 years |
+| `4` | adults | 18-59 years |
+| `5` | seniors | 60+ years |
+
+**ID Generator:**
+```typescript
+const id = (n: number) => `1${n.toString().padStart(6, '0')}`
+// id(1)    → '1000001'
+// id(1000) → '1001000'
+```
+
+## File Organization
+
+Questions are sharded into small files for performance:
+
+```
+server/data/
+├── little-kids/
+│   ├── d1/           # Difficulty 1
+│   │   ├── f1.ts     # Questions 1-100
+│   │   ├── f2.ts     # Questions 101-200
+│   │   └── ...       # 10 files total
+│   ├── d2/           # Difficulty 2
+│   └── d10/          # Difficulty 10
+├── kids/
+├── teens/
+├── adults/
+└── seniors/
+```
+
+**File template:**
+```typescript
+// server/data/little-kids/d1/f1.ts
+export const questions = [
+  { id: '1000001', text: '...', options: [...], correctIndex: 0, difficulty: 1, category: '...' },
+  { id: '1000002', text: '...', options: [...], correctIndex: 1, difficulty: 1, category: '...' },
+  // ... 100 questions per file
+]
+```
 
 ## Categories
 
@@ -48,99 +104,84 @@ Questions are organized into the following categories:
 | `entertainment` | Entertainment | Movies, TV, games, celebrities |
 | `food` | Food & Cooking | Cuisine, ingredients, recipes |
 | `general` | General Knowledge | Miscellaneous facts and trivia |
+| `colors` | Colors | Color recognition (for little kids) |
+| `animals` | Animals | Animal facts, sounds, habitats |
+| `body` | Body | Body parts, senses |
+| `home` | Home | Household items, daily routines |
+| `clothing` | Clothing | What to wear |
+| `opposites` | Opposites | Antonyms and contrasts |
+| `time` | Time | Days, months, seasons, holidays |
 
 ## Difficulty Levels
 
 ### Level 1 (Questions 1-100)
 **Very Easy** - Common knowledge, obvious answers
 
-Examples:
-- "How many days are in a week?"
-- "What color is the sky on a clear day?"
+Examples for Little Kids:
+- "What color is a banana?"
 - "What sound does a dog make?"
+- "How many eyes do you have?"
 
 ### Level 2 (Questions 101-200)
 **Easy** - Basic knowledge most people know
 
-Examples:
-- "What is the largest planet in our solar system?"
-- "Who wrote Romeo and Juliet?"
+Examples for Little Kids:
+- "How many legs does a spider have?"
+- "What is 5 + 5?"
+- "What season has snow?"
 
 ### Level 3 (Questions 201-300)
-**Below Average** - Elementary school level
-
-Examples:
-- "What is the boiling point of water in Celsius?"
-- "On which continent is Egypt located?"
+**Below Average** - Elementary concepts
 
 ### Level 4 (Questions 301-400)
-**Average** - Middle school level
-
-Examples:
-- "What is the chemical symbol for gold?"
-- "In what year did World War II end?"
+**Average** - Requires some thinking
 
 ### Level 5 (Questions 401-500)
-**Moderate** - High school level
-
-Examples:
-- "What is the powerhouse of the cell?"
-- "Who painted the Mona Lisa?"
+**Moderate** - Challenging for age group
 
 ### Level 6 (Questions 501-600)
-**Above Average** - Advanced high school
-
-Examples:
-- "What is the smallest prime number greater than 50?"
-- "Who was the first woman to win a Nobel Prize?"
+**Above Average** - Advanced concepts
 
 ### Level 7 (Questions 601-700)
-**Challenging** - College level
-
-Examples:
-- "What is the half-life of Carbon-14?"
-- "Who wrote 'The Republic'?"
+**Challenging** - Requires good knowledge
 
 ### Level 8 (Questions 701-800)
 **Hard** - Specialized knowledge
 
-Examples:
-- "In what year was the Treaty of Westphalia signed?"
-- "What is the Heisenberg Uncertainty Principle?"
-
 ### Level 9 (Questions 801-900)
-**Very Hard** - Expert level
-
-Examples:
-- "What is the Riemann Hypothesis about?"
-- "Who composed 'The Rite of Spring'?"
+**Very Hard** - Expert level for age group
 
 ### Level 10 (Questions 901-1000)
-**Master** - Highly specialized trivia
-
-Examples:
-- "What is the Chandrasekhar limit?"
-- "In what year was the Edict of Nantes revoked?"
+**Master** - Highly challenging
 
 ## Age Group Adaptations
 
-### Kids (6-12 years)
-- Simple vocabulary
+### Little Kids (3-7 years)
+- Very simple vocabulary
 - Visual/concrete concepts
+- Basic colors, shapes, animals
+- Simple counting (1-20)
+- No reading comprehension required
 - Fun, engaging topics
-- No sensitive content
-- Shorter question text
 
 Example:
-```json
+```typescript
 {
-  "text": "What is the largest animal on Earth?",
-  "options": ["Elephant", "Blue Whale", "Giraffe", "Shark"],
-  "correctIndex": 1,
-  "difficulty": 3,
-  "category": "nature"
+  id: '1000001',
+  text: 'What color is the sun?',
+  options: ['Blue', 'Green', 'Yellow', 'Purple'],
+  correctIndex: 2,
+  difficulty: 1,
+  category: 'colors'
 }
 ```
+
+### Kids (8-12 years)
+- Simple vocabulary
+- Elementary school concepts
+- Basic math, science, geography
+- No sensitive content
+- Shorter question text
 
 ### Teens (13-17 years)
 - School curriculum aligned
@@ -148,33 +189,11 @@ Example:
 - Moderate complexity
 - Age-appropriate content
 
-Example:
-```json
-{
-  "text": "What is the formula for the area of a circle?",
-  "options": ["2πr", "πr²", "πd", "2r²"],
-  "correctIndex": 1,
-  "difficulty": 4,
-  "category": "math"
-}
-```
-
 ### Adults (18-59 years)
 - Full range of topics
 - Current events included
 - Professional knowledge
 - All categories available
-
-Example:
-```json
-{
-  "text": "What economic principle states that bad money drives out good?",
-  "options": ["Pareto Principle", "Gresham's Law", "Law of Diminishing Returns", "Say's Law"],
-  "correctIndex": 1,
-  "difficulty": 7,
-  "category": "general"
-}
-```
 
 ### Seniors (60+ years)
 - Classic references
@@ -182,39 +201,38 @@ Example:
 - Traditional knowledge
 - Clear, readable text
 
-Example:
-```json
-{
-  "text": "Who was the lead actor in 'Casablanca' (1942)?",
-  "options": ["Clark Gable", "Humphrey Bogart", "Cary Grant", "James Stewart"],
-  "correctIndex": 1,
-  "difficulty": 3,
-  "category": "entertainment"
-}
-```
-
 ## Question Count Requirements
 
-Each age group should have **at minimum**:
+Each age group has **10,000 questions**:
 
-| Difficulty | Min Questions | Purpose |
-|------------|---------------|---------|
-| 1 | 500+ | Ensure variety for Q 1-100 |
-| 2 | 500+ | Ensure variety for Q 101-200 |
-| 3 | 500+ | Ensure variety for Q 201-300 |
-| 4 | 500+ | Ensure variety for Q 301-400 |
-| 5 | 500+ | Ensure variety for Q 401-500 |
-| 6 | 500+ | Ensure variety for Q 501-600 |
-| 7 | 500+ | Ensure variety for Q 601-700 |
-| 8 | 500+ | Ensure variety for Q 701-800 |
-| 9 | 500+ | Ensure variety for Q 801-900 |
-| 10 | 500+ | Ensure variety for Q 901-1000 |
+| Difficulty | Questions | Files |
+|------------|-----------|-------|
+| 1 | 1,000 | 10 files × 100 |
+| 2 | 1,000 | 10 files × 100 |
+| 3 | 1,000 | 10 files × 100 |
+| 4 | 1,000 | 10 files × 100 |
+| 5 | 1,000 | 10 files × 100 |
+| 6 | 1,000 | 10 files × 100 |
+| 7 | 1,000 | 10 files × 100 |
+| 8 | 1,000 | 10 files × 100 |
+| 9 | 1,000 | 10 files × 100 |
+| 10 | 1,000 | 10 files × 100 |
+| **Total** | **10,000** | **100 files** |
 
-**Total: 5,000+ questions per age group**
-**Grand Total: 20,000+ questions**
+**Grand Total: 50,000 questions** (5 age groups × 10,000)
+
+### Generation Progress
+
+| Age Group | Status | Questions |
+|-----------|--------|-----------|
+| Little Kids (3-7) | ✅ Complete | 10,000 |
+| Kids (8-12) | ⏳ Pending | 0 |
+| Teens (13-17) | ⏳ Pending | 0 |
+| Adults (18-59) | ⏳ Pending | 0 |
+| Seniors (60+) | ⏳ Pending | 0 |
 
 This ensures:
-- 5x coverage for each difficulty level
+- 10x coverage for each difficulty level
 - 7-day cooldown system works effectively
 - Multiple playthroughs remain fresh
 
@@ -227,3 +245,4 @@ This ensures:
 5. **Avoid Bias**: No political, religious, or cultural bias
 6. **No Tricks**: Questions should test knowledge, not trick players
 7. **Randomize Correct Answer Position**: Don't always put correct answer in same position
+8. **Age Appropriate**: Match vocabulary and concepts to age group
