@@ -21,6 +21,11 @@ const kidsModules = import.meta.glob<{ questions: Question[] }>(
   { eager: false }
 )
 
+const teensModules = import.meta.glob<{ questions: Question[] }>(
+  '../server/data/teens/d*/f*.ts',
+  { eager: false }
+)
+
 const adultsModules = import.meta.glob<{ questions: Question[] }>(
   '../server/data/adults/d*/f*.ts',
   { eager: false }
@@ -35,6 +40,7 @@ const seniorsModules = import.meta.glob<{ questions: Question[] }>(
 const ageGroupModules: Record<string, Record<string, () => Promise<{ questions: Question[] }>>> = {
   'little-kids': littleKidsModules,
   'kids': kidsModules,
+  'teens': teensModules,
   'adults': adultsModules,
   'seniors': seniorsModules,
 }

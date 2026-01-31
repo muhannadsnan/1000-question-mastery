@@ -65,6 +65,13 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.9.0
+- Added 10,000 questions for Teens age group (13-17 years)
+- Focus on music, gaming, movies, sports, and school-level knowledge
+- Topics: pop culture, video games, social media, sports, basic science, geography, history
+- General knowledge only - no specialist content
+- All 5 age groups now complete with 50,000 total questions
+
 ### v1.8.0
 - Added 10,000 questions for Seniors age group (35+ years)
 - D1-D2: Reasonable/normal for educated adults
