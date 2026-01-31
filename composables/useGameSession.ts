@@ -1,4 +1,5 @@
 import type { AgeGroup, Difficulty, QuestionCategory } from '~/types'
+import { useQuestions } from './useQuestions'
 
 export interface Question {
   id: string
@@ -6,7 +7,7 @@ export interface Question {
   options: [string, string, string, string]
   correctIndex: 0 | 1 | 2 | 3
   difficulty: Difficulty
-  category: QuestionCategory
+  category: QuestionCategory | string
 }
 
 export interface GameSession {
@@ -98,7 +99,7 @@ export const useGameSession = () => {
     return newSession
   }
 
-  // Fetch next question from API
+  // Fetch next question (client-side)
   const fetchQuestion = async () => {
     if (!session.value) return null
 
@@ -108,18 +109,21 @@ export const useGameSession = () => {
     lastAnswerCorrect.value = null
 
     try {
-      const response = await $fetch<Question>('/api/question', {
-        method: 'POST',
-        body: {
-          ageGroup: session.value.ageGroup,
-          difficulty: currentLevel.value,
-          excludeIds: session.value.askedQuestionIds,
-          cooldowns: session.value.cooldowns,
-        },
-      })
+      const { getQuestion } = useQuestions()
+      const question = await getQuestion(
+        session.value.ageGroup,
+        currentLevel.value,
+        session.value.askedQuestionIds,
+        session.value.cooldowns
+      )
 
-      currentQuestionData.value = response
-      return response
+      if (question) {
+        currentQuestionData.value = question as Question
+        return question
+      }
+
+      console.error('No questions available')
+      return null
     } catch (error) {
       console.error('Failed to fetch question:', error)
       return null
