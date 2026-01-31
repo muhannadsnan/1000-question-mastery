@@ -65,6 +65,14 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.8.0
+- Added 10,000 questions for Seniors age group (35+ years)
+- D1-D2: Reasonable/normal for educated adults
+- D3-D5: Moderate difficulty requiring good general knowledge
+- D6-D9: Challenging, requires wide reading and cultural literacy
+- D10: Specialist/expert level (academic depth)
+- Topics: history, literature, science, art, music, philosophy, economics, law, archaeology, linguistics
+
 ### v1.7.0
 - Added 10,000 questions for Adults age group (18-35 years)
 - Topics include pop culture, movies, music, history, geography, science, sports, literature, art, business, technology, politics, philosophy
