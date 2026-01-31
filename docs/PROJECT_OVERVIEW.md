@@ -65,6 +65,12 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.10.0
+- UI improvements: Enlarged bottom bar icons on main menu
+- Setup page: Elegant emoji icons for age groups with larger touch targets
+- Game page: Question positioned higher, thicker option buttons for better tap targets
+- Category badges now have predefined colors per topic (music=pink, science=emerald, etc.)
+
 ### v1.9.0
 - Added 10,000 questions for Teens age group (13-17 years)
 - Focus on music, gaming, movies, sports, and school-level knowledge

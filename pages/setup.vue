@@ -99,7 +99,7 @@
               ]"
             >
               <div class="age-icon" :class="group.iconBg">
-                <component :is="group.iconComponent" class="w-6 h-6" :class="group.iconColor" />
+                <span class="text-3xl">{{ group.emoji }}</span>
               </div>
               <div class="font-semibold text-slate-800">{{ group.label }}</div>
               <div class="text-xs text-slate-500">{{ group.ageRange }}</div>
@@ -147,67 +147,41 @@ const savedNames = ref<string[]>([])
 const showNameDropdown = ref(false)
 const nameInputRef = ref<HTMLInputElement | null>(null)
 
-// Icon components as render functions
-const BabyIcon = {
-  template: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12c-4 0-7 2-7 5v3h14v-3c0-3-3-5-7-5z"/></svg>`
-}
-
-const ChildIcon = {
-  template: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`
-}
-
-const TeenIcon = {
-  template: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>`
-}
-
-const AdultIcon = {
-  template: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`
-}
-
-const SeniorIcon = {
-  template: `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`
-}
-
 const ageGroups = [
   {
     id: 'littleKids' as AgeGroup,
     label: 'Little Kids',
     ageRange: '3-7 years',
-    iconComponent: BabyIcon,
+    emoji: '👶',
     iconBg: 'bg-pink-100',
-    iconColor: 'text-pink-600'
   },
   {
     id: 'kids' as AgeGroup,
     label: 'Kids',
     ageRange: '8-12 years',
-    iconComponent: ChildIcon,
+    emoji: '🧒',
     iconBg: 'bg-blue-100',
-    iconColor: 'text-blue-600'
   },
   {
     id: 'teens' as AgeGroup,
     label: 'Teens',
     ageRange: '13-17 years',
-    iconComponent: TeenIcon,
+    emoji: '🎮',
     iconBg: 'bg-purple-100',
-    iconColor: 'text-purple-600'
   },
   {
     id: 'adults' as AgeGroup,
     label: 'Adults',
     ageRange: '18-35 years',
-    iconComponent: AdultIcon,
+    emoji: '👨‍💼',
     iconBg: 'bg-emerald-100',
-    iconColor: 'text-emerald-600'
   },
   {
     id: 'seniors' as AgeGroup,
     label: 'Seniors',
     ageRange: '35+ years',
-    iconComponent: SeniorIcon,
+    emoji: '🎓',
     iconBg: 'bg-amber-100',
-    iconColor: 'text-amber-600'
   },
 ]
 
@@ -294,10 +268,10 @@ onMounted(() => {
 
 <style scoped>
 .age-group-btn {
-  @apply p-4 rounded-xl border-2 transition-all duration-200 text-left flex flex-col items-center text-center;
+  @apply p-5 rounded-xl border-2 transition-all duration-200 text-left flex flex-col items-center text-center;
 }
 
 .age-icon {
-  @apply w-12 h-12 rounded-full flex items-center justify-center mb-2;
+  @apply w-16 h-16 rounded-2xl flex items-center justify-center mb-3;
 }
 </style>

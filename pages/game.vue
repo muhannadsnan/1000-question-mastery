@@ -39,7 +39,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-1 flex flex-col items-center justify-center px-4 py-6">
+    <main class="flex-1 flex flex-col items-center px-4 py-6 pt-4">
       <!-- Loading State -->
       <div v-if="isLoading" class="text-center">
         <div class="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
@@ -66,7 +66,10 @@
       >
         <!-- Category Badge -->
         <div class="text-center mb-4">
-          <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-medium capitalize">
+          <span
+            class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold capitalize"
+            :class="getCategoryColor(currentQuestionData.category)"
+          >
             {{ currentQuestionData.category }}
           </span>
         </div>
@@ -85,31 +88,31 @@
         </div>
 
         <!-- Options -->
-        <div class="space-y-3">
+        <div class="space-y-4">
           <button
             v-for="(option, index) in currentQuestionData.options"
             :key="index"
             @click="selectOption(index)"
             :disabled="isAnswerRevealed"
             :class="[
-              'w-full p-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center gap-3',
+              'w-full px-5 py-5 rounded-2xl border-2 text-left transition-all duration-200 flex items-center gap-4',
               getOptionClass(index)
             ]"
             :style="{ animationDelay: `${index * 50}ms` }"
           >
             <span :class="[
-              'w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0',
+              'w-10 h-10 rounded-xl flex items-center justify-center text-base font-bold shrink-0',
               getOptionBadgeClass(index)
             ]">
               {{ ['A', 'B', 'C', 'D'][index] }}
             </span>
-            <span class="text-lg">{{ option }}</span>
+            <span class="text-lg font-medium">{{ option }}</span>
 
             <!-- Correct/Wrong Icon -->
-            <span v-if="isAnswerRevealed && index === currentQuestionData.correctIndex" class="ml-auto text-green-500 text-xl">
+            <span v-if="isAnswerRevealed && index === currentQuestionData.correctIndex" class="ml-auto text-green-500 text-2xl">
               ✓
             </span>
-            <span v-else-if="isAnswerRevealed && index === selectedAnswer && index !== currentQuestionData.correctIndex" class="ml-auto text-red-500 text-xl">
+            <span v-else-if="isAnswerRevealed && index === selectedAnswer && index !== currentQuestionData.correctIndex" class="ml-auto text-red-500 text-2xl">
               ✗
             </span>
           </button>
@@ -237,6 +240,47 @@ const getOptionBadgeClass = (index: number) => {
     return 'bg-red-500 text-white'
   }
   return 'bg-slate-100 text-slate-400'
+}
+
+// Category colors - predefined palette
+const categoryColors: Record<string, string> = {
+  math: 'bg-blue-100 text-blue-700',
+  science: 'bg-emerald-100 text-emerald-700',
+  geography: 'bg-cyan-100 text-cyan-700',
+  history: 'bg-amber-100 text-amber-700',
+  music: 'bg-pink-100 text-pink-700',
+  movies: 'bg-purple-100 text-purple-700',
+  'tv-shows': 'bg-violet-100 text-violet-700',
+  sports: 'bg-orange-100 text-orange-700',
+  gaming: 'bg-indigo-100 text-indigo-700',
+  literature: 'bg-rose-100 text-rose-700',
+  art: 'bg-fuchsia-100 text-fuchsia-700',
+  technology: 'bg-sky-100 text-sky-700',
+  'pop-culture': 'bg-red-100 text-red-700',
+  'social-media': 'bg-teal-100 text-teal-700',
+  food: 'bg-lime-100 text-lime-700',
+  general: 'bg-slate-100 text-slate-700',
+  vocabulary: 'bg-yellow-100 text-yellow-700',
+  animals: 'bg-green-100 text-green-700',
+  nature: 'bg-emerald-100 text-emerald-700',
+  politics: 'bg-red-100 text-red-700',
+  philosophy: 'bg-purple-100 text-purple-700',
+  economics: 'bg-blue-100 text-blue-700',
+  business: 'bg-slate-200 text-slate-700',
+  psychology: 'bg-violet-100 text-violet-700',
+  law: 'bg-gray-200 text-gray-700',
+  religion: 'bg-amber-100 text-amber-700',
+  archaeology: 'bg-orange-100 text-orange-700',
+  linguistics: 'bg-cyan-100 text-cyan-700',
+  anthropology: 'bg-teal-100 text-teal-700',
+  mythology: 'bg-indigo-100 text-indigo-700',
+  'film-theory': 'bg-purple-100 text-purple-700',
+  paleography: 'bg-stone-200 text-stone-700',
+  physics: 'bg-blue-200 text-blue-700',
+}
+
+const getCategoryColor = (category: string) => {
+  return categoryColors[category] || 'bg-slate-100 text-slate-700'
 }
 
 const selectOption = (index: number) => {
