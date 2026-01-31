@@ -4,8 +4,9 @@
 
 The application uses a **simplified architecture** with no traditional database:
 
-- **Server-side**: Questions stored as sharded TypeScript files
-- **Client-side**: Session state in localStorage (minimal data)
+- **Questions**: Stored as sharded TypeScript files, bundled client-side at build time
+- **Session state**: Stored in localStorage (minimal data)
+- **Deployment**: Static site generation (no server required)
 
 ## Server-Side: Question Storage
 
@@ -26,8 +27,8 @@ server/data/
 │
 ├── kids/                 # Age group 2 (ages 8-12)
 ├── teens/                # Age group 3 (ages 13-17)
-├── adults/               # Age group 4 (ages 18-59)
-└── seniors/              # Age group 5 (ages 60+)
+├── adults/               # Age group 4 (ages 18-35)
+└── seniors/              # Age group 5 (ages 35+)
 ```
 
 ### Question Structure
@@ -57,8 +58,8 @@ IDs follow the format: `{age_group}{6-digit-sequence}`
 - `1` = littleKids (3-7 years)
 - `2` = kids (8-12 years)
 - `3` = teens (13-17 years)
-- `4` = adults (18-59 years)
-- `5` = seniors (60+ years)
+- `4` = adults (18-35 years)
+- `5` = seniors (35+ years)
 
 ### File Contents
 
@@ -93,11 +94,14 @@ interface GameSession {
 
 **Size estimate**: ~10-50 KB per session (depending on progress)
 
-## API Endpoint
+## Question Loading (Client-Side)
 
-### POST /api/question
+> **Note:** As of v1.5.0, questions are loaded client-side using `useQuestions` composable.
+> The server API endpoint below is deprecated but kept for reference.
 
-Fetches the next question for the player.
+### Legacy: POST /api/question
+
+Previously fetched the next question from the server.
 
 **Request:**
 ```json

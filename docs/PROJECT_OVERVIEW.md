@@ -9,8 +9,8 @@
 - **Little Kids** (3-7 years)
 - **Kids** (8-12 years)
 - **Teens** (13-17 years)
-- **Adults** (18-59 years)
-- **Seniors** (60+ years)
+- **Adults** (18-35 years)
+- **Seniors** (35+ years)
 
 Each age group has its own curated question pool with age-appropriate content and difficulty.
 
@@ -59,6 +59,31 @@ Questions span all aspects of life and knowledge:
 - **Frontend**: Vue 3 + Nuxt 3
 - **Storage**: localStorage for session state
 - **Styling**: Tailwind CSS
-- **State Management**: Pinia
-- **Deployment**: Netlify (serverless)
-- **Certificate Generation**: HTML Canvas / PDF generation
+- **State Management**: Vue Composables
+- **Deployment**: Netlify (static hosting)
+- **Certificate Generation**: html2canvas for image export
+
+## Changelog
+
+### v1.5.0
+- Client-side question loading (removed server API dependency)
+- Static site generation for Netlify compatibility
+- Fixed certificate download (title now renders correctly)
+- Improved stats spacing in certificate
+
+### v1.4.0
+- Shareable certificate with download as image
+- Modern card-style main menu with icons
+- Name memory feature (remembers previous players)
+- Age range updates (Adults: 18-35, Seniors: 35+)
+- Premium certificate design with fireworks animation
+
+### v1.3.0
+- Dynamic question loading from sharded files
+- Age-appropriate questions for all groups
+
+### v1.2.0
+- Little Kids age group with 10,000 questions
+
+### v1.0.0
+- Initial release with basic quiz functionality

@@ -33,7 +33,7 @@
 │
 ├── composables/
 │   ├── useGameSession.ts         # Game state management
-│   ├── useQuestionSelector.ts    # Question selection logic
+│   ├── useQuestions.ts           # Client-side question loading
 │   ├── useSound.ts               # Sound effects
 │   └── useCertificate.ts         # Certificate generation
 │
@@ -56,9 +56,9 @@
 │
 ├── server/
 │   ├── api/
-│   │   └── question.post.ts      # Question fetching endpoint
+│   │   └── question.post.ts      # (Legacy) Server-side question endpoint
 │   │
-│   └── data/                     # Sharded question files
+│   └── data/                     # Sharded question files (loaded client-side)
 │       ├── little-kids/          # Age group 1 (ages 3-7)
 │       │   ├── d1/               # Difficulty 1
 │       │   │   ├── f1.ts         # 100 questions
@@ -192,9 +192,11 @@ interface GameState {
 
 ## Question Selection Algorithm
 
+Questions are loaded **client-side** using Vite's `import.meta.glob` for static hosting compatibility:
+
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                    Question Selection                         │
+│              Client-Side Question Selection                   │
 ├──────────────────────────────────────────────────────────────┤
 │                                                              │
 │  1. Get current progress (e.g., question 247)                │
@@ -203,20 +205,22 @@ interface GameState {
 │                          ▼                                   │
 │  3. Pick random file (1-10) from d3/                         │
 │                          ▼                                   │
-│  4. Load that file (100 questions only)                      │
+│  4. Dynamic import via import.meta.glob (bundled at build)   │
 │                          ▼                                   │
-│  5. Convert excludeIds to Set for O(1) lookup                │
+│  5. Cache loaded files in memory for reuse                   │
 │                          ▼                                   │
 │  6. Filter: exclude asked IDs + cooldown check               │
 │                          ▼                                   │
-│  7. If empty, try next file                                  │
+│  7. If empty, try next file or fallback to static questions  │
 │                          ▼                                   │
 │  8. Random select from filtered results                      │
 │                          ▼                                   │
-│  9. Return question to client                                │
+│  9. Return question to game component                        │
 │                                                              │
 └──────────────────────────────────────────────────────────────┘
 ```
+
+**Deployment:** Static generation (`nuxt generate`) for Netlify/static hosting.
 
 ## Certificate Generation
 
