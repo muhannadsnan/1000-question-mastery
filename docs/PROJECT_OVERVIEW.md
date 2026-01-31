@@ -65,6 +65,11 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.7.0
+- Added 10,000 questions for Adults age group (18-35 years)
+- Topics include pop culture, movies, music, history, geography, science, sports, literature, art, business, technology, politics, philosophy
+- Progressive difficulty: D1-D2 easy, D3-D4 normal, D5-D6 moderate, D7-D10 challenging but accessible
+
 ### v1.6.1
 - Fixed Kids D7-D10 questions to be age-appropriate (grades 3-6)
 - Removed algebra, physics, chemical formulas from kids questions

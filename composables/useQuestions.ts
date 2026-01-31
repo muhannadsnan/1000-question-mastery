@@ -21,10 +21,16 @@ const kidsModules = import.meta.glob<{ questions: Question[] }>(
   { eager: false }
 )
 
+const adultsModules = import.meta.glob<{ questions: Question[] }>(
+  '../server/data/adults/d*/f*.ts',
+  { eager: false }
+)
+
 // Map age group to their question modules
 const ageGroupModules: Record<string, Record<string, () => Promise<{ questions: Question[] }>>> = {
   'little-kids': littleKidsModules,
   'kids': kidsModules,
+  'adults': adultsModules,
 }
 
 // Map age group to folder names
