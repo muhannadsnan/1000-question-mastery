@@ -1,7 +1,9 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command = "npm run generate"
+  publish = ".output/public"
 
-[functions]
-  directory = ".netlify/functions-internal"
-  included_files = ["server/data/**"]
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

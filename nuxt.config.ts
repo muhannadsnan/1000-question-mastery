@@ -14,9 +14,10 @@ export default defineNuxtConfig({
     },
   },
 
-  // Netlify deployment preset
+  // Static generation for Netlify
+  ssr: false,
   nitro: {
-    preset: 'netlify',
+    preset: 'static',
   },
 
   app: {
