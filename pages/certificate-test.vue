@@ -1,150 +1,185 @@
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-gradient-to-br from-amber-50 via-white to-purple-50">
-    <!-- Celebration Header -->
-    <div class="text-center mb-8 animate-bounce-in">
-      <div class="text-6xl mb-4">🎉</div>
-      <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-2">Certificate Preview</h1>
-      <p class="text-slate-600">This is a test certificate for design preview</p>
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <!-- Fireworks Canvas -->
+    <canvas ref="fireworksCanvas" class="fixed inset-0 pointer-events-none z-10" />
+
+    <!-- Ambient glow -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
     </div>
 
-    <!-- Certificate -->
-    <div
-      ref="certificateRef"
-      id="certificate-card"
-      :class="[
-        'w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden animate-slide-up',
-        tierStyles[selectedTier].border
-      ]"
-    >
-      <!-- Certificate Border Top -->
-      <div :class="['h-2', tierStyles[selectedTier].gradient]" />
-
-      <div class="p-8 text-center">
-        <!-- Badge -->
-        <div :class="[
-          'w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center text-4xl',
-          tierStyles[selectedTier].badge
-        ]">
-          {{ tierStyles[selectedTier].icon }}
-        </div>
-
-        <!-- Title -->
-        <h2 class="text-2xl font-bold text-slate-400 uppercase tracking-widest mb-1">Certificate of</h2>
-        <h3 :class="['text-4xl font-extrabold mb-6', tierStyles[selectedTier].text]">
-          {{ tierStyles[selectedTier].title }}
-        </h3>
-
-        <!-- Divider -->
-        <div class="w-24 h-1 bg-slate-200 mx-auto mb-6 rounded-full" />
-
-        <!-- Name -->
-        <p class="text-slate-500 mb-1">This certifies that</p>
-        <p class="text-3xl font-bold text-slate-800 mb-4">{{ testName }}</p>
-
-        <!-- Achievement -->
-        <p class="text-slate-500 mb-6">
-          has successfully completed the<br />
-          <span class="font-semibold text-slate-700">1000 Question Mastery Challenge</span>
-        </p>
-
-        <!-- Stats -->
-        <div class="bg-slate-50 rounded-xl p-4 mb-6">
-          <div class="grid grid-cols-3 gap-4">
-            <div>
-              <div class="text-2xl font-bold text-primary-600">{{ testScore }}</div>
-              <div class="text-xs text-slate-500">Correct</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold text-slate-800">{{ testPercentage }}%</div>
-              <div class="text-xs text-slate-500">Accuracy</div>
-            </div>
-            <div>
-              <div :class="['text-2xl font-bold capitalize', tierStyles[selectedTier].text]">
-                {{ selectedTier }}
-              </div>
-              <div class="text-xs text-slate-500">Tier</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Date & Code -->
-        <div class="text-sm text-slate-400">
-          <p>{{ formattedDate }}</p>
-          <p class="font-mono mt-1">QM-TEST1234</p>
-        </div>
-
-        <!-- Game Link -->
-        <div class="mt-4 pt-4 border-t border-slate-100">
-          <p class="text-xs text-slate-400">Play at</p>
-          <p class="text-sm font-semibold text-primary-600">1000questionmastery.com</p>
-        </div>
-      </div>
-
-      <!-- Certificate Border Bottom -->
-      <div :class="['h-2', tierStyles[selectedTier].gradient]" />
+    <!-- Header -->
+    <div class="text-center mb-6 animate-bounce-in relative z-20">
+      <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Certificate Preview</h1>
+      <p class="text-slate-400 text-sm">Test page for design preview</p>
     </div>
 
     <!-- Tier Selector -->
-    <div class="flex gap-2 mt-6 animate-slide-up" style="animation-delay: 200ms;">
+    <div class="flex gap-2 mb-6 z-20 animate-slide-up">
       <button
         v-for="tier in ['gold', 'silver', 'bronze', 'standard']"
         :key="tier"
-        @click="selectedTier = tier"
+        @click="selectedTier = tier; launchFireworks()"
         :class="[
-          'px-4 py-2 rounded-lg font-medium transition-all capitalize',
+          'px-4 py-2 rounded-lg font-medium transition-all capitalize text-sm',
           selectedTier === tier
-            ? 'bg-primary-500 text-white'
-            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            ? tierButtonStyles[tier]
+            : 'bg-white/10 text-white/70 hover:bg-white/20'
         ]"
       >
         {{ tier }}
       </button>
     </div>
 
-    <!-- Share Actions -->
-    <div class="flex flex-col sm:flex-row gap-4 mt-8 animate-slide-up" style="animation-delay: 400ms;">
-      <button @click="shareToTwitter" class="btn-primary flex items-center justify-center gap-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    <!-- Premium Certificate -->
+    <div
+      id="certificate-card"
+      :class="[
+        'w-full max-w-xl relative animate-slide-up z-20',
+        'bg-gradient-to-br from-slate-50 via-white to-slate-100',
+        'rounded-lg shadow-2xl overflow-hidden',
+        tierStyles[selectedTier].outerRing
+      ]"
+    >
+      <!-- Decorative Corner Ornaments -->
+      <div class="absolute top-0 left-0 w-24 h-24 opacity-20">
+        <svg viewBox="0 0 100 100" class="w-full h-full" :class="tierStyles[selectedTier].ornamentColor">
+          <path d="M0,0 L100,0 L100,20 C60,20 20,60 20,100 L0,100 Z" fill="currentColor"/>
         </svg>
-        Share on X
-      </button>
+      </div>
+      <div class="absolute top-0 right-0 w-24 h-24 opacity-20 rotate-90">
+        <svg viewBox="0 0 100 100" class="w-full h-full" :class="tierStyles[selectedTier].ornamentColor">
+          <path d="M0,0 L100,0 L100,20 C60,20 20,60 20,100 L0,100 Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="absolute bottom-0 left-0 w-24 h-24 opacity-20 -rotate-90">
+        <svg viewBox="0 0 100 100" class="w-full h-full" :class="tierStyles[selectedTier].ornamentColor">
+          <path d="M0,0 L100,0 L100,20 C60,20 20,60 20,100 L0,100 Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="absolute bottom-0 right-0 w-24 h-24 opacity-20 rotate-180">
+        <svg viewBox="0 0 100 100" class="w-full h-full" :class="tierStyles[selectedTier].ornamentColor">
+          <path d="M0,0 L100,0 L100,20 C60,20 20,60 20,100 L0,100 Z" fill="currentColor"/>
+        </svg>
+      </div>
 
-      <button @click="shareToFacebook" class="btn-secondary flex items-center justify-center gap-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-        </svg>
-        Share on Facebook
-      </button>
+      <!-- Top Border Gradient -->
+      <div :class="['h-3', tierStyles[selectedTier].gradient]" />
 
-      <button @click="shareToWhatsApp" class="btn-success flex items-center justify-center gap-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-        WhatsApp
-      </button>
+      <!-- Inner decorative border -->
+      <div class="m-4 p-6 border-2 border-dashed rounded" :class="tierStyles[selectedTier].innerBorder">
+        <div class="text-center">
+          <!-- Seal/Badge -->
+          <div class="relative inline-block mb-4">
+            <div :class="[
+              'w-24 h-24 rounded-full flex items-center justify-center text-5xl',
+              'shadow-xl ring-4',
+              tierStyles[selectedTier].badge,
+              tierStyles[selectedTier].ring
+            ]">
+              {{ tierStyles[selectedTier].icon }}
+            </div>
+            <!-- Ribbon effect -->
+            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+              <div :class="['w-4 h-8 rounded-b-full', tierStyles[selectedTier].ribbonColor]" />
+              <div :class="['w-4 h-6 rounded-b-full', tierStyles[selectedTier].ribbonColor]" />
+            </div>
+          </div>
+
+          <!-- Certificate Header -->
+          <div class="mt-4 mb-2">
+            <p class="text-sm font-medium tracking-[0.3em] text-slate-400 uppercase">Certificate of</p>
+          </div>
+          <h3 :class="[
+            'text-4xl md:text-5xl font-black tracking-wide mb-6',
+            tierStyles[selectedTier].titleGradient
+          ]">
+            {{ tierStyles[selectedTier].title }}
+          </h3>
+
+          <!-- Decorative Line -->
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <div :class="['h-px w-16', tierStyles[selectedTier].lineColor]" />
+            <div :class="['w-2 h-2 rotate-45', tierStyles[selectedTier].diamondColor]" />
+            <div :class="['h-px w-16', tierStyles[selectedTier].lineColor]" />
+          </div>
+
+          <!-- Recipient -->
+          <p class="text-slate-500 text-sm mb-1">This certifies that</p>
+          <p class="text-3xl md:text-4xl font-bold text-slate-800 mb-2 font-serif italic">
+            {{ testName }}
+          </p>
+
+          <!-- Achievement Text -->
+          <p class="text-slate-500 mb-6 max-w-sm mx-auto">
+            has successfully completed the<br />
+            <span class="font-semibold text-slate-700">1000 Question Mastery Challenge</span>
+          </p>
+
+          <!-- Stats Section -->
+          <div :class="['rounded-xl p-5 mb-6', tierStyles[selectedTier].statsBg]">
+            <div class="grid grid-cols-3 gap-4">
+              <div>
+                <div :class="['text-3xl font-bold', tierStyles[selectedTier].statsText]">
+                  {{ tierScores[selectedTier] }}
+                </div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider">Correct</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-slate-800">
+                  {{ tierPercentages[selectedTier] }}%
+                </div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider">Accuracy</div>
+              </div>
+              <div>
+                <div :class="['text-3xl font-bold capitalize', tierStyles[selectedTier].statsText]">
+                  {{ selectedTier }}
+                </div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider">Tier</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Date & Code -->
+          <div class="text-sm text-slate-400 space-y-1">
+            <p>{{ formattedDate }}</p>
+            <p class="font-mono text-xs tracking-wider">QM-TEST1234</p>
+          </div>
+
+          <!-- Footer -->
+          <div class="mt-6 pt-4 border-t border-slate-200">
+            <p class="text-xs text-slate-400">1000 Question Mastery</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Border Gradient -->
+      <div :class="['h-3', tierStyles[selectedTier].gradient]" />
     </div>
 
-    <div class="flex gap-4 mt-4">
-      <button @click="downloadImage" class="btn-primary flex items-center gap-2">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Download Button -->
+    <div class="mt-8 flex gap-4 animate-slide-up z-20" style="animation-delay: 200ms;">
+      <button
+        @click="downloadCertificate"
+        :disabled="isDownloading"
+        class="btn-lg px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white rounded-xl font-semibold shadow-lg shadow-amber-500/30 transition-all transform hover:scale-105 flex items-center justify-center gap-3 disabled:opacity-50"
+      >
+        <svg v-if="!isDownloading" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
-        Download Image
-      </button>
-
-      <button @click="copyLink" class="btn-secondary flex items-center gap-2">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+        <svg v-else class="w-6 h-6 animate-spin" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
         </svg>
-        Copy Link
+        {{ isDownloading ? 'Downloading...' : 'Download Certificate' }}
       </button>
     </div>
 
     <!-- Home Link -->
     <button
       @click="goHome"
-      class="mt-6 text-slate-500 hover:text-slate-700 transition-colors"
+      class="mt-6 text-slate-400 hover:text-white transition-colors z-20"
     >
       Back to Home
     </button>
@@ -152,7 +187,7 @@
     <!-- Toast -->
     <div
       v-if="showToast"
-      class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white px-6 py-3 rounded-xl shadow-lg animate-slide-up"
+      class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-white text-slate-800 px-6 py-3 rounded-xl shadow-lg animate-slide-up z-50"
     >
       {{ toastMessage }}
     </div>
@@ -162,47 +197,99 @@
 <script setup lang="ts">
 const router = useRouter()
 
-const certificateRef = ref<HTMLElement | null>(null)
+const fireworksCanvas = ref<HTMLCanvasElement | null>(null)
 const selectedTier = ref<'gold' | 'silver' | 'bronze' | 'standard'>('gold')
 const showToast = ref(false)
 const toastMessage = ref('')
+const isDownloading = ref(false)
 
 const testName = 'Test Player'
-const testScore = 920
-const testPercentage = 92
+
+const tierScores = {
+  gold: 920,
+  silver: 800,
+  bronze: 650,
+  standard: 500,
+}
+
+const tierPercentages = {
+  gold: 92,
+  silver: 80,
+  bronze: 65,
+  standard: 50,
+}
+
+const tierButtonStyles = {
+  gold: 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white',
+  silver: 'bg-gradient-to-r from-slate-400 to-slate-500 text-white',
+  bronze: 'bg-gradient-to-r from-orange-500 to-orange-600 text-white',
+  standard: 'bg-gradient-to-r from-primary-500 to-purple-500 text-white',
+}
 
 const tierStyles = {
   gold: {
-    border: 'ring-4 ring-amber-400',
-    gradient: 'bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400',
-    badge: 'bg-gradient-to-br from-amber-400 to-yellow-500',
-    text: 'text-amber-600',
-    icon: '🏆',
+    outerRing: 'ring-4 ring-amber-400/50',
+    gradient: 'bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500',
+    badge: 'bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-500',
+    ring: 'ring-amber-300',
+    innerBorder: 'border-amber-300/50',
+    ornamentColor: 'text-amber-400',
+    titleGradient: 'bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 bg-clip-text text-transparent',
     title: 'MASTERY',
+    icon: '🏆',
+    lineColor: 'bg-amber-300',
+    diamondColor: 'bg-amber-400',
+    ribbonColor: 'bg-amber-500',
+    statsBg: 'bg-amber-50',
+    statsText: 'text-amber-600',
   },
   silver: {
-    border: 'ring-4 ring-slate-400',
+    outerRing: 'ring-4 ring-slate-400/50',
     gradient: 'bg-gradient-to-r from-slate-400 via-slate-300 to-slate-400',
-    badge: 'bg-gradient-to-br from-slate-400 to-slate-500',
-    text: 'text-slate-600',
-    icon: '🥈',
+    badge: 'bg-gradient-to-br from-slate-300 via-slate-200 to-slate-400',
+    ring: 'ring-slate-300',
+    innerBorder: 'border-slate-300/50',
+    ornamentColor: 'text-slate-400',
+    titleGradient: 'bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 bg-clip-text text-transparent',
     title: 'EXCELLENCE',
+    icon: '🥈',
+    lineColor: 'bg-slate-300',
+    diamondColor: 'bg-slate-400',
+    ribbonColor: 'bg-slate-500',
+    statsBg: 'bg-slate-100',
+    statsText: 'text-slate-600',
   },
   bronze: {
-    border: 'ring-4 ring-orange-400',
-    gradient: 'bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400',
-    badge: 'bg-gradient-to-br from-orange-400 to-orange-600',
-    text: 'text-orange-600',
-    icon: '🥉',
+    outerRing: 'ring-4 ring-orange-400/50',
+    gradient: 'bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500',
+    badge: 'bg-gradient-to-br from-orange-400 via-orange-300 to-orange-500',
+    ring: 'ring-orange-300',
+    innerBorder: 'border-orange-300/50',
+    ornamentColor: 'text-orange-400',
+    titleGradient: 'bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent',
     title: 'ACHIEVEMENT',
+    icon: '🥉',
+    lineColor: 'bg-orange-300',
+    diamondColor: 'bg-orange-400',
+    ribbonColor: 'bg-orange-500',
+    statsBg: 'bg-orange-50',
+    statsText: 'text-orange-600',
   },
   standard: {
-    border: 'ring-2 ring-slate-200',
-    gradient: 'bg-gradient-to-r from-primary-400 via-purple-400 to-primary-400',
-    badge: 'bg-gradient-to-br from-primary-400 to-purple-500',
-    text: 'text-primary-600',
-    icon: '🎓',
+    outerRing: 'ring-4 ring-primary-400/50',
+    gradient: 'bg-gradient-to-r from-primary-500 via-purple-500 to-primary-500',
+    badge: 'bg-gradient-to-br from-primary-400 via-purple-400 to-primary-500',
+    ring: 'ring-primary-300',
+    innerBorder: 'border-primary-300/50',
+    ornamentColor: 'text-primary-400',
+    titleGradient: 'bg-gradient-to-r from-primary-600 via-purple-500 to-primary-600 bg-clip-text text-transparent',
     title: 'COMPLETION',
+    icon: '🎓',
+    lineColor: 'bg-primary-300',
+    diamondColor: 'bg-primary-400',
+    ribbonColor: 'bg-primary-500',
+    statsBg: 'bg-primary-50',
+    statsText: 'text-primary-600',
   },
 }
 
@@ -214,17 +301,6 @@ const formattedDate = computed(() => {
   })
 })
 
-const gameUrl = computed(() => {
-  if (typeof window !== 'undefined') {
-    return window.location.origin
-  }
-  return 'https://1000questionmastery.com'
-})
-
-const shareText = computed(() => {
-  return `I just earned a ${selectedTier.value.toUpperCase()} certificate on 1000 Question Mastery! ${testScore}/1000 correct (${testPercentage}%). Can you beat my score?`
-})
-
 const toast = (message: string) => {
   toastMessage.value = message
   showToast.value = true
@@ -233,7 +309,103 @@ const toast = (message: string) => {
   }, 3000)
 }
 
-const downloadImage = async () => {
+// Fireworks animation
+const launchFireworks = () => {
+  const canvas = fireworksCanvas.value
+  if (!canvas) return
+
+  const ctx = canvas.getContext('2d')
+  if (!ctx) return
+
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+
+  interface Particle {
+    x: number
+    y: number
+    vx: number
+    vy: number
+    color: string
+    life: number
+    maxLife: number
+  }
+
+  const particles: Particle[] = []
+  const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8']
+
+  const createFirework = (x: number, y: number) => {
+    const particleCount = 60
+    const color = colors[Math.floor(Math.random() * colors.length)]
+
+    for (let i = 0; i < particleCount; i++) {
+      const angle = (Math.PI * 2 * i) / particleCount
+      const speed = 2 + Math.random() * 4
+      particles.push({
+        x,
+        y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        color,
+        life: 1,
+        maxLife: 60 + Math.random() * 40,
+      })
+    }
+  }
+
+  let animationId: number
+  let frameCount = 0
+
+  const animate = () => {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+    if (frameCount % 30 === 0 && frameCount < 150) {
+      createFirework(
+        100 + Math.random() * (canvas.width - 200),
+        100 + Math.random() * (canvas.height / 2)
+      )
+    }
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i]
+      p.x += p.vx
+      p.y += p.vy
+      p.vy += 0.05
+      p.vx *= 0.99
+      p.life++
+
+      const alpha = 1 - p.life / p.maxLife
+      if (alpha <= 0) {
+        particles.splice(i, 1)
+        continue
+      }
+
+      ctx.beginPath()
+      ctx.arc(p.x, p.y, 3 * alpha, 0, Math.PI * 2)
+      ctx.fillStyle = p.color + Math.floor(alpha * 255).toString(16).padStart(2, '0')
+      ctx.fill()
+    }
+
+    frameCount++
+
+    if (frameCount < 300 || particles.length > 0) {
+      animationId = requestAnimationFrame(animate)
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+    }
+  }
+
+  animate()
+
+  setTimeout(() => {
+    cancelAnimationFrame(animationId)
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+  }, 6000)
+}
+
+const downloadCertificate = async () => {
+  isDownloading.value = true
+
   try {
     const html2canvas = (await import('html2canvas')).default
     const element = document.getElementById('certificate-card')
@@ -242,44 +414,27 @@ const downloadImage = async () => {
     const canvas = await html2canvas(element, {
       backgroundColor: '#ffffff',
       scale: 2,
+      logging: false,
     })
 
     const link = document.createElement('a')
-    link.download = `certificate-${testName.replace(/\s+/g, '-')}.png`
+    link.download = `certificate-${testName.replace(/\s+/g, '-')}-${selectedTier.value}.png`
     link.href = canvas.toDataURL('image/png')
     link.click()
     toast('Certificate downloaded!')
   } catch (error) {
     console.error('Failed to download:', error)
-    toast('Failed to download certificate')
-  }
-}
-
-const shareToTwitter = async () => {
-  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText.value)}&url=${encodeURIComponent(gameUrl.value)}`
-  window.open(url, '_blank', 'width=600,height=400')
-}
-
-const shareToFacebook = () => {
-  const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(gameUrl.value)}&quote=${encodeURIComponent(shareText.value)}`
-  window.open(url, '_blank', 'width=600,height=400')
-}
-
-const shareToWhatsApp = () => {
-  const url = `https://wa.me/?text=${encodeURIComponent(shareText.value + ' ' + gameUrl.value)}`
-  window.open(url, '_blank')
-}
-
-const copyLink = async () => {
-  try {
-    await navigator.clipboard.writeText(gameUrl.value)
-    toast('Link copied to clipboard!')
-  } catch {
-    toast('Failed to copy link')
+    toast('Failed to download. Try again.')
+  } finally {
+    isDownloading.value = false
   }
 }
 
 const goHome = () => {
   router.push('/')
 }
+
+onMounted(() => {
+  setTimeout(() => launchFireworks(), 500)
+})
 </script>
