@@ -65,6 +65,11 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.6.1
+- Fixed Kids D7-D10 questions to be age-appropriate (grades 3-6)
+- Removed algebra, physics, chemical formulas from kids questions
+- Added brain teasers, trivia, dinosaurs, fun facts for harder levels
+
 ### v1.6.0
 - Added 10,000 questions for Kids age group (8-12 years)
 - Topics include math, science, geography, history, vocabulary across 10 difficulty levels
