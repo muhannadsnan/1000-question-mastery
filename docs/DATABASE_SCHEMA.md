@@ -4,12 +4,31 @@
 
 The application uses a **simplified architecture** with no traditional database:
 
-- **Server-side**: Questions stored as TypeScript modules
+- **Server-side**: Questions stored as sharded TypeScript files
 - **Client-side**: Session state in localStorage (minimal data)
 
 ## Server-Side: Question Storage
 
-Questions are stored in `server/data/questions.ts` as TypeScript objects organized by age group.
+Questions are stored in `server/data/` as TypeScript files, sharded by age group, difficulty, and file number.
+
+### File Structure
+
+```
+server/data/
+├── little-kids/          # Age group 1 (ages 3-7)
+│   ├── d1/               # Difficulty 1 (1000 questions)
+│   │   ├── f1.ts         # Questions 1-100
+│   │   ├── f2.ts         # Questions 101-200
+│   │   ├── ...
+│   │   └── f10.ts        # Questions 901-1000
+│   ├── d2/               # Difficulty 2
+│   └── ...
+│
+├── kids/                 # Age group 2 (ages 8-12)
+├── teens/                # Age group 3 (ages 13-17)
+├── adults/               # Age group 4 (ages 18-59)
+└── seniors/              # Age group 5 (ages 60+)
+```
 
 ### Question Structure
 
@@ -24,14 +43,35 @@ interface Question {
 }
 ```
 
-### Age Groups
+### Question ID Format
 
-- `kids`: Ages 6-12, simpler vocabulary and concepts
-- `teens`: Ages 13-17, school curriculum aligned
-- `adults`: Ages 18-59, full range of topics
-- `seniors`: Ages 60+, classic references
+IDs follow the format: `{age_group}{6-digit-sequence}`
 
-Each age group has questions for all 10 difficulty levels.
+```
+1000001  →  Age group 1 (littleKids), Question 1
+1001000  →  Age group 1 (littleKids), Question 1000
+2000001  →  Age group 2 (kids), Question 1
+```
+
+**Age group codes:**
+- `1` = littleKids (3-7 years)
+- `2` = kids (8-12 years)
+- `3` = teens (13-17 years)
+- `4` = adults (18-59 years)
+- `5` = seniors (60+ years)
+
+### File Contents
+
+Each file exports an array of 100 questions:
+
+```typescript
+// server/data/little-kids/d1/f1.ts
+export const questions: Question[] = [
+  { id: '1000001', text: 'What color is a banana?', ... },
+  { id: '1000002', text: 'What sound does a dog make?', ... },
+  // ... 100 questions total
+]
+```
 
 ## Client-Side: Session Storage
 
@@ -62,22 +102,22 @@ Fetches the next question for the player.
 **Request:**
 ```json
 {
-  "ageGroup": "adults",
+  "ageGroup": "littleKids",
   "difficulty": 3,
-  "excludeIds": ["id1", "id2"],
-  "cooldowns": { "id3": "2026-01-25T10:00:00Z" }
+  "excludeIds": ["1000001", "1000002"],
+  "cooldowns": { "1000003": "2026-01-25T10:00:00Z" }
 }
 ```
 
 **Response:**
 ```json
 {
-  "id": "a3-001",
-  "text": "What is the boiling point of water?",
-  "options": ["90°C", "100°C", "110°C", "120°C"],
+  "id": "1000247",
+  "text": "What is 2 + 2?",
+  "options": ["3", "4", "5", "6"],
   "correctIndex": 1,
   "difficulty": 3,
-  "category": "science"
+  "category": "math"
 }
 ```
 
@@ -87,21 +127,29 @@ Fetches the next question for the player.
 1. Calculate difficulty from currentQuestion:
    difficulty = Math.ceil(currentQuestion / 100)
 
-2. Filter questions:
-   - Match ageGroup
-   - Match difficulty
+2. Pick random file (1-10) from difficulty folder
+
+3. Load only that file (100 questions)
+
+4. Convert excludeIds to Set (O(1) lookup)
+
+5. Filter questions:
    - NOT in excludeIds (already asked this session)
    - NOT in cooldowns within 7 days
 
-3. Random select from filtered results
+6. If no eligible questions, try next file
 
-4. Return question to client
+7. Random select from filtered results
+
+8. Return question to client
 ```
 
 ## Benefits of This Approach
 
-- **No database setup** - Just static files
-- **Fast** - No DB queries, just array filtering
+- **No database setup** - Just static TypeScript files
+- **Ultra-fast** - Load 100 questions, not 10,000
+- **O(1) filtering** - Set-based exclusion lookup
 - **Simple deployment** - Deploy as static site + serverless
 - **Tiny client footprint** - Only session data stored locally
-- **Offline-friendly session** - Can resume if connection drops mid-answer
+- **Scales infinitely** - Add more files without performance impact
+- **Easy to edit** - Questions are plain TypeScript, easy to update

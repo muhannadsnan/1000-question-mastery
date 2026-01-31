@@ -96,7 +96,8 @@ const playerName = ref('')
 const selectedAgeGroup = ref<AgeGroup | null>(null)
 
 const ageGroups = [
-  { id: 'kids' as AgeGroup, label: 'Kids', ageRange: '6-12 years', icon: '🧒' },
+  { id: 'littleKids' as AgeGroup, label: 'Little Kids', ageRange: '3-7 years', icon: '👶' },
+  { id: 'kids' as AgeGroup, label: 'Kids', ageRange: '8-12 years', icon: '🧒' },
   { id: 'teens' as AgeGroup, label: 'Teens', ageRange: '13-17 years', icon: '🧑' },
   { id: 'adults' as AgeGroup, label: 'Adults', ageRange: '18-59 years', icon: '👨' },
   { id: 'seniors' as AgeGroup, label: 'Seniors', ageRange: '60+ years', icon: '👴' },

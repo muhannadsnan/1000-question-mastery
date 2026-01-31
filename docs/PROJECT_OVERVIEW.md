@@ -6,7 +6,8 @@
 
 ## Target Audience
 
-- **Kids** (6-12 years)
+- **Little Kids** (3-7 years)
+- **Kids** (8-12 years)
 - **Teens** (13-17 years)
 - **Adults** (18-59 years)
 - **Seniors** (60+ years)
@@ -15,7 +16,7 @@ Each age group has its own curated question pool with age-appropriate content an
 
 ## Game Flow
 
-1. Player selects their age category
+1. Player enters their name and selects their age category
 2. Game loads/resumes their progress
 3. Questions are presented one at a time (multiple choice, 4 options)
 4. Progress: Question 1 → 1000
@@ -47,7 +48,7 @@ Questions span all aspects of life and knowledge:
 
 ## Key Features
 
-- **Offline-First**: All questions stored locally in client-side database
+- **Lightweight & Fast**: Questions sharded into small files for instant loading
 - **Progress Persistence**: Game state saved locally, resume anytime
 - **No Repeat Policy**: Questions are not repeated within the same playthrough
 - **Cooldown System**: Previously asked questions have a 7-day cooldown before reappearing in new games
@@ -56,7 +57,8 @@ Questions span all aspects of life and knowledge:
 ## Tech Stack
 
 - **Frontend**: Vue 3 + Nuxt 3
-- **Database**: IndexedDB (via Dexie.js) for client-side storage
+- **Storage**: localStorage for session state
 - **Styling**: Tailwind CSS
 - **State Management**: Pinia
+- **Deployment**: Netlify (serverless)
 - **Certificate Generation**: HTML Canvas / PDF generation

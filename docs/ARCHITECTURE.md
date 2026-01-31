@@ -32,9 +32,9 @@
 │       └── CertificateDownload.vue
 │
 ├── composables/
-│   ├── useDatabase.ts            # Dexie database instance
 │   ├── useGameSession.ts         # Game state management
 │   ├── useQuestionSelector.ts    # Question selection logic
+│   ├── useSound.ts               # Sound effects
 │   └── useCertificate.ts         # Certificate generation
 │
 ├── layouts/
@@ -49,22 +49,39 @@
 │   │   └── [id].vue              # Certificate view/download
 │   └── history.vue               # Past games & certificates
 │
-├── plugins/
-│   └── dexie.client.ts           # Database initialization
-│
 ├── public/
-│   ├── data/
-│   │   ├── questions-kids.json
-│   │   ├── questions-teens.json
-│   │   ├── questions-adults.json
-│   │   └── questions-seniors.json
-│   │
 │   └── images/
 │       ├── certificate-bg.png
 │       └── badges/
 │
 ├── server/
-│   └── (empty - fully client-side)
+│   ├── api/
+│   │   └── question.post.ts      # Question fetching endpoint
+│   │
+│   └── data/                     # Sharded question files
+│       ├── little-kids/          # Age group 1 (ages 3-7)
+│       │   ├── d1/               # Difficulty 1
+│       │   │   ├── f1.ts         # 100 questions
+│       │   │   ├── f2.ts         # 100 questions
+│       │   │   ├── ...
+│       │   │   └── f10.ts        # 100 questions
+│       │   ├── d2/               # Difficulty 2
+│       │   │   ├── f1.ts
+│       │   │   └── ...
+│       │   └── d10/              # Difficulty 10
+│       │       └── ...
+│       │
+│       ├── kids/                 # Age group 2 (ages 8-12)
+│       │   └── (same structure)
+│       │
+│       ├── teens/                # Age group 3 (ages 13-17)
+│       │   └── (same structure)
+│       │
+│       ├── adults/               # Age group 4 (ages 18-59)
+│       │   └── (same structure)
+│       │
+│       └── seniors/              # Age group 5 (ages 60+)
+│           └── (same structure)
 │
 ├── stores/
 │   ├── game.ts                   # Pinia store for game state
@@ -77,6 +94,25 @@
     ├── questionHelpers.ts        # Question-related utilities
     └── certificateGenerator.ts   # Canvas/PDF generation
 ```
+
+## Question File Sharding
+
+Questions are split into small files for optimal performance:
+
+```
+Total per age group: 10,000 questions
+├── 10 difficulty levels × 1,000 questions each
+└── Each difficulty: 10 files × 100 questions each
+
+File size: ~15-20 KB per file (100 questions)
+Load time: <50ms per file
+```
+
+**Benefits:**
+- Only load 100 questions per request (not 10,000)
+- Instant filtering (100 items vs 10,000)
+- Minimal memory footprint
+- No database needed
 
 ## Component Architecture
 
@@ -154,34 +190,7 @@ interface GameState {
 - completeGame()
 ```
 
-## Database Layer
-
-### Dexie Schema
-
-```typescript
-// composables/useDatabase.ts
-import Dexie from 'dexie'
-
-class QuizDatabase extends Dexie {
-  questions!: Table<Question>
-  gameSessions!: Table<GameSession>
-  certificates!: Table<Certificate>
-  settings!: Table<Setting>
-
-  constructor() {
-    super('QuizMasteryDB')
-
-    this.version(1).stores({
-      questions: 'id, [ageGroup+difficulty], lastAskedAt',
-      gameSessions: 'id, status, ageGroup',
-      certificates: 'id, sessionId, certificateCode',
-      settings: 'key'
-    })
-  }
-}
-```
-
-## Question Selection Flow
+## Question Selection Algorithm
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -192,19 +201,19 @@ class QuizDatabase extends Dexie {
 │                          ▼                                   │
 │  2. Calculate difficulty: ceil(247/100) = 3                  │
 │                          ▼                                   │
-│  3. Query DB:                                                │
-│     - ageGroup = 'adults'                                    │
-│     - difficulty = 3                                         │
-│     - id NOT IN [...already asked IDs]                       │
-│     - lastAskedAt < 7 days ago OR null                       │
+│  3. Pick random file (1-10) from d3/                         │
 │                          ▼                                   │
-│  4. Random select from results                               │
+│  4. Load that file (100 questions only)                      │
 │                          ▼                                   │
-│  5. Update question.lastAskedAt = now()                      │
+│  5. Convert excludeIds to Set for O(1) lookup                │
 │                          ▼                                   │
-│  6. Add to session.askedQuestionIds                          │
+│  6. Filter: exclude asked IDs + cooldown check               │
 │                          ▼                                   │
-│  7. Return question to game                                  │
+│  7. If empty, try next file                                  │
+│                          ▼                                   │
+│  8. Random select from filtered results                      │
+│                          ▼                                   │
+│  9. Return question to client                                │
 │                                                              │
 └──────────────────────────────────────────────────────────────┘
 ```

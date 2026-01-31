@@ -304,12 +304,36 @@ const kidsQuestions: Question[] = [
   { id: id('k10', 2), text: 'What is the hardest natural substance?', options: ['Gold', 'Iron', 'Diamond', 'Ruby'], correctIndex: 2, difficulty: 10, category: 'science' },
 ]
 
+// Little Kids questions - very simple, ages 3-7
+// Placeholder - will be expanded to 10,000 questions
+const littleKidsQuestions: Question[] = [
+  // DIFFICULTY 1
+  { id: id('lk1', 1), text: 'What color is a banana?', options: ['Red', 'Yellow', 'Blue', 'Green'], correctIndex: 1, difficulty: 1, category: 'general' },
+  { id: id('lk1', 2), text: 'How many legs does a dog have?', options: ['2', '3', '4', '6'], correctIndex: 2, difficulty: 1, category: 'nature' },
+  { id: id('lk1', 3), text: 'What sound does a cat make?', options: ['Woof', 'Meow', 'Moo', 'Oink'], correctIndex: 1, difficulty: 1, category: 'nature' },
+  { id: id('lk1', 4), text: 'What is 1 + 1?', options: ['1', '2', '3', '4'], correctIndex: 1, difficulty: 1, category: 'math' },
+  { id: id('lk1', 5), text: 'What color is the sky?', options: ['Green', 'Blue', 'Red', 'Yellow'], correctIndex: 1, difficulty: 1, category: 'nature' },
+  // DIFFICULTY 2
+  { id: id('lk2', 1), text: 'How many fingers do you have?', options: ['5', '8', '10', '12'], correctIndex: 2, difficulty: 2, category: 'general' },
+  { id: id('lk2', 2), text: 'What do cows give us?', options: ['Eggs', 'Milk', 'Honey', 'Bread'], correctIndex: 1, difficulty: 2, category: 'nature' },
+  // DIFFICULTY 3-10 placeholders
+  { id: id('lk3', 1), text: 'What is 2 + 3?', options: ['4', '5', '6', '7'], correctIndex: 1, difficulty: 3, category: 'math' },
+  { id: id('lk4', 1), text: 'How many days in a week?', options: ['5', '6', '7', '8'], correctIndex: 2, difficulty: 4, category: 'general' },
+  { id: id('lk5', 1), text: 'What animal says "moo"?', options: ['Dog', 'Cat', 'Cow', 'Pig'], correctIndex: 2, difficulty: 5, category: 'nature' },
+  { id: id('lk6', 1), text: 'What is 5 + 5?', options: ['8', '9', '10', '11'], correctIndex: 2, difficulty: 6, category: 'math' },
+  { id: id('lk7', 1), text: 'What color is grass?', options: ['Blue', 'Green', 'Red', 'Yellow'], correctIndex: 1, difficulty: 7, category: 'nature' },
+  { id: id('lk8', 1), text: 'How many ears do you have?', options: ['1', '2', '3', '4'], correctIndex: 1, difficulty: 8, category: 'general' },
+  { id: id('lk9', 1), text: 'What is 3 + 4?', options: ['5', '6', '7', '8'], correctIndex: 2, difficulty: 9, category: 'math' },
+  { id: id('lk10', 1), text: 'What shape is a ball?', options: ['Square', 'Triangle', 'Circle', 'Star'], correctIndex: 2, difficulty: 10, category: 'math' },
+]
+
 // Teens and Seniors use adult questions with slight modifications
 // In a full implementation, these would be customized
 const teensQuestions: Question[] = adultsQuestions.map(q => ({ ...q, id: q.id.replace('a', 't') }))
 const seniorsQuestions: Question[] = adultsQuestions.map(q => ({ ...q, id: q.id.replace('a', 's') }))
 
 export const questions = {
+  littleKids: littleKidsQuestions,
   kids: kidsQuestions,
   teens: teensQuestions,
   adults: adultsQuestions,

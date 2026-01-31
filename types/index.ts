@@ -1,5 +1,5 @@
 // Age groups for different question pools
-export type AgeGroup = 'kids' | 'teens' | 'adults' | 'seniors'
+export type AgeGroup = 'littleKids' | 'kids' | 'teens' | 'adults' | 'seniors'
 
 // Question categories
 export type QuestionCategory =

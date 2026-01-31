@@ -1,5 +1,3 @@
-import { questions } from '../data/questions'
-
 interface RequestBody {
   ageGroup: string
   difficulty: number
@@ -7,65 +5,108 @@ interface RequestBody {
   cooldowns: Record<string, string>
 }
 
+// Map age group names to folder names
+const ageGroupFolders: Record<string, string> = {
+  littleKids: 'little-kids',
+  kids: 'kids',
+  teens: 'teens',
+  adults: 'adults',
+  seniors: 'seniors',
+}
+
 export default defineEventHandler(async (event) => {
   const body = await readBody<RequestBody>(event)
   const { ageGroup, difficulty, excludeIds = [], cooldowns = {} } = body
 
-  // Filter questions by age group and difficulty
-  const ageQuestions = questions[ageGroup as keyof typeof questions] || questions.adults
+  // Convert excludeIds to Set for O(1) lookup
+  const excludeSet = new Set(excludeIds)
 
-  const eligibleQuestions = ageQuestions.filter((q) => {
-    // Must match difficulty
-    if (q.difficulty !== difficulty) return false
+  // Get folder name for age group
+  const folder = ageGroupFolders[ageGroup] || 'adults'
 
-    // Must not be already asked in this session
-    if (excludeIds.includes(q.id)) return false
+  // Try up to 10 files to find an eligible question
+  const fileOrder = shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
-    // Check cooldown (7 days)
-    const lastAsked = cooldowns[q.id]
-    if (lastAsked) {
-      const lastAskedDate = new Date(lastAsked)
-      const now = new Date()
-      const daysDiff = (now.getTime() - lastAskedDate.getTime()) / (1000 * 60 * 60 * 24)
-      if (daysDiff < 7) return false
+  for (const fileNum of fileOrder) {
+    try {
+      // Dynamic import - only loads the specific file needed
+      const module = await import(`../data/${folder}/d${difficulty}/f${fileNum}.ts`)
+      const questions = module.questions || []
+
+      // Filter questions (only 100 items - very fast)
+      const eligibleQuestions = questions.filter((q: any) => {
+        // Must not be already asked in this session
+        if (excludeSet.has(q.id)) return false
+
+        // Check cooldown (7 days)
+        const lastAsked = cooldowns[q.id]
+        if (lastAsked) {
+          const lastAskedDate = new Date(lastAsked)
+          const now = new Date()
+          const daysDiff = (now.getTime() - lastAskedDate.getTime()) / (1000 * 60 * 60 * 24)
+          if (daysDiff < 7) return false
+        }
+
+        return true
+      })
+
+      if (eligibleQuestions.length > 0) {
+        // Pick random question from this file
+        const selectedQuestion = eligibleQuestions[Math.floor(Math.random() * eligibleQuestions.length)]
+
+        return {
+          id: selectedQuestion.id,
+          text: selectedQuestion.text,
+          options: selectedQuestion.options,
+          correctIndex: selectedQuestion.correctIndex,
+          difficulty: selectedQuestion.difficulty,
+          category: selectedQuestion.category,
+        }
+      }
+      // If no eligible questions in this file, continue to next file
+    } catch (e) {
+      // File doesn't exist or error loading - continue to next file
+      console.warn(`Could not load ${folder}/d${difficulty}/f${fileNum}.ts`)
     }
+  }
 
-    return true
+  // If we've exhausted all files, try fallback (ignore cooldown)
+  for (const fileNum of fileOrder) {
+    try {
+      const module = await import(`../data/${folder}/d${difficulty}/f${fileNum}.ts`)
+      const questions = module.questions || []
+
+      const fallbackQuestions = questions.filter((q: any) => !excludeSet.has(q.id))
+
+      if (fallbackQuestions.length > 0) {
+        const selectedQuestion = fallbackQuestions[Math.floor(Math.random() * fallbackQuestions.length)]
+
+        return {
+          id: selectedQuestion.id,
+          text: selectedQuestion.text,
+          options: selectedQuestion.options,
+          correctIndex: selectedQuestion.correctIndex,
+          difficulty: selectedQuestion.difficulty,
+          category: selectedQuestion.category,
+        }
+      }
+    } catch (e) {
+      // Continue
+    }
+  }
+
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'No questions available for this difficulty',
   })
-
-  // If no eligible questions (shouldn't happen with enough questions), relax constraints
-  let selectedQuestion
-  if (eligibleQuestions.length === 0) {
-    // Fallback: just exclude already asked, ignore cooldown
-    const fallbackQuestions = ageQuestions.filter(
-      (q) => q.difficulty === difficulty && !excludeIds.includes(q.id)
-    )
-    if (fallbackQuestions.length > 0) {
-      selectedQuestion = fallbackQuestions[Math.floor(Math.random() * fallbackQuestions.length)]
-    } else {
-      // Last resort: any question of that difficulty
-      const lastResort = ageQuestions.filter((q) => q.difficulty === difficulty)
-      selectedQuestion = lastResort[Math.floor(Math.random() * lastResort.length)]
-    }
-  } else {
-    // Pick random question
-    selectedQuestion = eligibleQuestions[Math.floor(Math.random() * eligibleQuestions.length)]
-  }
-
-  if (!selectedQuestion) {
-    throw createError({
-      statusCode: 404,
-      statusMessage: 'No questions available',
-    })
-  }
-
-  // Return question (without exposing more than needed)
-  return {
-    id: selectedQuestion.id,
-    text: selectedQuestion.text,
-    options: selectedQuestion.options,
-    correctIndex: selectedQuestion.correctIndex,
-    difficulty: selectedQuestion.difficulty,
-    category: selectedQuestion.category,
-  }
 })
+
+// Fisher-Yates shuffle
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
