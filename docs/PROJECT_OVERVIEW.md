@@ -65,6 +65,10 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.6.0
+- Added 10,000 questions for Kids age group (8-12 years)
+- Topics include math, science, geography, history, vocabulary across 10 difficulty levels
+
 ### v1.5.0
 - Client-side question loading (removed server API dependency)
 - Static site generation for Netlify compatibility

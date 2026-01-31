@@ -11,10 +11,21 @@ interface Question {
 }
 
 // Use import.meta.glob to pre-bundle all question files at build time
-const questionModules = import.meta.glob<{ questions: Question[] }>(
+const littleKidsModules = import.meta.glob<{ questions: Question[] }>(
   '../server/data/little-kids/d*/f*.ts',
   { eager: false }
 )
+
+const kidsModules = import.meta.glob<{ questions: Question[] }>(
+  '../server/data/kids/d*/f*.ts',
+  { eager: false }
+)
+
+// Map age group to their question modules
+const ageGroupModules: Record<string, Record<string, () => Promise<{ questions: Question[] }>>> = {
+  'little-kids': littleKidsModules,
+  'kids': kidsModules,
+}
 
 // Map age group to folder names
 const ageGroupFolders: Record<string, string> = {
@@ -51,10 +62,11 @@ export const useQuestions = () => {
 
     let foundAnyFile = false
 
-    // Try folder-based structure first (only little-kids has files)
-    if (folder === 'little-kids') {
+    // Try folder-based structure first (little-kids and kids have files)
+    const questionModules = ageGroupModules[folder]
+    if (questionModules) {
       for (const fileNum of fileOrder) {
-        const modulePath = `../server/data/little-kids/d${difficulty}/f${fileNum}.ts`
+        const modulePath = `../server/data/${folder}/d${difficulty}/f${fileNum}.ts`
         const cacheKey = modulePath
 
         try {
@@ -99,7 +111,7 @@ export const useQuestions = () => {
       // Fallback: try ignoring cooldowns
       if (foundAnyFile) {
         for (const fileNum of fileOrder) {
-          const modulePath = `../server/data/little-kids/d${difficulty}/f${fileNum}.ts`
+          const modulePath = `../server/data/${folder}/d${difficulty}/f${fileNum}.ts`
           const questions = questionCache.get(modulePath)
 
           if (questions) {
