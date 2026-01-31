@@ -65,6 +65,10 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.10.1
+- Fixed question skip exploit: quitting and continuing now restores the same question
+- Pending question is saved in session until answered
+
 ### v1.10.0
 - UI improvements: Enlarged bottom bar icons on main menu
 - Setup page: Elegant emoji icons for age groups with larger touch targets

@@ -20,6 +20,7 @@ export interface GameSession {
   startedAt: string
   askedQuestionIds: string[]
   cooldowns: Record<string, string>
+  pendingQuestion?: Question | null // Store the current unanswered question
 }
 
 const STORAGE_KEY = 'quiz-mastery-session'
@@ -109,6 +110,13 @@ export const useGameSession = () => {
     lastAnswerCorrect.value = null
 
     try {
+      // Check if there's a pending question (player quit without answering)
+      if (session.value.pendingQuestion) {
+        currentQuestionData.value = session.value.pendingQuestion
+        isLoading.value = false
+        return session.value.pendingQuestion
+      }
+
       const { getQuestion } = useQuestions()
       const question = await getQuestion(
         session.value.ageGroup,
@@ -119,6 +127,9 @@ export const useGameSession = () => {
 
       if (question) {
         currentQuestionData.value = question as Question
+        // Save the question as pending until answered
+        session.value.pendingQuestion = question as Question
+        saveSession()
         return question
       }
 
@@ -151,6 +162,9 @@ export const useGameSession = () => {
     // Track asked question
     session.value.askedQuestionIds.push(currentQuestionData.value.id)
     session.value.cooldowns[currentQuestionData.value.id] = new Date().toISOString()
+
+    // Clear pending question since it's been answered
+    session.value.pendingQuestion = null
 
     saveSession()
 
