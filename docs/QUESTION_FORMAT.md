@@ -160,9 +160,12 @@ Examples for Little Kids:
 - Very simple vocabulary
 - Visual/concrete concepts
 - Basic colors, shapes, animals
-- Simple counting (1-20)
+- Simple counting (1-10)
+- Body parts, family, daily life
 - No reading comprehension required
 - Fun, engaging topics
+
+**Important**: Difficulty levels 1-10 do NOT increase topic complexity for this age group. Instead, they offer variation in the same simple topics (animal sounds, colors, shapes, counting, body parts, family, clothing, daily routines). Higher difficulty = more variety, NOT harder concepts.
 
 Example:
 ```typescript
