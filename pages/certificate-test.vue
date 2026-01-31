@@ -93,7 +93,7 @@
           </div>
           <h3 :class="[
             'text-4xl md:text-5xl font-black tracking-wide mb-6',
-            tierStyles[selectedTier].titleGradient
+            tierStyles[selectedTier].titleColor
           ]">
             {{ tierStyles[selectedTier].title }}
           </h3>
@@ -124,19 +124,19 @@
                 <div :class="['text-3xl font-bold', tierStyles[selectedTier].statsText]">
                   {{ tierScores[selectedTier] }}
                 </div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider">Correct</div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider mt-2">Correct</div>
               </div>
               <div>
                 <div class="text-3xl font-bold text-slate-800">
                   {{ tierPercentages[selectedTier] }}%
                 </div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider">Accuracy</div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider mt-2">Accuracy</div>
               </div>
               <div>
                 <div :class="['text-3xl font-bold capitalize', tierStyles[selectedTier].statsText]">
                   {{ selectedTier }}
                 </div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider">Tier</div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider mt-2">Tier</div>
               </div>
             </div>
           </div>
@@ -234,7 +234,7 @@ const tierStyles = {
     ring: 'ring-amber-300',
     innerBorder: 'border-amber-300/50',
     ornamentColor: 'text-amber-400',
-    titleGradient: 'bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 bg-clip-text text-transparent',
+    titleColor: 'text-amber-600',
     title: 'MASTERY',
     icon: '🏆',
     lineColor: 'bg-amber-300',
@@ -250,7 +250,7 @@ const tierStyles = {
     ring: 'ring-slate-300',
     innerBorder: 'border-slate-300/50',
     ornamentColor: 'text-slate-400',
-    titleGradient: 'bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 bg-clip-text text-transparent',
+    titleColor: 'text-slate-600',
     title: 'EXCELLENCE',
     icon: '🥈',
     lineColor: 'bg-slate-300',
@@ -266,7 +266,7 @@ const tierStyles = {
     ring: 'ring-orange-300',
     innerBorder: 'border-orange-300/50',
     ornamentColor: 'text-orange-400',
-    titleGradient: 'bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent',
+    titleColor: 'text-orange-600',
     title: 'ACHIEVEMENT',
     icon: '🥉',
     lineColor: 'bg-orange-300',
@@ -282,7 +282,7 @@ const tierStyles = {
     ring: 'ring-primary-300',
     innerBorder: 'border-primary-300/50',
     ornamentColor: 'text-primary-400',
-    titleGradient: 'bg-gradient-to-r from-primary-600 via-purple-500 to-primary-600 bg-clip-text text-transparent',
+    titleColor: 'text-primary-600',
     title: 'COMPLETION',
     icon: '🎓',
     lineColor: 'bg-primary-300',
