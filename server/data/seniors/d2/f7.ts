@@ -34,7 +34,7 @@ export const questions = [
   { id: '5020633', text: 'What is the capital of Singapore?', options: ['Singapore', 'There is no separate capital', 'Central Singapore', 'Marina Bay'], correctIndex: 0, difficulty: 2, category: 'geography' },
   { id: '5020634', text: 'Who discovered monoclonal antibodies?', options: ['César Milstein and Georges Köhler', 'Paul Ehrlich', 'Emil von Behring', 'Karl Landsteiner'], correctIndex: 0, difficulty: 2, category: 'science' },
   { id: '5020635', text: 'Who directed "E.T. the Extra-Terrestrial"?', options: ['Steven Spielberg', 'George Lucas', 'Robert Zemeckis', 'Joe Dante'], correctIndex: 0, difficulty: 2, category: 'movies' },
-  { id: '5020636', text: 'Who painted "Les Demoiselles d\'Avignon"?', options: ['Pablo Picasso', 'Georges Braque', 'Henri Matisse', 'André Derain'], correctIndex: 0, difficulty: 2, category: 'art' },
+  { id: '5020636', text: 'What was the Marshall Plan?', options: ['US program to rebuild Western Europe after WWII', 'Cold War military alliance', 'UN development program', 'Soviet economic initiative'], correctIndex: 0, difficulty: 2, category: 'history' },
   { id: '5020637', text: 'Who composed "Piano Concerto No. 21"?', options: ['Wolfgang Amadeus Mozart', 'Ludwig van Beethoven', 'Frédéric Chopin', 'Franz Liszt'], correctIndex: 0, difficulty: 2, category: 'music' },
   { id: '5020638', text: 'What was the Ethiopian-Eritrean War?', options: ['1998-2000 border conflict', 'Colonial war', 'Civil war', 'Independence war'], correctIndex: 0, difficulty: 2, category: 'politics' },
   { id: '5020639', text: 'Who wrote "After Virtue"?', options: ['Alasdair MacIntyre', 'Charles Taylor', 'Michael Sandel', 'Martha Nussbaum'], correctIndex: 0, difficulty: 2, category: 'philosophy' },

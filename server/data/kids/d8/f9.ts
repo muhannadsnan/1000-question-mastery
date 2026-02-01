@@ -46,7 +46,7 @@ export const questions = [
   { id: '2007845', text: 'Lily ate 1/3 of a cake. Her mom ate 1/4 of the same cake. How much cake did they eat together?', options: ['2/7', '7/12', '5/12', '4/12'], correctIndex: 1, difficulty: 8, category: 'math' },
   { id: '2007846', text: 'What is 2/3 + 2/9 equal to?', options: ['4/12', '8/9', '6/9', '7/9'], correctIndex: 1, difficulty: 8, category: 'math' },
   { id: '2007847', text: 'What is the center of an atom called?', options: ['Electron', 'Proton', 'Nucleus', 'Neutron'], correctIndex: 2, difficulty: 8, category: 'science' },
-  { id: '2007848', text: 'What is the antonym of "ancient"?', options: ['Old', 'Antique', 'Modern', 'Historic'], correctIndex: 2, difficulty: 8, category: 'english' },
+  { id: '2007848', text: 'Which bird is known for its colorful tail feathers that form a fan?', options: ['Eagle', 'Peacock', 'Parrot', 'Flamingo'], correctIndex: 1, difficulty: 8, category: 'science' },
   { id: '2007849', text: 'The Appalachian Trail runs through how many US states?', options: ['10', '12', '14', '16'], correctIndex: 2, difficulty: 8, category: 'geography' },
   { id: '2007850', text: 'A square has a perimeter of 100 inches. What is the length of each side?', options: ['23 inches', '24 inches', '25 inches', '26 inches'], correctIndex: 2, difficulty: 8, category: 'math' },
   { id: '2007851', text: 'Which muscle in your leg helps you walk and run?', options: ['Bicep', 'Tricep', 'Quadricep', 'Deltoid'], correctIndex: 2, difficulty: 8, category: 'science' },

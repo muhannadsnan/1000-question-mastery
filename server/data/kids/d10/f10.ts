@@ -97,6 +97,6 @@ export const questions = [
   { id: '2009996', text: 'What is 12 times 12?', options: ['124', '134', '144', '154'], correctIndex: 2, difficulty: 10, category: 'math' },
   { id: '2009997', text: 'What is the next number: 1, 2, 4, 8, 16, 32, ?', options: ['48', '56', '64', '72'], correctIndex: 2, difficulty: 10, category: 'math' },
   { id: '2009998', text: 'What is the most recently discovered dinosaur species called?', options: ['It changes frequently', 'T-Rex', 'Spinosaurus', 'Giganotosaurus'], correctIndex: 0, difficulty: 10, category: 'dinosaurs' },
-  { id: '2009999', text: 'What is the largest ocean on Earth?', options: ['Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean', 'Pacific Ocean'], correctIndex: 3, difficulty: 10, category: 'oceans' },
+  { id: '2009999', text: 'Which ancient civilization built the Great Sphinx of Giza?', options: ['Greeks', 'Romans', 'Egyptians', 'Persians'], correctIndex: 2, difficulty: 10, category: 'history' },
   { id: '2010000', text: 'If you are running a race and pass the person in 2nd place, what place are you in now?', options: ['1st place', '2nd place', '3rd place', 'Last place'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
 ]

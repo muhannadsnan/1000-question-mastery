@@ -20,7 +20,7 @@ export const questions = [
   { id: '2007519', text: 'What is a synonym for "tranquil"?', options: ['Noisy', 'Peaceful', 'Busy', 'Loud'], correctIndex: 1, difficulty: 8, category: 'english' },
   { id: '2007520', text: 'A train arrives at 4:35 PM. If the journey was 2 hours 20 minutes, when did it depart?', options: ['2:05 PM', '2:15 PM', '2:25 PM', '1:55 PM'], correctIndex: 1, difficulty: 8, category: 'math' },
   { id: '2007521', text: 'The Rhine River flows mainly through which country?', options: ['France', 'Germany', 'Austria', 'Netherlands'], correctIndex: 1, difficulty: 8, category: 'geography' },
-  { id: '2007522', text: 'What is 5/6 - 1/3 equal to?', options: ['4/6', '3/6', '2/6', '1/2'], correctIndex: 3, difficulty: 8, category: 'math' },
+  { id: '2007522', text: 'Which famous volcano destroyed the ancient city of Pompeii?', options: ['Mount Etna', 'Mount Vesuvius', 'Mount Fuji', 'Mount Kilimanjaro'], correctIndex: 1, difficulty: 8, category: 'history' },
   { id: '2007523', text: 'Which vitamin is produced when your skin is exposed to sunlight?', options: ['Vitamin A', 'Vitamin B', 'Vitamin C', 'Vitamin D'], correctIndex: 3, difficulty: 8, category: 'science' },
   { id: '2007524', text: 'The Titanic sank in which year?', options: ['1905', '1912', '1920', '1898'], correctIndex: 1, difficulty: 8, category: 'history' },
   { id: '2007525', text: 'A courtyard is 42 meters long and 28 meters wide. What is the area?', options: ['70 square meters', '140 square meters', '1,176 square meters', '1,156 square meters'], correctIndex: 2, difficulty: 8, category: 'math' },

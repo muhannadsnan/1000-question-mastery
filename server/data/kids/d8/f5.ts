@@ -58,7 +58,7 @@ export const questions = [
   { id: '2007457', text: 'What is the purpose of the ozone layer?', options: ['Keeps air warm', 'Protects from UV rays', 'Provides oxygen', 'Creates rain'], correctIndex: 1, difficulty: 8, category: 'science' },
   { id: '2007458', text: 'A rectangle has a perimeter of 92 inches. If the length is 26 inches, what is the width?', options: ['18 inches', '19 inches', '20 inches', '21 inches'], correctIndex: 2, difficulty: 8, category: 'math' },
   { id: '2007459', text: 'Which ocean is the second largest?', options: ['Indian', 'Pacific', 'Atlantic', 'Arctic'], correctIndex: 2, difficulty: 8, category: 'geography' },
-  { id: '2007460', text: 'What is 5/8 - 1/4 equal to?', options: ['4/8', '3/8', '2/8', '1/8'], correctIndex: 1, difficulty: 8, category: 'math' },
+  { id: '2007460', text: 'What do you call a dinosaur that only ate plants?', options: ['Carnivore', 'Herbivore', 'Omnivore', 'Insectivore'], correctIndex: 1, difficulty: 8, category: 'science' },
   { id: '2007461', text: 'What is the antonym of "vanish"?', options: ['Disappear', 'Hide', 'Appear', 'Leave'], correctIndex: 2, difficulty: 8, category: 'english' },
   { id: '2007462', text: 'Which blood type is called the "universal donor"?', options: ['Type A', 'Type B', 'Type AB', 'Type O'], correctIndex: 3, difficulty: 8, category: 'science' },
   { id: '2007463', text: 'Pocahontas is associated with which early American colony?', options: ['Plymouth', 'Jamestown', 'Massachusetts Bay', 'Roanoke'], correctIndex: 1, difficulty: 8, category: 'history' },

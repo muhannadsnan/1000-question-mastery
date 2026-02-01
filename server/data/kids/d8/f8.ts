@@ -26,7 +26,7 @@ export const questions = [
   { id: '2007725', text: 'A garden is 56 meters long and 38 meters wide. What is the area?', options: ['94 square meters', '188 square meters', '2,128 square meters', '2,000 square meters'], correctIndex: 2, difficulty: 8, category: 'math' },
   { id: '2007726', text: 'What is 25.75 - 17.25 equal to?', options: ['8.50', '9.50', '7.50', '10.50'], correctIndex: 0, difficulty: 8, category: 'math' },
   { id: '2007727', text: 'Which country is home to the Leaning Tower of Pisa?', options: ['Greece', 'Spain', 'Italy', 'France'], correctIndex: 2, difficulty: 8, category: 'geography' },
-  { id: '2007728', text: 'What is the antonym of "innocent"?', options: ['Pure', 'Clean', 'Guilty', 'Good'], correctIndex: 2, difficulty: 8, category: 'english' },
+  { id: '2007728', text: 'What is the largest land predator in North America?', options: ['Wolf', 'Grizzly bear', 'Mountain lion', 'Polar bear'], correctIndex: 3, difficulty: 8, category: 'science' },
   { id: '2007729', text: 'What is the term for animals that are active at night?', options: ['Diurnal', 'Nocturnal', 'Migratory', 'Hibernating'], correctIndex: 1, difficulty: 8, category: 'science' },
   { id: '2007730', text: 'A parking garage has 18 floors with 45 spaces on each floor. How many spaces are there?', options: ['800', '810', '820', '790'], correctIndex: 1, difficulty: 8, category: 'math' },
   { id: '2007731', text: 'The Carpathian Mountains are located in which continent?', options: ['Asia', 'Europe', 'North America', 'South America'], correctIndex: 1, difficulty: 8, category: 'geography' },

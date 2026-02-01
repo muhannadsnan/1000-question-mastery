@@ -75,7 +75,7 @@ export const questions = [
   { id: '5020774', text: 'Who discovered the mechanism of autophagy?', options: ['Yoshinori Ohsumi', 'Randy Schekman', 'James Rothman', 'Thomas Südhof'], correctIndex: 0, difficulty: 2, category: 'science' },
   { id: '5020775', text: 'Who directed "Minority Report"?', options: ['Steven Spielberg', 'Ridley Scott', 'Paul Verhoeven', 'James Cameron'], correctIndex: 0, difficulty: 2, category: 'movies' },
   { id: '5020776', text: 'Who painted "The Hunters in the Snow"?', options: ['Pieter Bruegel the Elder', 'Hieronymus Bosch', 'Lucas Cranach', 'Albrecht Altdorfer'], correctIndex: 0, difficulty: 2, category: 'art' },
-  { id: '5020777', text: 'Who composed "Violin Concerto in D major"?', options: ['Johannes Brahms', 'Ludwig van Beethoven', 'Pyotr Ilyich Tchaikovsky', 'Felix Mendelssohn'], correctIndex: 0, difficulty: 2, category: 'music' },
+  { id: '5020777', text: 'What was the Scopes Trial primarily about?', options: ['Teaching evolution in schools', 'Civil rights', 'Free speech', 'Separation of church and state'], correctIndex: 0, difficulty: 2, category: 'history' },
   { id: '5020778', text: 'What is the Arab League?', options: ['Regional organization of Arab states', 'Trade bloc only', 'Military alliance', 'Oil cartel'], correctIndex: 0, difficulty: 2, category: 'politics' },
   { id: '5020779', text: 'Who wrote "Capitalism, Socialism and Democracy"?', options: ['Joseph Schumpeter', 'John Maynard Keynes', 'Friedrich Hayek', 'Karl Marx'], correctIndex: 0, difficulty: 2, category: 'philosophy' },
   { id: '5020780', text: 'What is a flash crash?', options: ['Very rapid stock market decline and recovery', 'Computer failure', 'Trading halt', 'Currency collapse'], correctIndex: 0, difficulty: 2, category: 'economics' },
