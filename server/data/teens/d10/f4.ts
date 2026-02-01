@@ -1,6 +1,6 @@
 export const questions = [
   { id: '3100301', text: 'Which active volcano in Italy famously destroyed Pompeii and Herculaneum?', options: ['Mount Etna', 'Mount Vesuvius', 'Stromboli', 'Vulcano'], correctIndex: 1, difficulty: 10, category: 'geography' },
-  { id: '3100302', text: 'Who painted the ceiling of the Sistine Chapel?', options: ['Leonardo da Vinci', 'Raphael', 'Michelangelo', 'Donatello'], correctIndex: 2, difficulty: 10, category: 'history' },
+  { id: '3100302', text: 'What is the capital of Chad?', options: ['Moundou', 'N\'Djamena', 'Abeche', 'Sarh'], correctIndex: 1, difficulty: 10, category: 'history' },
   { id: '3100303', text: 'Who wrote "Catch-22", coining the phrase for a no-win situation?', options: ['Kurt Vonnegut', 'Joseph Heller', 'Norman Mailer', 'Thomas Pynchon'], correctIndex: 1, difficulty: 10, category: 'literature' },
   { id: '3100304', text: 'Which TV series features a high school chemistry teacher turned drug manufacturer?', options: ['Dexter', 'Breaking Bad', 'The Wire', 'Sons of Anarchy'], correctIndex: 1, difficulty: 10, category: 'pop-culture' },
   { id: '3100305', text: 'Which artist released "What\'s Going On" in 1971, addressing social issues?', options: ['Stevie Wonder', 'Marvin Gaye', 'Curtis Mayfield', 'Al Green'], correctIndex: 1, difficulty: 10, category: 'music' },

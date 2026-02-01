@@ -28,7 +28,7 @@ export const questions = [
   { id: '2005127', text: 'If 4 shirts cost $60, how much would 7 shirts cost?', options: ['$90', '$100', '$105', '$120'], correctIndex: 2, difficulty: 6, category: 'math' },
   { id: '2005128', text: 'What is the main adaptation of tundra animals?', options: ['Thin fur', 'Thick fur or blubber', 'Long tails', 'Large ears'], correctIndex: 1, difficulty: 6, category: 'science' },
   { id: '2005129', text: 'What is the chemical formula for table salt?', options: ['NaCl', 'H₂O', 'CO₂', 'O₂'], correctIndex: 0, difficulty: 6, category: 'science' },
-  { id: '2005130', text: 'Which ancient civilization built ziggurats?', options: ['Egyptians', 'Sumerians', 'Greeks', 'Romans'], correctIndex: 1, difficulty: 6, category: 'history' },
+  { id: '2005130', text: 'What is the capital of Antigua and Barbuda?', options: ['Codrington', 'St. John\'s', 'Parham', 'Bolans'], correctIndex: 1, difficulty: 6, category: 'history' },
   { id: '2005131', text: 'What does the prefix "trans-" mean?', options: ['Under', 'Over', 'Across', 'Within'], correctIndex: 2, difficulty: 6, category: 'vocabulary' },
   { id: '2005132', text: 'What is the volume of a cone with radius 3 cm and height 9 cm? (Use π ≈ 3.14)', options: ['28.26 cm³', '84.78 cm³', '254.34 cm³', '56.52 cm³'], correctIndex: 1, difficulty: 6, category: 'math' },
   { id: '2005133', text: 'Solve: 3 + 4² × 2 - 1', options: ['34', '56', '48', '32'], correctIndex: 0, difficulty: 6, category: 'math' },

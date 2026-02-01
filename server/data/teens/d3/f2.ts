@@ -50,7 +50,7 @@ export const questions = [
   { id: '3030149', text: 'In Genshin Impact, what is resin used for?', options: ['Building', 'Claiming rewards from bosses/domains', 'Cooking', 'Fishing'], correctIndex: 1, difficulty: 3, category: 'gaming' },
   { id: '3030150', text: 'What does "weeb" mean?', options: ['Web developer', 'Someone very into anime/Japanese culture', 'A streamer', 'A gamer'], correctIndex: 1, difficulty: 3, category: 'streaming' },
   { id: '3030151', text: 'In "Vinland Saga," what historical period is it set in?', options: ['Ancient Rome', 'Viking Age', 'Medieval times', 'Modern day'], correctIndex: 1, difficulty: 3, category: 'anime' },
-  { id: '3030152', text: 'Who released "Laugh Now Cry Later"?', options: ['Travis Scott', 'Drake ft. Lil Durk', 'Post Malone', 'J. Cole'], correctIndex: 1, difficulty: 3, category: 'music' },
+  { id: '3030152', text: 'Who released Life Is Good?', options: ['Future', 'Drake', 'Both', 'Migos'], correctIndex: 2, difficulty: 3, category: 'music' },
   { id: '3030153', text: 'In Valorant, what does "one-tap" mean?', options: ['Tapping once', 'Killing with one headshot', 'Pressing one button', 'One round'], correctIndex: 1, difficulty: 3, category: 'gaming' },
   { id: '3030154', text: 'What is "slice of life" anime?', options: ['Cooking shows', 'Everyday life scenarios/mundane activities', 'Action only', 'Fantasy'], correctIndex: 1, difficulty: 3, category: 'streaming' },
   { id: '3030155', text: 'In "Mob Psycho 100," what is Mob trying to control?', options: ['His anger', 'His psychic powers', 'His grades', 'His money'], correctIndex: 1, difficulty: 3, category: 'anime' },

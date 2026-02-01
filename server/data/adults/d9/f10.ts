@@ -4,7 +4,7 @@ export const questions = [
   { id: '4090903', text: 'Which treaty ended World War I with Germany?', options: ['Treaty of Paris', 'Treaty of Versailles', 'Treaty of Vienna', 'Treaty of Berlin'], correctIndex: 1, difficulty: 9, category: 'history' },
   { id: '4090904', text: 'What is "deterrence" in international relations?', options: ['Prevention', 'Discouraging attack through threat of retaliation', 'Diplomatic negotiations', 'Economic sanctions'], correctIndex: 1, difficulty: 9, category: 'politics' },
   { id: '4090905', text: 'Which author wrote "Jane Eyre"?', options: ['Emily Brontë', 'Charlotte Brontë', 'Anne Brontë', 'George Eliot'], correctIndex: 1, difficulty: 9, category: 'literature' },
-  { id: '4090906', text: 'Who painted "The Birth of Venus"?', options: ['Leonardo da Vinci', 'Sandro Botticelli', 'Raphael', 'Michelangelo'], correctIndex: 1, difficulty: 9, category: 'art' },
+  { id: '4090906', text: 'What is the Riemann hypothesis about?', options: ['Geometry', 'Prime numbers', 'Calculus', 'Topology'], correctIndex: 1, difficulty: 9, category: 'art' },
   { id: '4090907', text: 'What is the Doppler effect?', options: ['Sound speed', 'Change in frequency due to motion', 'Echo phenomenon', 'Wave interference'], correctIndex: 1, difficulty: 9, category: 'science' },
   { id: '4090908', text: 'Which philosopher wrote "On the Genealogy of Morality"?', options: ['Arthur Schopenhauer', 'Friedrich Nietzsche', 'Georg Hegel', 'Søren Kierkegaard'], correctIndex: 1, difficulty: 9, category: 'philosophy' },
   { id: '4090909', text: 'Which film is considered the first blockbuster?', options: ['Star Wars', 'Jaws', 'The Godfather', 'E.T.'], correctIndex: 1, difficulty: 9, category: 'movies' },

@@ -62,7 +62,7 @@ export const questions = [
   { id: '4080861', text: 'The Ob River flows into which body of water?', options: ['Caspian Sea', 'Arctic Ocean', 'Pacific Ocean', 'Baltic Sea'], correctIndex: 1, difficulty: 8, category: 'geography' },
   { id: '4080862', text: 'Who composed "Finlandia"?', options: ['Edvard Grieg', 'Jean Sibelius', 'Carl Nielsen', 'Johan Svendsen'], correctIndex: 1, difficulty: 8, category: 'music' },
   { id: '4080863', text: 'What is the problem of evil in philosophy of religion?', options: ['Sin concept', 'Why evil exists if God is good and omnipotent', 'Moral relativism', 'Afterlife question'], correctIndex: 1, difficulty: 8, category: 'philosophy' },
-  { id: '4080864', text: 'The Boer Wars were fought in which modern-day country?', options: ['Zimbabwe', 'South Africa', 'Namibia', 'Botswana'], correctIndex: 1, difficulty: 8, category: 'history' },
+  { id: '4080864', text: 'What is 2 cubed?', options: ['0', '8', '16', '24'], correctIndex: 1, difficulty: 8, category: 'history' },
   { id: '4080865', text: 'Who painted "The Potato Eaters"?', options: ['Jean-François Millet', 'Vincent van Gogh', 'Gustave Courbet', 'Honoré Daumier'], correctIndex: 1, difficulty: 8, category: 'art' },
   { id: '4080866', text: 'What is a neutron star?', options: ['Normal star', 'Extremely dense collapsed star', 'Gas giant', 'Dwarf planet'], correctIndex: 1, difficulty: 8, category: 'science' },
   { id: '4080867', text: 'What is the concept of "darshan" in Hinduism?', options: ['Meditation', 'Seeing and being seen by deity', 'Pilgrimage', 'Fasting'], correctIndex: 1, difficulty: 8, category: 'religion' },

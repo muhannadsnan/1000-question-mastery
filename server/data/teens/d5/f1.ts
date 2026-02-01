@@ -1,7 +1,7 @@
 export const questions = [
   { id: '3050001', text: 'Which legendary guitarist was known as "Slowhand"?', options: ['Jeff Beck', 'Eric Clapton', 'Jimmy Page', 'Keith Richards'], correctIndex: 1, difficulty: 5, category: 'music' },
   { id: '3050002', text: 'What game engine was originally developed for Quake?', options: ['id Tech', 'Source Engine', 'Unreal Engine', 'GoldSrc'], correctIndex: 0, difficulty: 5, category: 'gaming' },
-  { id: '3050003', text: 'Which film won the Academy Award for Best Picture in 1994?', options: ['Pulp Fiction', 'The Shawshank Redemption', 'Forrest Gump', 'The Lion King'], correctIndex: 2, difficulty: 5, category: 'movies' },
+  { id: '3050003', text: 'What is the capital of Burundi?', options: ['Bujumbura', 'Gitega', 'Muyinga', 'Ngozi'], correctIndex: 1, difficulty: 5, category: 'movies' },
   { id: '3050004', text: 'Who holds the record for most career rushing yards in NFL history?', options: ['Walter Payton', 'Emmitt Smith', 'Barry Sanders', 'Adrian Peterson'], correctIndex: 1, difficulty: 5, category: 'sports' },
   { id: '3050005', text: 'What is the smallest bone in the human body?', options: ['Anvil', 'Hammer', 'Stapes', 'Phalange'], correctIndex: 2, difficulty: 5, category: 'science' },
   { id: '3050006', text: 'Which hip-hop producer founded Death Row Records?', options: ['P. Diddy', 'Suge Knight', 'Russell Simmons', 'Jay-Z'], correctIndex: 1, difficulty: 5, category: 'music' },
@@ -86,7 +86,7 @@ export const questions = [
   { id: '3050085', text: 'What type of blood is considered the universal donor?', options: ['A', 'B', 'AB', 'O negative'], correctIndex: 3, difficulty: 5, category: 'science' },
   { id: '3050086', text: 'Which rapper is known for the album "good kid, m.A.A.d city"?', options: ['J. Cole', 'Kendrick Lamar', 'Drake', 'Tyler, the Creator'], correctIndex: 1, difficulty: 5, category: 'music' },
   { id: '3050087', text: 'What engine powers Metal Gear Solid V?', options: ['Fox Engine', 'Unreal Engine', 'Frostbite', 'MT Framework'], correctIndex: 0, difficulty: 5, category: 'gaming' },
-  { id: '3050088', text: 'Which film won the Academy Award for Best Picture in 2021?', options: ['Mank', 'Nomadland', 'The Father', 'Promising Young Woman'], correctIndex: 1, difficulty: 5, category: 'movies' },
+  { id: '3050088', text: 'What is 16 squared?', options: ['254', '256', '258', '260'], correctIndex: 1, difficulty: 5, category: 'movies' },
   { id: '3050089', text: 'What is the record for most wins in a single F1 season?', options: ['13', '15', '19', '21'], correctIndex: 2, difficulty: 5, category: 'sports' },
   { id: '3050090', text: 'What is the name of the nearest star to our Sun?', options: ['Alpha Centauri A', 'Proxima Centauri', 'Barnard\'s Star', 'Sirius'], correctIndex: 1, difficulty: 5, category: 'science' },
   { id: '3050091', text: 'Which rock band released "Physical Graffiti" in 1975?', options: ['The Rolling Stones', 'Led Zeppelin', 'Deep Purple', 'Black Sabbath'], correctIndex: 1, difficulty: 5, category: 'music' },

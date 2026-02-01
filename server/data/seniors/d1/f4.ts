@@ -29,7 +29,7 @@ export const questions = [
   { id: '5010328', text: 'Which British author created the spy George Smiley?', options: ['Ian Fleming', 'John le Carre', 'Graham Greene', 'Len Deighton'], correctIndex: 1, difficulty: 1, category: 'literature' },
   { id: '5010329', text: 'What economic system is based on private ownership and free markets?', options: ['Socialism', 'Capitalism', 'Communism', 'Mercantilism'], correctIndex: 1, difficulty: 1, category: 'economics' },
   { id: '5010330', text: 'Which ethical theory judges actions by their consequences?', options: ['Deontology', 'Utilitarianism', 'Virtue ethics', 'Moral relativism'], correctIndex: 1, difficulty: 1, category: 'philosophy' },
-  { id: '5010331', text: 'What unit measures electrical resistance?', options: ['Ampere', 'Ohm', 'Volt', 'Watt'], correctIndex: 1, difficulty: 1, category: 'science' },
+  { id: '5010331', text: 'What is the hardest mineral?', options: ['Quartz', 'Diamond', 'Ruby', 'Sapphire'], correctIndex: 1, difficulty: 1, category: 'science' },
   { id: '5010332', text: 'Which emperor divided the Roman Empire into East and West?', options: ['Constantine', 'Diocletian', 'Theodosius', 'Hadrian'], correctIndex: 1, difficulty: 1, category: 'history' },
   { id: '5010333', text: 'What musical form features a recurring theme alternating with contrasting sections?', options: ['Sonata', 'Rondo', 'Fugue', 'Canon'], correctIndex: 1, difficulty: 1, category: 'music' },
   { id: '5010334', text: 'Which Southeast Asian country was formerly called Burma?', options: ['Thailand', 'Myanmar', 'Cambodia', 'Laos'], correctIndex: 1, difficulty: 1, category: 'geography' },

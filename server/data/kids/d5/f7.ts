@@ -1,5 +1,5 @@
 export const questions = [
-  { id: '2004601', text: 'What is 14/19 + 4/19?', options: ['18/38', '18/19', '10/19', '10/38'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '2004601', text: 'What is the capital of Grenada?', options: ['Gouyave', 'St. George\'s', 'Grenville', 'Sauteurs'], correctIndex: 1, difficulty: 5, category: 'math' },
   { id: '2004602', text: 'A school has 720 students. 5/9 walk to school. How many students walk to school?', options: ['395', '398', '400', '402'], correctIndex: 2, difficulty: 5, category: 'math' },
   { id: '2004603', text: 'What is 27% of 900?', options: ['241', '242', '243', '244'], correctIndex: 2, difficulty: 5, category: 'math' },
   { id: '2004604', text: 'The Kamchatka Mountains are located in which country?', options: ['China', 'Japan', 'Russia', 'North Korea'], correctIndex: 2, difficulty: 5, category: 'geography' },
@@ -82,7 +82,7 @@ export const questions = [
   { id: '2004681', text: 'Who invented the ATM (Automatic Teller Machine)?', options: ['John Shepherd-Barron', 'Luther Simjian', 'Don Wetzel', 'James Goodfellow'], correctIndex: 0, difficulty: 5, category: 'science' },
   { id: '2004682', text: 'A rectangle has a length of 12 cm and width of 8 cm. What is its area?', options: ['40 sq cm', '80 sq cm', '96 sq cm', '100 sq cm'], correctIndex: 2, difficulty: 5, category: 'math' },
   { id: '2004683', text: 'How many ounces are in 7 pounds?', options: ['98', '105', '112', '119'], correctIndex: 2, difficulty: 5, category: 'math' },
-  { id: '2004684', text: 'What is 73% of 800?', options: ['582', '583', '584', '585'], correctIndex: 2, difficulty: 5, category: 'math' },
+  { id: '2004684', text: 'What is the capital of Ghana?', options: ['Kumasi', 'Accra', 'Tamale', 'Takoradi'], correctIndex: 1, difficulty: 5, category: 'math' },
   { id: '2004685', text: 'A gym has 1100 members. 8/11 attend regularly. How many members attend regularly?', options: ['795', '798', '800', '802'], correctIndex: 2, difficulty: 5, category: 'math' },
   { id: '2004686', text: 'The Cardamom Hills are located in which country?', options: ['Sri Lanka', 'Pakistan', 'India', 'Nepal'], correctIndex: 2, difficulty: 5, category: 'geography' },
   { id: '2004687', text: 'What is 46/70 - 38/70?', options: ['8/70', '84/70', '8/140', '84/140'], correctIndex: 0, difficulty: 5, category: 'math' },

@@ -39,7 +39,7 @@ export const questions = [
   { id: '2007938', text: 'What is 9.75 × 12 equal to?', options: ['115.00', '116.00', '117.00', '118.00'], correctIndex: 2, difficulty: 8, category: 'math' },
   { id: '2007939', text: 'Which island nation is located southeast of Australia?', options: ['Fiji', 'Tonga', 'New Zealand', 'Samoa'], correctIndex: 2, difficulty: 8, category: 'geography' },
   { id: '2007940', text: 'A rectangle has an area of 504 square feet. If the width is 18 feet, what is the length?', options: ['26 feet', '27 feet', '28 feet', '29 feet'], correctIndex: 2, difficulty: 8, category: 'math' },
-  { id: '2007941', text: 'What is the antonym of "generous"?', options: ['Kind', 'Giving', 'Selfish', 'Helpful'], correctIndex: 2, difficulty: 8, category: 'english' },
+  { id: '2007941', text: 'What is the capital of Ireland?', options: ['Cork', 'Dublin', 'Galway', 'Belfast'], correctIndex: 1, difficulty: 8, category: 'english' },
   { id: '2007942', text: 'A play starts at 8:10 PM. If you need to arrive 20 minutes early and the drive is 45 minutes, when should you leave?', options: ['6:55 PM', '7:05 PM', '7:15 PM', '6:45 PM'], correctIndex: 1, difficulty: 8, category: 'math' },
   { id: '2007943', text: 'What is the largest internal organ in the human body?', options: ['Heart', 'Lungs', 'Liver', 'Brain'], correctIndex: 2, difficulty: 8, category: 'science' },
   { id: '2007944', text: 'The Parthenon is an ancient temple in which country?', options: ['Italy', 'Turkey', 'Greece', 'Egypt'], correctIndex: 2, difficulty: 8, category: 'geography' },

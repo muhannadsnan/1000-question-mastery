@@ -83,7 +83,7 @@ export const questions = [
   { id: '2001182', text: 'Which bird cannot fly but is an excellent swimmer?', options: ['Eagle', 'Sparrow', 'Penguin', 'Hawk'], correctIndex: 2, difficulty: 2, category: 'animals' },
   { id: '2001183', text: 'Which state is directly south of Canada and north of Ohio?', options: ['Indiana', 'Michigan', 'Wisconsin', 'Minnesota'], correctIndex: 1, difficulty: 2, category: 'geography' },
   { id: '2001184', text: 'What is 1/4 of 48?', options: ['10', '11', '12', '14'], correctIndex: 2, difficulty: 2, category: 'math' },
-  { id: '2001185', text: 'What is 49 + 43?', options: ['82', '92', '102', '112'], correctIndex: 1, difficulty: 2, category: 'math' },
+  { id: '2001185', text: 'What is 7 plus 12?', options: ['18', '19', '20', '21'], correctIndex: 1, difficulty: 2, category: 'math' },
   { id: '2001186', text: 'What is 54 divided by 6?', options: ['7', '8', '9', '10'], correctIndex: 2, difficulty: 2, category: 'math' },
   { id: '2001187', text: 'What is the opposite of "innocent"?', options: ['Pure', 'Clean', 'Guilty', 'Good'], correctIndex: 2, difficulty: 2, category: 'vocabulary' },
   { id: '2001188', text: 'Which animal is known as the "King of the Jungle"?', options: ['Tiger', 'Elephant', 'Lion', 'Gorilla'], correctIndex: 2, difficulty: 2, category: 'animals' },

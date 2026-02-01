@@ -27,7 +27,7 @@ export const questions = [
   { id: '2005326', text: 'What is 10 1/3 - 7 2/3?', options: ['2 2/3', '3 1/3', '2 1/3', '3'], correctIndex: 0, difficulty: 6, category: 'math' },
   { id: '2005327', text: 'If a car travels 75 miles on 3 gallons of gas, how far can it travel on 8 gallons?', options: ['175 miles', '200 miles', '225 miles', '250 miles'], correctIndex: 1, difficulty: 6, category: 'math' },
   { id: '2005328', text: 'What is the main characteristic of a Mediterranean climate?', options: ['Cold and snowy', 'Hot and dry summers, mild wet winters', 'Hot and humid year-round', 'Freezing temperatures'], correctIndex: 1, difficulty: 6, category: 'science' },
-  { id: '2005329', text: 'What is the chemical formula for methane?', options: ['CO₂', 'CH₄', 'H₂O', 'O₂'], correctIndex: 1, difficulty: 6, category: 'science' },
+  { id: '2005329', text: 'What is 11 squared?', options: ['119', '121', '123', '125'], correctIndex: 1, difficulty: 6, category: 'science' },
   { id: '2005330', text: 'Which ancient civilization is known for its aqueducts?', options: ['Greeks', 'Egyptians', 'Romans', 'Persians'], correctIndex: 2, difficulty: 6, category: 'history' },
   { id: '2005331', text: 'What does the prefix "auto-" mean?', options: ['Other', 'Self', 'Many', 'One'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
   { id: '2005332', text: 'What is the slant height of a cone with radius 3 cm and height 4 cm?', options: ['5 cm', '7 cm', '6 cm', '8 cm'], correctIndex: 0, difficulty: 6, category: 'math' },

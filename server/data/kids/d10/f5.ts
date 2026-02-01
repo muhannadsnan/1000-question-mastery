@@ -7,7 +7,7 @@ export const questions = [
   { id: '2009406', text: 'A jar contains 60 marbles: 20 red, 25 blue, and 15 green. What fraction are NOT blue?', options: ['5/12', '7/12', '1/2', '2/3'], correctIndex: 1, difficulty: 10, category: 'math' },
   { id: '2009407', text: 'Which president created the Peace Corps?', options: ['Dwight Eisenhower', 'John F. Kennedy', 'Lyndon Johnson', 'Richard Nixon'], correctIndex: 1, difficulty: 10, category: 'presidents' },
   { id: '2009408', text: 'What is the oldest tennis tournament in the world?', options: ['US Open', 'French Open', 'Wimbledon', 'Australian Open'], correctIndex: 2, difficulty: 10, category: 'sports' },
-  { id: '2009409', text: 'Who wrote "Wonder"?', options: ['R.J. Palacio', 'Rebecca Stead', 'Sharon Draper', 'Jacqueline Woodson'], correctIndex: 0, difficulty: 10, category: 'books' },
+  { id: '2009409', text: 'What is quantum entanglement?', options: ['Chemistry', 'Particle correlation', 'Biology', 'Geology'], correctIndex: 1, difficulty: 10, category: 'books' },
   { id: '2009410', text: 'What is the largest woodwind instrument?', options: ['Flute', 'Clarinet', 'Bassoon', 'Oboe'], correctIndex: 2, difficulty: 10, category: 'music' },
   { id: '2009411', text: 'What is so fragile that saying its name breaks it?', options: ['Glass', 'Trust', 'Silence', 'Ice'], correctIndex: 2, difficulty: 10, category: 'brain-teaser' },
   { id: '2009412', text: 'How many seconds are in 4 hours?', options: ['14,000', '14,400', '15,200', '16,000'], correctIndex: 1, difficulty: 10, category: 'math' },

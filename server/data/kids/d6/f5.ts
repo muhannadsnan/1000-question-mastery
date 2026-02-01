@@ -27,7 +27,7 @@ export const questions = [
   { id: '2005426', text: 'What is 12 1/4 - 9 3/4?', options: ['2 1/2', '3', '2 3/4', '2 1/4'], correctIndex: 0, difficulty: 6, category: 'math' },
   { id: '2005427', text: 'If a printer prints 15 pages in 3 minutes, how many pages can it print in 10 minutes?', options: ['45 pages', '50 pages', '40 pages', '55 pages'], correctIndex: 1, difficulty: 6, category: 'math' },
   { id: '2005428', text: 'What is the name for animals that can live both on land and in water?', options: ['Mammals', 'Reptiles', 'Amphibians', 'Fish'], correctIndex: 2, difficulty: 6, category: 'science' },
-  { id: '2005429', text: 'What is the chemical formula for ammonia?', options: ['NH₃', 'NO₂', 'N₂O', 'NaCl'], correctIndex: 0, difficulty: 6, category: 'science' },
+  { id: '2005429', text: 'What is 20 squared?', options: ['398', '400', '402', '404'], correctIndex: 1, difficulty: 6, category: 'science' },
   { id: '2005430', text: 'Which ancient civilization built the city of Tenochtitlan?', options: ['Incas', 'Mayans', 'Aztecs', 'Olmecs'], correctIndex: 2, difficulty: 6, category: 'history' },
   { id: '2005431', text: 'What does the prefix "multi-" mean?', options: ['One', 'Two', 'Few', 'Many'], correctIndex: 3, difficulty: 6, category: 'vocabulary' },
   { id: '2005432', text: 'What is the height of a triangle with area 60 cm² and base 15 cm?', options: ['4 cm', '8 cm', '10 cm', '6 cm'], correctIndex: 1, difficulty: 6, category: 'math' },

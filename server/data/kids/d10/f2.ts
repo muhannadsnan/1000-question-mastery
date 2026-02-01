@@ -97,6 +97,6 @@ export const questions = [
   { id: '2009196', text: 'A water tank fills at 3 gallons per minute and drains at 1 gallon per minute. If it starts empty, how long to fill a 100-gallon tank?', options: ['33 minutes', '50 minutes', '75 minutes', '100 minutes'], correctIndex: 1, difficulty: 10, category: 'math' },
   { id: '2009197', text: 'Who was the first president to be impeached?', options: ['Richard Nixon', 'Andrew Johnson', 'Bill Clinton', 'Donald Trump'], correctIndex: 1, difficulty: 10, category: 'presidents' },
   { id: '2009198', text: 'How many points is a touchdown worth in American football?', options: ['3', '5', '6', '7'], correctIndex: 2, difficulty: 10, category: 'sports' },
-  { id: '2009199', text: 'Who wrote "Hatchet"?', options: ['Gary Paulsen', 'Jack London', 'Jean Craighead George', 'Scott O\'Dell'], correctIndex: 0, difficulty: 10, category: 'books' },
+  { id: '2009199', text: 'What is the capital of Belarus?', options: ['Gomel', 'Minsk', 'Brest', 'Grodno'], correctIndex: 1, difficulty: 10, category: 'books' },
   { id: '2009200', text: 'Who painted "Girl with a Pearl Earring"?', options: ['Rembrandt', 'Vermeer', 'Rubens', 'Caravaggio'], correctIndex: 1, difficulty: 10, category: 'art' },
 ]

@@ -52,7 +52,7 @@ export const questions = [
   { id: '1005751', text: 'What does enormous mean?', options: ['Tiny', 'Very big', 'Normal', 'Small'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
   { id: '1005752', text: 'What does miniature mean?', options: ['Giant', 'Normal', 'Very small', 'Average'], correctIndex: 2, difficulty: 6, category: 'vocabulary' },
   { id: '1005753', text: 'What does rapid mean?', options: ['Slow', 'Very fast', 'Normal', 'Steady'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
-  { id: '1005754', text: 'What does ancient mean?', options: ['New', 'Modern', 'Very old', 'Recent'], correctIndex: 2, difficulty: 6, category: 'vocabulary' },
+  { id: '1005754', text: 'What is the capital of Guyana?', options: ['Linden', 'Georgetown', 'New Amsterdam', 'Anna Regina'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
   { id: '1005755', text: 'What does freezing mean?', options: ['Hot', 'Warm', 'Very cold', 'Cool'], correctIndex: 2, difficulty: 6, category: 'vocabulary' },
   { id: '1005756', text: 'What is the opposite of smile?', options: ['Grin', 'Laugh', 'Frown', 'Giggle'], correctIndex: 2, difficulty: 6, category: 'opposites' },
   { id: '1005757', text: 'What is the opposite of whisper?', options: ['Talk', 'Speak', 'Shout', 'Murmur'], correctIndex: 2, difficulty: 6, category: 'opposites' },

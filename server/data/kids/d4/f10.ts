@@ -32,7 +32,7 @@ export const questions = [
   { id: '2003931', text: 'The Battle of Yorktown ended which war?', options: ['Civil War', 'War of 1812', 'Revolutionary War', 'French and Indian War'], correctIndex: 2, difficulty: 4, category: 'history' },
   { id: '2003932', text: 'What is the area of a rectangle 68 cm by 46 cm?', options: ['3118 sq cm', '3128 sq cm', '3138 sq cm', '3148 sq cm'], correctIndex: 1, difficulty: 4, category: 'math' },
   { id: '2003933', text: 'What is 87.8 - 9.9?', options: ['77.1', '77.9', '78.1', '78.9'], correctIndex: 1, difficulty: 4, category: 'math' },
-  { id: '2003934', text: 'What is the capital of Uruguay?', options: ['Salto', 'Montevideo', 'Ciudad de la Costa', 'Paysandu'], correctIndex: 1, difficulty: 4, category: 'geography' },
+  { id: '2003934', text: 'What is 9 times 7?', options: ['61', '63', '65', '67'], correctIndex: 1, difficulty: 4, category: 'geography' },
   { id: '2003935', text: 'What is 64 x 11?', options: ['694', '704', '714', '724'], correctIndex: 1, difficulty: 4, category: 'math' },
   { id: '2003936', text: 'What are the first leaves of a seedling called?', options: ['True leaves', 'Cotyledons', 'Petals', 'Sepals'], correctIndex: 1, difficulty: 4, category: 'science' },
   { id: '2003937', text: 'In "She initially disagreed but later agreed," what is "initially"?', options: ['Adjective', 'Adverb', 'Preposition', 'Noun'], correctIndex: 1, difficulty: 4, category: 'language' },
@@ -96,7 +96,7 @@ export const questions = [
   { id: '2003995', text: 'What building did the Constitutional Convention meet in?', options: ['White House', 'Independence Hall', 'Capitol Building', 'Faneuil Hall'], correctIndex: 1, difficulty: 4, category: 'history' },
   { id: '2003996', text: 'What is the area of a triangle with base 44 cm and height 40 cm?', options: ['880 sq cm', '1760 sq cm', '84 sq cm', '168 sq cm'], correctIndex: 0, difficulty: 4, category: 'math' },
   { id: '2003997', text: 'What is 95.8 - 9.9?', options: ['85.1', '85.9', '86.1', '86.9'], correctIndex: 1, difficulty: 4, category: 'math' },
-  { id: '2003998', text: 'What is the capital of Senegal?', options: ['Saint-Louis', 'Dakar', 'Thies', 'Kaolack'], correctIndex: 1, difficulty: 4, category: 'geography' },
+  { id: '2003998', text: 'What is 3 times 12?', options: ['34', '36', '38', '40'], correctIndex: 1, difficulty: 4, category: 'geography' },
   { id: '2003999', text: 'What is 84 x 11?', options: ['914', '924', '934', '944'], correctIndex: 1, difficulty: 4, category: 'math' },
   { id: '2004000', text: 'In "She honestly admitted her mistake," what is "honestly"?', options: ['Adjective', 'Adverb', 'Preposition', 'Noun'], correctIndex: 1, difficulty: 4, category: 'language' },
 ]

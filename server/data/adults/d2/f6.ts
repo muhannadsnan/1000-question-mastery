@@ -17,7 +17,7 @@ export const questions = [
   { id: '4020516', text: 'Who is the lead vocalist of Foo Fighters?', options: ['Dave Grohl', 'Taylor Hawkins', 'Pat Smear', 'Nate Mendel'], correctIndex: 0, difficulty: 2, category: 'music' },
   { id: '4020517', text: 'What is the capital of Angola?', options: ['Luanda', 'Benguela', 'Huambo', 'Lobito'], correctIndex: 0, difficulty: 2, category: 'geography' },
   { id: '4020518', text: 'Which movie features the character John McClane?', options: ['Die Hard', 'Lethal Weapon', 'The Expendables', 'Rambo'], correctIndex: 0, difficulty: 2, category: 'movies' },
-  { id: '4020519', text: 'What is the smallest unit of matter?', options: ['Atom', 'Molecule', 'Cell', 'Electron'], correctIndex: 0, difficulty: 2, category: 'science' },
+  { id: '4020519', text: 'What is 1 plus 13?', options: ['13', '14', '15', '16'], correctIndex: 1, difficulty: 2, category: 'science' },
   { id: '4020520', text: 'Who wrote "Educated"?', options: ['Tara Westover', 'Michelle Obama', 'Malala Yousafzai', 'Chimamanda Ngozi Adichie'], correctIndex: 0, difficulty: 2, category: 'literature' },
   { id: '4020521', text: 'What type of wine is Champagne?', options: ['Sparkling', 'Red', 'White', 'Rose'], correctIndex: 0, difficulty: 2, category: 'food' },
   { id: '4020522', text: 'What is the capital of Madagascar?', options: ['Antananarivo', 'Toamasina', 'Antsirabe', 'Mahajanga'], correctIndex: 0, difficulty: 2, category: 'geography' },

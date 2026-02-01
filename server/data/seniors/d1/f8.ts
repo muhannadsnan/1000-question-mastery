@@ -81,7 +81,7 @@ export const questions = [
   { id: '5010780', text: 'Which Aztec god demanded human sacrifice and was associated with the sun?', options: ['Quetzalcoatl', 'Huitzilopochtli', 'Tlaloc', 'Tezcatlipoca'], correctIndex: 1, difficulty: 1, category: 'mythology' },
   { id: '5010781', text: 'What ancient Roman structure supplied water to cities?', options: ['Colosseum', 'Aqueduct', 'Forum', 'Amphitheater'], correctIndex: 1, difficulty: 1, category: 'architecture' },
   { id: '5010782', text: 'Which procedure uses electricity to restore normal heart rhythm?', options: ['Angioplasty', 'Defibrillation', 'Pacemaker', 'Bypass surgery'], correctIndex: 1, difficulty: 1, category: 'medicine' },
-  { id: '5010783', text: 'What is the largest freshwater lake by surface area?', options: ['Lake Victoria', 'Lake Superior', 'Lake Baikal', 'Lake Huron'], correctIndex: 1, difficulty: 1, category: 'geography' },
+  { id: '5010783', text: 'In what year did WWII end?', options: ['1943', '1944', '1945', '1946'], correctIndex: 2, difficulty: 1, category: 'geography' },
   { id: '5010784', text: 'Which Stoic philosopher was a Roman emperor?', options: ['Seneca', 'Marcus Aurelius', 'Epictetus', 'Cicero'], correctIndex: 1, difficulty: 1, category: 'philosophy' },
   { id: '5010785', text: 'What Mexican sauce contains chocolate and chili peppers?', options: ['Salsa verde', 'Mole', 'Guacamole', 'Pico de gallo'], correctIndex: 1, difficulty: 1, category: 'food' },
   { id: '5010786', text: 'Which French composer wrote "Prelude to the Afternoon of a Faun"?', options: ['Maurice Ravel', 'Claude Debussy', 'Gabriel Faure', 'Erik Satie'], correctIndex: 1, difficulty: 1, category: 'music' },

@@ -4,7 +4,7 @@ export const questions = [
   { id: '4010803', text: 'Who played the main character in "Django Unchained"?', options: ['Will Smith', 'Jamie Foxx', 'Denzel Washington', 'Samuel L. Jackson'], correctIndex: 1, difficulty: 1, category: 'movies' },
   { id: '4010804', text: 'What does "TGIF" celebrate?', options: ['Thursday', 'Friday', 'Weekend', 'Monday'], correctIndex: 1, difficulty: 1, category: 'general' },
   { id: '4010805', text: 'Who sang "7 Rings"?', options: ['Doja Cat', 'Ariana Grande', 'Cardi B', 'Nicki Minaj'], correctIndex: 1, difficulty: 1, category: 'music' },
-  { id: '4010806', text: 'What sport does Novak Djokovic play?', options: ['Golf', 'Tennis', 'Badminton', 'Squash'], correctIndex: 1, difficulty: 1, category: 'sports' },
+  { id: '4010806', text: 'What is 6 plus 11?', options: ['16', '17', '18', '19'], correctIndex: 1, difficulty: 1, category: 'sports' },
   { id: '4010807', text: 'What is 19 x 5?', options: ['85', '90', '95', '100'], correctIndex: 2, difficulty: 1, category: 'general' },
   { id: '4010808', text: 'What is traditionally used to make soy sauce?', options: ['Rice', 'Soybeans', 'Wheat only', 'Corn'], correctIndex: 1, difficulty: 1, category: 'food' },
   { id: '4010809', text: 'What is the capital of Kenya?', options: ['Lagos', 'Nairobi', 'Addis Ababa', 'Dar es Salaam'], correctIndex: 1, difficulty: 1, category: 'geography' },

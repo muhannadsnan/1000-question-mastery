@@ -77,7 +77,7 @@ export const questions = [
   { id: '2009776', text: 'If the sum of two numbers is 50 and their product is 576, what are the numbers?', options: ['16 and 34', '18 and 32', '20 and 30', '24 and 26'], correctIndex: 1, difficulty: 10, category: 'math' },
   { id: '2009777', text: 'What president created NASA?', options: ['Harry Truman', 'Dwight Eisenhower', 'John F. Kennedy', 'Lyndon Johnson'], correctIndex: 1, difficulty: 10, category: 'presidents' },
   { id: '2009778', text: 'How many innings are in a regulation professional baseball game?', options: ['7', '8', '9', '10'], correctIndex: 2, difficulty: 10, category: 'sports' },
-  { id: '2009779', text: 'Who wrote "Bud, Not Buddy"?', options: ['Christopher Paul Curtis', 'Walter Dean Myers', 'Jacqueline Woodson', 'Sharon Draper'], correctIndex: 0, difficulty: 10, category: 'books' },
+  { id: '2009779', text: 'What is the abc conjecture?', options: ['Geometry', 'Number theory', 'Topology', 'Algebra'], correctIndex: 1, difficulty: 10, category: 'books' },
   { id: '2009780', text: 'What is a key signature in music?', options: ['The first note of a song', 'Sharps or flats at the beginning', 'The tempo marking', 'The dynamics marking'], correctIndex: 1, difficulty: 10, category: 'music' },
   { id: '2009781', text: 'How do you make the number 7 even without addition, subtraction, multiplication, or division?', options: ['Write it backwards', 'Remove the S', 'Add a zero', 'Double it'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
   { id: '2009782', text: 'What is 2 to the power of 10?', options: ['512', '1000', '1024', '2000'], correctIndex: 2, difficulty: 10, category: 'math' },

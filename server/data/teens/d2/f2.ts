@@ -95,7 +95,7 @@ export const questions = [
   { id: '3020194', text: 'In "Assassination Classroom," who is Koro-sensei?', options: ['A student', 'An alien teacher', 'A robot', 'A ghost'], correctIndex: 1, difficulty: 2, category: 'anime' },
   { id: '3020195', text: 'Which artist released "The Box"?', options: ['DaBaby', 'Roddy Ricch', 'Lil Baby', 'Pop Smoke'], correctIndex: 1, difficulty: 2, category: 'music' },
   { id: '3020196', text: 'What does "content creator" mean?', options: ['Consumer', 'Someone who makes videos, posts, or other media', 'Moderator', 'Viewer'], correctIndex: 1, difficulty: 2, category: 'streaming' },
-  { id: '3020197', text: 'In Splatoon, what do you shoot?', options: ['Bullets', 'Ink', 'Water', 'Paint'], correctIndex: 1, difficulty: 2, category: 'gaming' },
+  { id: '3020197', text: 'Who was the Sun King of France?', options: ['Louis XIII', 'Louis XIV', 'Louis XV', 'Louis XVI'], correctIndex: 1, difficulty: 2, category: 'gaming' },
   { id: '3020198', text: 'Which anime is about pirates with Devil Fruit powers?', options: ['Naruto', 'Bleach', 'One Piece', 'Dragon Ball'], correctIndex: 2, difficulty: 2, category: 'anime' },
   { id: '3020199', text: 'Who released "Mood"?', options: ['24kGoldn ft. iann dior', 'Juice WRLD', 'Post Malone', 'The Weeknd'], correctIndex: 0, difficulty: 2, category: 'music' },
   { id: '3020200', text: 'What does "follow" mean on social media?', options: ['Walk behind someone', 'Subscribe to see someone\'s content', 'Block someone', 'Report'], correctIndex: 1, difficulty: 2, category: 'streaming' },

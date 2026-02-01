@@ -39,7 +39,7 @@ export const questions = [
   { id: '2008438', text: 'What does the idiom "seeing red" mean?', options: ['Wearing red', 'Being very angry', 'Traffic lights', 'Seeing colors'], correctIndex: 1, difficulty: 9, category: 'language' },
   { id: '2008439', text: 'Apollo was the Greek god of what?', options: ['War', 'Sea', 'Sun and music', 'Underworld'], correctIndex: 2, difficulty: 9, category: 'history' },
   { id: '2008440', text: 'Richard James invented what spring toy?', options: ['Pogo stick', 'Jack-in-the-box', 'Slinky', 'Wind-up toys'], correctIndex: 2, difficulty: 9, category: 'science' },
-  { id: '2008441', text: 'What is the capital of Laos?', options: ['Luang Prabang', 'Vientiane', 'Savannakhet', 'Pakse'], correctIndex: 1, difficulty: 9, category: 'geography' },
+  { id: '2008441', text: 'What is the capital of Solomon Islands?', options: ['Gizo', 'Honiara', 'Auki', 'Noro'], correctIndex: 1, difficulty: 9, category: 'geography' },
   { id: '2008442', text: 'A raccoon is classified as which type of animal?', options: ['Rodent', 'Carnivore mammal', 'Marsupial', 'Reptile'], correctIndex: 1, difficulty: 9, category: 'science' },
   { id: '2008443', text: 'What is the Richter scale used to measure?', options: ['Tornadoes', 'Hurricanes', 'Earthquakes', 'Tsunamis'], correctIndex: 2, difficulty: 9, category: 'science' },
   { id: '2008444', text: 'What is 4.8 divided by 1.2?', options: ['3', '4', '5', '6'], correctIndex: 1, difficulty: 9, category: 'math' },

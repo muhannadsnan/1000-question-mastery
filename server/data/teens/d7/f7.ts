@@ -51,7 +51,7 @@ export const questions = [
   { id: '3070650', text: 'Which game features the "BFG" weapon?', options: ['Halo', 'Doom', 'Quake', 'Half-Life'], correctIndex: 1, difficulty: 7, category: 'gaming' },
   { id: '3070651', text: 'What is "in medias res" in storytelling?', options: ['Happy ending', 'Starting in the middle', 'Character introduction', 'Plot twist'], correctIndex: 1, difficulty: 7, category: 'movies' },
   { id: '3070652', text: 'What is a "two-point conversion" in American football?', options: ['Safety', 'Play after touchdown instead of kick', 'Field goal', 'Fumble recovery'], correctIndex: 1, difficulty: 7, category: 'sports' },
-  { id: '3070653', text: 'What is the photoelectric effect?', options: ['Light creating heat', 'Light releasing electrons', 'Light bending', 'Light reflecting'], correctIndex: 1, difficulty: 7, category: 'science' },
+  { id: '3070653', text: 'What is the capital of Mongolia?', options: ['Erdenet', 'Ulaanbaatar', 'Darkhan', 'Choibalsan'], correctIndex: 1, difficulty: 7, category: 'science' },
   { id: '3070654', text: 'Which Asian capital city was formerly known as Edo?', options: ['Seoul', 'Beijing', 'Tokyo', 'Bangkok'], correctIndex: 2, difficulty: 7, category: 'geography' },
   { id: '3070655', text: 'The Ethiopian Empire is one of the oldest in which continent?', options: ['Asia', 'Europe', 'Africa', 'South America'], correctIndex: 2, difficulty: 7, category: 'history' },
   { id: '3070656', text: 'Who wrote "Around the World in Eighty Days"?', options: ['H.G. Wells', 'Jules Verne', 'Alexandre Dumas', 'Victor Hugo'], correctIndex: 1, difficulty: 7, category: 'literature' },

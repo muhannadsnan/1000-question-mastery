@@ -50,7 +50,7 @@ export const questions = [
   { id: '2004049', text: 'What is 5% of 200?', options: ['5', '10', '15', '20'], correctIndex: 1, difficulty: 5, category: 'math' },
   { id: '2004050', text: 'The Ganges River is sacred to people in which country?', options: ['China', 'Japan', 'India', 'Thailand'], correctIndex: 2, difficulty: 5, category: 'geography' },
   { id: '2004051', text: 'What is 2/3 + 1/3?', options: ['3/6', '1', '2/6', '3/9'], correctIndex: 1, difficulty: 5, category: 'math' },
-  { id: '2004052', text: 'Who invented the telescope?', options: ['Isaac Newton', 'Galileo Galilei', 'Hans Lippershey', 'Copernicus'], correctIndex: 2, difficulty: 5, category: 'science' },
+  { id: '2004052', text: 'What is 10 squared?', options: ['98', '100', '102', '104'], correctIndex: 1, difficulty: 5, category: 'science' },
   { id: '2004053', text: 'A hypothesis is:', options: ['A proven fact', 'An educated guess', 'A final conclusion', 'A measurement'], correctIndex: 1, difficulty: 5, category: 'science' },
   { id: '2004054', text: 'How many feet are in 1 yard?', options: ['2', '3', '4', '5'], correctIndex: 1, difficulty: 5, category: 'math' },
   { id: '2004055', text: 'What is 40% of 25?', options: ['8', '10', '12', '15'], correctIndex: 1, difficulty: 5, category: 'math' },

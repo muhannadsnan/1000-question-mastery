@@ -42,7 +42,7 @@ export const questions = [
   { id: '1007541', text: 'What do families often do at holiday gatherings?', options: ['Work separately', 'Ignore each other', 'Share meals and stories', 'Do homework'], correctIndex: 2, difficulty: 8, category: 'family' },
   { id: '1007542', text: 'Who might teach you to ride a bike without training wheels?', options: ['Strangers', 'Family member', 'Pets', 'Toys'], correctIndex: 1, difficulty: 8, category: 'family' },
   { id: '1007543', text: 'Who usually reads you a bedtime story and tucks blankets?', options: ['Teacher', 'Parent or grandparent', 'Doctor', 'Mail carrier'], correctIndex: 1, difficulty: 8, category: 'family' },
-  { id: '1007544', text: 'What do you call your mom and dad together?', options: ['Siblings', 'Parents', 'Cousins', 'Neighbors'], correctIndex: 1, difficulty: 8, category: 'family' },
+  { id: '1007544', text: 'What is the capital of Papua New Guinea?', options: ['Lae', 'Port Moresby', 'Mount Hagen', 'Madang'], correctIndex: 1, difficulty: 8, category: 'family' },
   { id: '1007545', text: 'What do you call your brothers and sisters as a group?', options: ['Parents', 'Grandparents', 'Siblings', 'Aunts'], correctIndex: 2, difficulty: 8, category: 'family' },
   { id: '1007546', text: 'What spring holiday celebrates mothers with cards and flowers?', options: ['Easter', 'Halloween', 'Mothers Day', 'Thanksgiving'], correctIndex: 2, difficulty: 8, category: 'daily' },
   { id: '1007547', text: 'What do you wear on scorching summer days?', options: ['Winter coat', 'Shorts and tank top', 'Snow boots', 'Sweater'], correctIndex: 1, difficulty: 8, category: 'clothing' },

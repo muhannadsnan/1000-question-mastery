@@ -89,7 +89,7 @@ export const questions = [
   { id: '4050688', text: 'Which country has the most earthquakes?', options: ['Japan', 'Indonesia', 'Chile', 'United States'], correctIndex: 1, difficulty: 5, category: 'geography' },
   { id: '4050689', text: 'Who proposed the expanding universe theory?', options: ['Albert Einstein', 'Edwin Hubble', 'Georges Lemaître', 'Alexander Friedmann'], correctIndex: 1, difficulty: 5, category: 'science' },
   { id: '4050690', text: 'Which empire was known for the Silk Road trade?', options: ['Roman Empire', 'Han Dynasty', 'Persian Empire', 'All of these'], correctIndex: 3, difficulty: 5, category: 'history' },
-  { id: '4050691', text: 'Who said "The ballot is stronger than the bullet"?', options: ['Thomas Jefferson', 'Abraham Lincoln', 'Frederick Douglass', 'Ulysses S. Grant'], correctIndex: 1, difficulty: 5, category: 'politics' },
+  { id: '4050691', text: 'What is the cube root of 64?', options: ['3', '4', '5', '6'], correctIndex: 1, difficulty: 5, category: 'politics' },
   { id: '4050692', text: 'Which Canadian dish is fries with cheese curds and gravy?', options: ['Poutine', 'Nanaimo Bar', 'BeaverTails', 'Tourtière'], correctIndex: 0, difficulty: 5, category: 'food' },
   { id: '4050693', text: 'Who wrote "Lolita"?', options: ['Fyodor Dostoevsky', 'Vladimir Nabokov', 'Aleksandr Solzhenitsyn', 'Boris Pasternak'], correctIndex: 1, difficulty: 5, category: 'literature' },
   { id: '4050694', text: 'Which actress won the Oscar for Best Actress in "Terms of Endearment"?', options: ['Meryl Streep', 'Shirley MacLaine', 'Debra Winger', 'Julie Walters'], correctIndex: 1, difficulty: 5, category: 'movies' },

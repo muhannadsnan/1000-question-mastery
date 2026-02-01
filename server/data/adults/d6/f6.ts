@@ -54,7 +54,7 @@ export const questions = [
   { id: '4060553', text: 'Who is the founder of The Body Shop?', options: ['Anita Roddick', 'Estée Lauder', 'Helena Rubinstein', 'Elizabeth Arden'], correctIndex: 0, difficulty: 6, category: 'business' },
   { id: '4060554', text: 'Which is the most visited country in the world?', options: ['France', 'Spain', 'United States', 'China'], correctIndex: 0, difficulty: 6, category: 'geography' },
   { id: '4060555', text: 'Which artist is known for the "Black Square" painting?', options: ['Kazimir Malevich', 'Piet Mondrian', 'Wassily Kandinsky', 'El Lissitzky'], correctIndex: 0, difficulty: 6, category: 'art' },
-  { id: '4060556', text: 'What is the chemical symbol for tungsten?', options: ['W', 'Tu', 'Tg', 'Tn'], correctIndex: 0, difficulty: 6, category: 'science' },
+  { id: '4060556', text: 'What is 2 squared?', options: ['2', '4', '6', '8'], correctIndex: 1, difficulty: 6, category: 'science' },
   { id: '4060557', text: 'Which country has won the most Cricket World Cup titles?', options: ['Australia', 'India', 'West Indies', 'England'], correctIndex: 0, difficulty: 6, category: 'sports' },
   { id: '4060558', text: 'Who wrote "The Kite Runner"?', options: ['Khaled Hosseini', 'Salman Rushdie', 'Arundhati Roy', 'Jhumpa Lahiri'], correctIndex: 0, difficulty: 6, category: 'literature' },
   { id: '4060559', text: 'What is the capital of Cuba?', options: ['Havana', 'Santiago de Cuba', 'Camagüey', 'Santa Clara'], correctIndex: 0, difficulty: 6, category: 'geography' },

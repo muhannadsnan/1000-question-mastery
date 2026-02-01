@@ -1,6 +1,6 @@
 export const questions = [
   { id: '1006901', text: 'What color is a rubber duck?', options: ['Blue', 'Red', 'Yellow', 'Green'], correctIndex: 2, difficulty: 7, category: 'colors' },
-  { id: '1006902', text: 'What color is a fire engine?', options: ['Blue', 'Red', 'Yellow', 'Green'], correctIndex: 1, difficulty: 7, category: 'colors' },
+  { id: '1006902', text: 'What is the opposite of full?', options: ['Heavy', 'Light', 'Empty', 'Big'], correctIndex: 2, difficulty: 7, category: 'colors' },
   { id: '1006903', text: 'What color is a pickle?', options: ['Red', 'Blue', 'Green', 'Purple'], correctIndex: 2, difficulty: 7, category: 'colors' },
   { id: '1006904', text: 'What color is a persimmon?', options: ['Blue', 'Green', 'Orange', 'Purple'], correctIndex: 2, difficulty: 7, category: 'colors' },
   { id: '1006905', text: 'What color is a blue whale?', options: ['Red', 'Blue', 'Yellow', 'Green'], correctIndex: 1, difficulty: 7, category: 'colors' },

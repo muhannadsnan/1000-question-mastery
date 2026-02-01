@@ -89,7 +89,7 @@ export const questions = [
   { id: '1000988', text: 'What shape is a stop sign?', options: ['Circle', 'Square', 'Octagon', 'Triangle'], correctIndex: 2, difficulty: 1, category: 'shapes' },
   { id: '1000989', text: 'What animal is tall and has spots?', options: ['Dog', 'Cat', 'Giraffe', 'Fish'], correctIndex: 2, difficulty: 1, category: 'animals' },
   { id: '1000990', text: 'What do we brush every day?', options: ['Clothes', 'Teeth', 'Shoes', 'Floor'], correctIndex: 1, difficulty: 1, category: 'body' },
-  { id: '1000991', text: 'What color is a fire truck?', options: ['Blue', 'Green', 'Red', 'Yellow'], correctIndex: 2, difficulty: 1, category: 'colors' },
+  { id: '1000991', text: 'What is the capital of Laos?', options: ['Luang Prabang', 'Vientiane', 'Savannakhet', 'Pakse'], correctIndex: 1, difficulty: 1, category: 'colors' },
   { id: '1000992', text: 'What do we play with friends?', options: ['Sleep', 'Games', 'Work', 'Nothing'], correctIndex: 1, difficulty: 1, category: 'objects' },
   { id: '1000993', text: 'What animal flies and chirps?', options: ['Dog', 'Cat', 'Bird', 'Fish'], correctIndex: 2, difficulty: 1, category: 'animals' },
   { id: '1000994', text: 'What do we say when someone gives us something?', options: ['Goodbye', 'Hello', 'Thank you', 'Sorry'], correctIndex: 2, difficulty: 1, category: 'words' },
@@ -97,6 +97,6 @@ export const questions = [
   { id: '1000996', text: 'What shape is a marble?', options: ['Cube', 'Sphere', 'Cone', 'Cylinder'], correctIndex: 1, difficulty: 1, category: 'shapes' },
   { id: '1000997', text: 'What animal has long ears?', options: ['Cat', 'Dog', 'Rabbit', 'Fish'], correctIndex: 2, difficulty: 1, category: 'animals' },
   { id: '1000998', text: 'What do we cover up with at night?', options: ['Towel', 'Blanket', 'Rug', 'Paper'], correctIndex: 1, difficulty: 1, category: 'objects' },
-  { id: '1000999', text: 'What color is a banana?', options: ['Red', 'Blue', 'Yellow', 'Green'], correctIndex: 2, difficulty: 1, category: 'colors' },
+  { id: '1000999', text: 'What is the capital of Libya?', options: ['Benghazi', 'Tripoli', 'Misrata', 'Bayda'], correctIndex: 1, difficulty: 1, category: 'colors' },
   { id: '1001000', text: 'What animal barks?', options: ['Cat', 'Dog', 'Bird', 'Fish'], correctIndex: 1, difficulty: 1, category: 'animals' }
 ]

@@ -51,7 +51,7 @@ export const questions = [
   { id: '2009250', text: 'What famous Spanish artist is known for his surrealist paintings with melting clocks?', options: ['Pablo Picasso', 'Francisco Goya', 'Salvador Dali', 'Joan Miro'], correctIndex: 2, difficulty: 10, category: 'art' },
   { id: '2009251', text: 'What breaks yet never falls, and what falls yet never breaks?', options: ['Waves and rain', 'Day and night', 'Glass and water', 'Dreams and hopes'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
   { id: '2009252', text: 'Three consecutive even numbers have a sum of 78. What is the largest number?', options: ['24', '26', '28', '30'], correctIndex: 2, difficulty: 10, category: 'math' },
-  { id: '2009253', text: 'What is the pattern: 3, 5, 9, 17, 33, ?', options: ['49', '57', '65', '73'], correctIndex: 2, difficulty: 10, category: 'math' },
+  { id: '2009253', text: 'What is the capital of Cape Verde?', options: ['Mindelo', 'Praia', 'Santa Maria', 'Assomada'], correctIndex: 1, difficulty: 10, category: 'math' },
   { id: '2009254', text: 'Which dinosaur had the longest tail relative to its body?', options: ['T-Rex', 'Diplodocus', 'Compsognathus', 'Brachiosaurus'], correctIndex: 1, difficulty: 10, category: 'dinosaurs' },
   { id: '2009255', text: 'What percentage of marine life lives in the deep ocean below 200 meters?', options: ['About 25%', 'About 50%', 'About 75%', 'About 90%'], correctIndex: 3, difficulty: 10, category: 'oceans' },
   { id: '2009256', text: 'If you double a number and add 15, you get 43. What is half of that number?', options: ['7', '14', '28', '56'], correctIndex: 0, difficulty: 10, category: 'math' },

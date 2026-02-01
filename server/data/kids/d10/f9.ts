@@ -1,5 +1,5 @@
 export const questions = [
-  { id: '2009801', text: 'What has hands but cannot clap?', options: ['A robot', 'A clock', 'A statue', 'A puppet'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
+  { id: '2009801', text: 'Who painted "Las Meninas"?', options: ['Goya', 'Velázquez', 'El Greco', 'Murillo'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
   { id: '2009802', text: 'If you rearrange the letters "CIFAIPC" you get the name of a(n):', options: ['Country', 'Ocean', 'City', 'Animal'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
   { id: '2009803', text: 'What is the next number: 2, 7, 17, 37, 77, ?', options: ['147', '157', '167', '177'], correctIndex: 1, difficulty: 10, category: 'math' },
   { id: '2009804', text: 'What is the name of a scientist who studies dinosaurs?', options: ['Archaeologist', 'Paleontologist', 'Geologist', 'Anthropologist'], correctIndex: 1, difficulty: 10, category: 'dinosaurs' },
@@ -51,7 +51,7 @@ export const questions = [
   { id: '2009850', text: 'What is the term for a song sung without instrumental accompaniment?', options: ['Solo', 'Acapella', 'Duet', 'Ensemble'], correctIndex: 1, difficulty: 10, category: 'music' },
   { id: '2009851', text: 'I shave every day but my beard stays the same. Who am I?', options: ['A barber', 'A sheep', 'A magician', 'A robot'], correctIndex: 0, difficulty: 10, category: 'brain-teaser' },
   { id: '2009852', text: 'How many perfect cubes are less than 100?', options: ['3', '4', '5', '6'], correctIndex: 1, difficulty: 10, category: 'math' },
-  { id: '2009853', text: 'What is the pattern: 1, 4, 9, 16, 25, ?', options: ['30', '32', '36', '40'], correctIndex: 2, difficulty: 10, category: 'math' },
+  { id: '2009853', text: 'What is the capital of Burkina Faso?', options: ['Bobo-Dioulasso', 'Ouagadougou', 'Koudougou', 'Banfora'], correctIndex: 1, difficulty: 10, category: 'math' },
   { id: '2009854', text: 'What evidence suggests some dinosaurs were warm-blooded?', options: ['Fossil teeth', 'Fast growth rates', 'Large size', 'Fossil skin'], correctIndex: 1, difficulty: 10, category: 'dinosaurs' },
   { id: '2009855', text: 'What is the largest bay in the world by water volume?', options: ['Hudson Bay', 'Bay of Bengal', 'Gulf of Mexico', 'Bay of Biscay'], correctIndex: 1, difficulty: 10, category: 'oceans' },
   { id: '2009856', text: 'If a coin is flipped 4 times, how many different outcomes are possible?', options: ['8', '12', '16', '20'], correctIndex: 2, difficulty: 10, category: 'math' },

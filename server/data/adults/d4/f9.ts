@@ -66,7 +66,7 @@ export const questions = [
   { id: '4040865', text: 'What is the longest river in Ireland?', options: ['Liffey', 'Shannon', 'Boyne', 'Barrow'], correctIndex: 1, difficulty: 4, category: 'geography' },
   { id: '4040866', text: 'Who painted "Arrangement in Grey and Black" (Whistler\'s Mother)?', options: ['John Singer Sargent', 'James McNeill Whistler', 'Winslow Homer', 'Thomas Eakins'], correctIndex: 1, difficulty: 4, category: 'art' },
   { id: '4040867', text: 'What is the Heisenberg uncertainty principle about?', options: ['Gravity', 'Quantum mechanics', 'Relativity', 'Thermodynamics'], correctIndex: 1, difficulty: 4, category: 'science' },
-  { id: '4040868', text: 'Who wrote "The Remains of the Day"?', options: ['Ian McEwan', 'Julian Barnes', 'Martin Amis', 'Kazuo Ishiguro'], correctIndex: 3, difficulty: 4, category: 'literature' },
+  { id: '4040868', text: 'What is 19 times 6?', options: ['108', '114', '120', '126'], correctIndex: 1, difficulty: 4, category: 'literature' },
   { id: '4040869', text: 'What is the traditional Japanese clear soup?', options: ['Miso', 'Suimono', 'Ramen', 'Udon'], correctIndex: 1, difficulty: 4, category: 'food' },
   { id: '4040870', text: 'Who sang "Heroes" (1977)?', options: ['Elton John', 'David Bowie', 'Freddie Mercury', 'Mick Jagger'], correctIndex: 1, difficulty: 4, category: 'music' },
   { id: '4040871', text: 'What is the capital of Lesotho?', options: ['Mbabane', 'Maseru', 'Gaborone', 'Maputo'], correctIndex: 1, difficulty: 4, category: 'geography' },

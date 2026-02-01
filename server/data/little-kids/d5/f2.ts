@@ -3,7 +3,7 @@ export const questions = [
   { id: '1004102', text: 'What tool does a painter use?', options: ['Hammer', 'Brush', 'Scissors', 'Ruler'], correctIndex: 1, difficulty: 5, category: 'tools' },
   { id: '1004103', text: 'Where do penguins live in the wild?', options: ['Desert', 'Jungle', 'Antarctica', 'Forest'], correctIndex: 2, difficulty: 5, category: 'animals' },
   { id: '1004104', text: 'What do we call the meal we eat in the morning?', options: ['Lunch', 'Dinner', 'Breakfast', 'Snack'], correctIndex: 2, difficulty: 5, category: 'food' },
-  { id: '1004105', text: 'What vehicle flies in the sky?', options: ['Car', 'Boat', 'Train', 'Airplane'], correctIndex: 3, difficulty: 5, category: 'vehicles' },
+  { id: '1004105', text: 'What is the capital of Guinea-Bissau?', options: ['Bafata', 'Bissau', 'Gabu', 'Bissorã'], correctIndex: 1, difficulty: 5, category: 'vehicles' },
   { id: '1004106', text: 'What do seeds grow into?', options: ['Rocks', 'Plants', 'Water', 'Sand'], correctIndex: 1, difficulty: 5, category: 'nature' },
   { id: '1004107', text: 'What instrument has strings and you strum it?', options: ['Drum', 'Flute', 'Guitar', 'Piano'], correctIndex: 2, difficulty: 5, category: 'music' },
   { id: '1004108', text: 'What do we put letters in to mail them?', options: ['Box', 'Envelope', 'Bag', 'Jar'], correctIndex: 1, difficulty: 5, category: 'objects' },

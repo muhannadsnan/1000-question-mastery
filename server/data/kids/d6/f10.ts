@@ -3,7 +3,7 @@ export const questions = [
   { id: '2005902', text: 'Using PEMDAS, solve: 9 × (6 + 8) - 81 ÷ 9', options: ['117', '126', '108', '135'], correctIndex: 0, difficulty: 6, category: 'math' },
   { id: '2005903', text: 'What is 11 8/11 + 9 5/11?', options: ['20 2/11', '21 2/11', '20 13/11', '22'], correctIndex: 1, difficulty: 6, category: 'math' },
   { id: '2005904', text: 'Which biome is home to the most types of insects?', options: ['Desert', 'Tropical rainforest', 'Tundra', 'Grassland'], correctIndex: 1, difficulty: 6, category: 'science' },
-  { id: '2005905', text: 'What is the chemical symbol for tin?', options: ['Ti', 'T', 'Sn', 'Tn'], correctIndex: 2, difficulty: 6, category: 'science' },
+  { id: '2005905', text: 'What is the capital of Bolivia?', options: ['La Paz', 'Sucre', 'Santa Cruz', 'Cochabamba'], correctIndex: 1, difficulty: 6, category: 'science' },
   { id: '2005906', text: 'Which ancient civilization invented glass-blowing?', options: ['Egyptians', 'Phoenicians', 'Romans', 'Greeks'], correctIndex: 1, difficulty: 6, category: 'history' },
   { id: '2005907', text: 'What does the prefix "ab-" mean?', options: ['Toward', 'Away from', 'With', 'Before'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
   { id: '2005908', text: 'What is the area of a circle inscribed in an equilateral triangle with side 12 cm? (Use π ≈ 3.14)', options: ['37.68 cm²', '75.36 cm²', '12.56 cm²', '50.24 cm²'], correctIndex: 0, difficulty: 6, category: 'math' },

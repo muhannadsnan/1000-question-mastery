@@ -33,7 +33,7 @@ export const questions = [
   { id: '4060832', text: 'What year did the Spanish Civil War begin?', options: ['1936', '1934', '1938', '1940'], correctIndex: 0, difficulty: 6, category: 'history' },
   { id: '4060833', text: 'Which company did Brian Chesky co-found?', options: ['Airbnb', 'Uber', 'WeWork', 'Lyft'], correctIndex: 0, difficulty: 6, category: 'business' },
   { id: '4060834', text: 'What is the largest lake in South America?', options: ['Lake Titicaca', 'Lake Maracaibo', 'Lagoa dos Patos', 'Lake Poopó'], correctIndex: 0, difficulty: 6, category: 'geography' },
-  { id: '4060835', text: 'Who wrote "The Master and Margarita"?', options: ['Mikhail Bulgakov', 'Boris Pasternak', 'Nikolai Gogol', 'Ivan Turgenev'], correctIndex: 0, difficulty: 6, category: 'literature' },
+  { id: '4060835', text: 'What is the area of a square with side 7?', options: ['42', '49', '56', '63'], correctIndex: 1, difficulty: 6, category: 'literature' },
   { id: '4060836', text: 'What is the most stable geometric shape?', options: ['Triangle', 'Square', 'Circle', 'Pentagon'], correctIndex: 0, difficulty: 6, category: 'science' },
   { id: '4060837', text: 'Which 2000 film features a Chinese martial artist seeking revenge?', options: ['Crouching Tiger, Hidden Dragon', 'Hero', 'House of Flying Daggers', 'Kill Bill'], correctIndex: 0, difficulty: 6, category: 'movies' },
   { id: '4060838', text: 'What is the traditional Austrian apple pastry?', options: ['Apfelstrudel', 'Sachertorte', 'Linzer torte', 'Kaiserschmarrn'], correctIndex: 0, difficulty: 6, category: 'food' },

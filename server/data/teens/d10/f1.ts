@@ -90,7 +90,7 @@ export const questions = [
   { id: '3100089', text: 'Who is known as the "Godfather of Soul" and performed "I Got You (I Feel Good)"?', options: ['Ray Charles', 'James Brown', 'Marvin Gaye', 'Otis Redding'], correctIndex: 1, difficulty: 10, category: 'music' },
   { id: '3100090', text: 'Which game released in 2011 allowed players to build and survive in a procedurally generated world?', options: ['Terraria', 'Minecraft', 'Roblox', 'Garry\'s Mod'], correctIndex: 1, difficulty: 10, category: 'gaming' },
   { id: '3100091', text: 'Which film franchise features the quote "I\'ll be back" and a cybernetic assassin?', options: ['RoboCop', 'The Terminator', 'Blade Runner', 'Total Recall'], correctIndex: 1, difficulty: 10, category: 'movies' },
-  { id: '3100092', text: 'Which country has won the most FIFA World Cup titles?', options: ['Germany', 'Argentina', 'Brazil', 'Italy'], correctIndex: 2, difficulty: 10, category: 'sports' },
+  { id: '3100092', text: 'What is 3 cubed?', options: ['19', '27', '35', '43'], correctIndex: 1, difficulty: 10, category: 'sports' },
   { id: '3100093', text: 'What theory did Albert Einstein publish in 1905 that changed our understanding of space and time?', options: ['Quantum theory', 'String theory', 'Special relativity', 'Chaos theory'], correctIndex: 2, difficulty: 10, category: 'science' },
   { id: '3100094', text: 'Which river is the longest in Africa and one of the longest in the world?', options: ['Congo', 'Zambezi', 'Niger', 'Nile'], correctIndex: 3, difficulty: 10, category: 'geography' },
   { id: '3100095', text: 'The Industrial Revolution began in which country during the late 18th century?', options: ['France', 'Germany', 'United States', 'Great Britain'], correctIndex: 3, difficulty: 10, category: 'history' },

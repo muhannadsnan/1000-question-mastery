@@ -29,7 +29,7 @@ export const questions = [
   { id: '3030828', text: 'Which artist performed "Dance Monkey"?', options: ['Sia', 'Tones and I', 'Dua Lipa', 'Billie Eilish'], correctIndex: 1, difficulty: 3, category: 'music' },
   { id: '3030829', text: 'In "League of Legends", what is the objective in Summoner\'s Rift?', options: ['Kill all enemies', 'Destroy the Nexus', 'Capture flags', 'Control points'], correctIndex: 1, difficulty: 3, category: 'gaming' },
   { id: '3030830', text: 'In "Jujutsu Kaisen", what are the supernatural beings called?', options: ['Hollows', 'Cursed Spirits', 'Demons', 'Titans'], correctIndex: 1, difficulty: 3, category: 'anime' },
-  { id: '3030831', text: 'Who released "Circles"?', options: ['Mac Miller', 'Post Malone', 'Juice WRLD', 'XXXTentacion'], correctIndex: 1, difficulty: 3, category: 'music' },
+  { id: '3030831', text: 'Who released Heartless?', options: ['Drake', 'The Weeknd', 'Travis Scott', 'Post Malone'], correctIndex: 1, difficulty: 3, category: 'music' },
   { id: '3030832', text: 'What game features characters like Steve, Alex, and Creepers?', options: ['Terraria', 'Minecraft', 'Roblox', 'Fortnite'], correctIndex: 1, difficulty: 3, category: 'gaming' },
   { id: '3030833', text: 'What is the name of YouTube\'s short-form video feature?', options: ['Reels', 'Stories', 'Shorts', 'Clips'], correctIndex: 2, difficulty: 3, category: 'technology' },
   { id: '3030834', text: 'In "Chainsaw Man", what does Denji want most at the start?', options: ['Revenge', 'A normal life', 'Power', 'Money'], correctIndex: 1, difficulty: 3, category: 'anime' },

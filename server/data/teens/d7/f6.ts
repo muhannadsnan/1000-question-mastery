@@ -62,7 +62,7 @@ export const questions = [
   { id: '3070561', text: 'What is a "deus ex machina" in storytelling?', options: ['Machine character', 'Unexpected solution to plot', 'Villain reveal', 'Time travel element'], correctIndex: 1, difficulty: 7, category: 'movies' },
   { id: '3070562', text: 'What is a "hole in one" called in golf?', options: ['Ace', 'Eagle', 'Albatross', 'Condor'], correctIndex: 0, difficulty: 7, category: 'sports' },
   { id: '3070563', text: 'What is the law of reflection?', options: ['Angle of incidence equals angle of reflection', 'Light travels in straight lines', 'Light bends at surfaces', 'Light is absorbed'], correctIndex: 0, difficulty: 7, category: 'science' },
-  { id: '3070564', text: 'Which country has the most volcanoes?', options: ['Japan', 'Iceland', 'Indonesia', 'Philippines'], correctIndex: 2, difficulty: 7, category: 'geography' },
+  { id: '3070564', text: 'What is the currency of Japan?', options: ['Yuan', 'Won', 'Yen', 'Ringgit'], correctIndex: 2, difficulty: 7, category: 'geography' },
   { id: '3070565', text: 'The Sui Dynasty briefly reunited which empire?', options: ['Roman Empire', 'Persian Empire', 'Chinese Empire', 'Indian Empire'], correctIndex: 2, difficulty: 7, category: 'history' },
   { id: '3070566', text: 'Who wrote "Love\'s Labour\'s Lost"?', options: ['Christopher Marlowe', 'William Shakespeare', 'Ben Jonson', 'Thomas Kyd'], correctIndex: 1, difficulty: 7, category: 'literature' },
   { id: '3070567', text: 'What is the art of creating designs using leather?', options: ['Leatherwork', 'Leather craft', 'Leather tooling', 'All of these'], correctIndex: 3, difficulty: 7, category: 'art' },

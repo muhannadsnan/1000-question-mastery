@@ -11,7 +11,7 @@ export const questions = [
   { id: '1005210', text: 'What toy do you push and it pops up?', options: ['Ball', 'Jack-in-the-box', 'Car', 'Doll'], correctIndex: 1, difficulty: 6, category: 'toys' },
   { id: '1005211', text: 'What shape is a slice of cheese?', options: ['Circle', 'Square', 'Triangle', 'Star'], correctIndex: 1, difficulty: 6, category: 'shapes' },
   { id: '1005212', text: 'What animal lives in the ocean and has claws?', options: ['Fish', 'Lobster', 'Shark', 'Dolphin'], correctIndex: 1, difficulty: 6, category: 'animals' },
-  { id: '1005213', text: 'What season comes after winter?', options: ['Fall', 'Spring', 'Summer', 'Winter'], correctIndex: 1, difficulty: 6, category: 'nature' },
+  { id: '1005213', text: 'What is the capital of Guinea?', options: ['Nzerekore', 'Conakry', 'Kankan', 'Kindia'], correctIndex: 1, difficulty: 6, category: 'nature' },
   { id: '1005214', text: 'What is 6 - 3?', options: ['2', '3', '4', '5'], correctIndex: 1, difficulty: 6, category: 'numbers' },
   { id: '1005215', text: 'What do we eat that comes from a pig?', options: ['Beef', 'Bacon', 'Chicken', 'Fish'], correctIndex: 1, difficulty: 6, category: 'food' },
   { id: '1005216', text: 'What bird is known for saying "coo coo"?', options: ['Eagle', 'Pigeon', 'Owl', 'Robin'], correctIndex: 1, difficulty: 6, category: 'animals' },
@@ -96,7 +96,7 @@ export const questions = [
   { id: '1005295', text: 'What food is yellow and made from corn?', options: ['Bread', 'Popcorn', 'Rice', 'Pasta'], correctIndex: 1, difficulty: 6, category: 'food' },
   { id: '1005296', text: 'What animal is small and gray with a long tail?', options: ['Cat', 'Mouse', 'Dog', 'Bird'], correctIndex: 1, difficulty: 6, category: 'animals' },
   { id: '1005297', text: 'What color is a goldfish?', options: ['Blue', 'Orange', 'Green', 'Purple'], correctIndex: 1, difficulty: 6, category: 'colors' },
-  { id: '1005298', text: 'What body part pumps blood?', options: ['Brain', 'Heart', 'Stomach', 'Lungs'], correctIndex: 1, difficulty: 6, category: 'body' },
+  { id: '1005298', text: 'What is the capital of Ghana?', options: ['Kumasi', 'Accra', 'Tamale', 'Takoradi'], correctIndex: 1, difficulty: 6, category: 'body' },
   { id: '1005299', text: 'What do we drink from cows?', options: ['Juice', 'Milk', 'Water', 'Soda'], correctIndex: 1, difficulty: 6, category: 'food' },
   { id: '1005300', text: 'What toy do you catch and throw with a glove?', options: ['Ball', 'Baseball', 'Frisbee', 'Kite'], correctIndex: 1, difficulty: 6, category: 'toys' },
 ];

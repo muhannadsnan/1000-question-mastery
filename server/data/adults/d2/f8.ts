@@ -62,7 +62,7 @@ export const questions = [
   { id: '4020761', text: 'What is the traditional Moroccan stew cooked in a conical pot?', options: ['Tagine', 'Couscous', 'Harira', 'Bastilla'], correctIndex: 0, difficulty: 2, category: 'food' },
   { id: '4020762', text: 'What is the capital of Eswatini?', options: ['Mbabane', 'Manzini', 'Lobamba', 'Siteki'], correctIndex: 0, difficulty: 2, category: 'geography' },
   { id: '4020763', text: 'Who directed the film Birdman?', options: ['Alejandro Gonzalez Inarritu', 'Guillermo del Toro', 'Alfonso Cuaron', 'Denis Villeneuve'], correctIndex: 0, difficulty: 2, category: 'movies' },
-  { id: '4020764', text: 'Which sport is played at Wimbledon?', options: ['Tennis', 'Golf', 'Cricket', 'Polo'], correctIndex: 0, difficulty: 2, category: 'sports' },
+  { id: '4020764', text: 'What is 2 plus 7?', options: ['8', '9', '10', '11'], correctIndex: 1, difficulty: 2, category: 'sports' },
   { id: '4020765', text: 'What year was Bitcoin created?', options: ['2009', '2008', '2010', '2011'], correctIndex: 0, difficulty: 2, category: 'technology' },
   { id: '4020766', text: 'Who sang "Take On Me"?', options: ['a-ha', 'Depeche Mode', 'Duran Duran', 'New Order'], correctIndex: 0, difficulty: 2, category: 'music' },
   { id: '4020767', text: 'What is the capital of Lesotho?', options: ['Maseru', 'Teyateyaneng', 'Mafeteng', 'Hlotse'], correctIndex: 0, difficulty: 2, category: 'geography' },

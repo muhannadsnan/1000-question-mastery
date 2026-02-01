@@ -34,7 +34,7 @@ export const questions = [
   { id: '2008333', text: 'What does the idiom "the best of both worlds" mean?', options: ['Traveling globally', 'Having advantages of two different situations', 'Living in two places', 'Being rich'], correctIndex: 1, difficulty: 9, category: 'language' },
   { id: '2008334', text: 'The Incas used what system of knotted strings for record keeping?', options: ['Papyrus', 'Quipu', 'Tablets', 'Scrolls'], correctIndex: 1, difficulty: 9, category: 'history' },
   { id: '2008335', text: 'Dr. Patricia Bath invented a device to treat what condition?', options: ['Hearing loss', 'Cataracts', 'Diabetes', 'Arthritis'], correctIndex: 1, difficulty: 9, category: 'science' },
-  { id: '2008336', text: 'What is the capital of Myanmar?', options: ['Yangon', 'Mandalay', 'Naypyidaw', 'Bagan'], correctIndex: 2, difficulty: 9, category: 'geography' },
+  { id: '2008336', text: 'Who wrote "Ulysses"?', options: ['Homer', 'James Joyce', 'Virginia Woolf', 'D.H. Lawrence'], correctIndex: 1, difficulty: 9, category: 'geography' },
   { id: '2008337', text: 'A hippo is classified as which type of animal?', options: ['Rodent', 'Carnivore', 'Mammal', 'Amphibian'], correctIndex: 2, difficulty: 9, category: 'science' },
   { id: '2008338', text: 'What is the difference between weather and climate?', options: ['They are the same', 'Weather is daily, climate is long-term average', 'Climate is daily, weather is long-term', 'Weather is hotter'], correctIndex: 1, difficulty: 9, category: 'science' },
   { id: '2008339', text: 'What is 4/5 divided by 2/3?', options: ['8/15', '6/5', '2/5', '12/10'], correctIndex: 1, difficulty: 9, category: 'math' },

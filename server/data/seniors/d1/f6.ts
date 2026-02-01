@@ -38,7 +38,7 @@ export const questions = [
   { id: '5010537', text: 'What type of tax is based on the value of goods purchased?', options: ['Income tax', 'Sales tax', 'Property tax', 'Estate tax'], correctIndex: 1, difficulty: 1, category: 'economics' },
   { id: '5010538', text: 'Which philosophical position holds that God and nature are identical?', options: ['Theism', 'Pantheism', 'Deism', 'Atheism'], correctIndex: 1, difficulty: 1, category: 'philosophy' },
   { id: '5010539', text: 'What musical term indicates gradually getting louder?', options: ['Diminuendo', 'Crescendo', 'Sforzando', 'Pianissimo'], correctIndex: 1, difficulty: 1, category: 'music' },
-  { id: '5010540', text: 'Which organ stores bile produced by the liver?', options: ['Pancreas', 'Gallbladder', 'Spleen', 'Appendix'], correctIndex: 1, difficulty: 1, category: 'medicine' },
+  { id: '5010540', text: 'Who was the first president of the USA?', options: ['Adams', 'Washington', 'Jefferson', 'Madison'], correctIndex: 1, difficulty: 1, category: 'medicine' },
   { id: '5010541', text: 'What Chinese cooking technique involves quick frying in a wok?', options: ['Steaming', 'Stir-frying', 'Braising', 'Red cooking'], correctIndex: 1, difficulty: 1, category: 'food' },
   { id: '5010542', text: 'Which architect designed the Guggenheim Museum in New York?', options: ['I.M. Pei', 'Frank Lloyd Wright', 'Le Corbusier', 'Mies van der Rohe'], correctIndex: 1, difficulty: 1, category: 'architecture' },
   { id: '5010543', text: 'What phenomenon causes ocean tides?', options: ['Wind patterns', 'Gravitational pull', 'Earth\'s rotation', 'Ocean currents'], correctIndex: 1, difficulty: 1, category: 'science' },

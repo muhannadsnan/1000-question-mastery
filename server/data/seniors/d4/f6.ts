@@ -61,7 +61,7 @@ export const questions = [
   { id: '5040560', text: 'The first exoplanet around a sun-like star was discovered in which year?', options: ['1995', '1990', '2000', '1985'], correctIndex: 0, difficulty: 4, category: 'science' },
   { id: '5040561', text: 'Contempt by Jean-Luc Godard is about the making of which epic?', options: ['The Odyssey', 'The Iliad', 'The Aeneid', 'Jason and the Argonauts'], correctIndex: 0, difficulty: 4, category: 'movies' },
   { id: '5040562', text: 'Who painted "Bacchus"?', options: ['Caravaggio', 'Titian', 'Peter Paul Rubens', 'All painted Bacchus'], correctIndex: 3, difficulty: 4, category: 'art' },
-  { id: '5040563', text: 'Who composed "Tristan und Isolde"?', options: ['Richard Wagner', 'Giuseppe Verdi', 'Richard Strauss', 'Gustav Mahler'], correctIndex: 0, difficulty: 4, category: 'music' },
+  { id: '5040563', text: 'What is the chemical symbol for nitrogen?', options: ['Ni', 'N', 'No', 'Nt'], correctIndex: 1, difficulty: 4, category: 'music' },
   { id: '5040564', text: 'The "twin deficits" hypothesis links budget deficits to what?', options: ['Trade deficits', 'Unemployment', 'Inflation', 'Interest rates'], correctIndex: 0, difficulty: 4, category: 'economics' },
   { id: '5040565', text: 'The Wannsee Conference (1942) planned what?', options: ['The Final Solution', 'Operation Barbarossa', 'The Blitz', 'Atlantic Wall'], correctIndex: 0, difficulty: 4, category: 'history' },
   { id: '5040566', text: 'Who wrote "If This Is a Man"?', options: ['Primo Levi', 'Italo Calvino', 'Elie Wiesel', 'Imre Kertész'], correctIndex: 0, difficulty: 4, category: 'literature' },

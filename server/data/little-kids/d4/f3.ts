@@ -90,7 +90,7 @@ export const questions = [
   { id: '1003289', text: 'What food is creamy and you eat with a spoon?', options: ['Bread', 'Yogurt', 'Chips', 'Crackers'], correctIndex: 1, difficulty: 4, category: 'food' },
   { id: '1003290', text: 'What toy makes bubbles when you blow?', options: ['Ball', 'Bubble wand', 'Blocks', 'Puzzle'], correctIndex: 1, difficulty: 4, category: 'toys' },
   { id: '1003291', text: 'What animal has a shell and lives in the sea?', options: ['Dog', 'Turtle', 'Cat', 'Bird'], correctIndex: 1, difficulty: 4, category: 'animals' },
-  { id: '1003292', text: 'What color is a ripe watermelon inside?', options: ['Green', 'Red', 'Yellow', 'White'], correctIndex: 1, difficulty: 4, category: 'colors' },
+  { id: '1003292', text: 'What is the capital of Dominica?', options: ['Portsmouth', 'Roseau', 'Marigot', 'Berekua'], correctIndex: 1, difficulty: 4, category: 'colors' },
   { id: '1003293', text: 'What shape is a picture frame?', options: ['Circle', 'Rectangle', 'Triangle', 'Star'], correctIndex: 1, difficulty: 4, category: 'shapes' },
   { id: '1003294', text: 'What is 7 - 3?', options: ['2', '3', '4', '5'], correctIndex: 2, difficulty: 4, category: 'numbers' },
   { id: '1003295', text: 'What season do we see the most flowers?', options: ['Winter', 'Fall', 'Spring', 'None'], correctIndex: 2, difficulty: 4, category: 'nature' },

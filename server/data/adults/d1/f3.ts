@@ -95,7 +95,7 @@ export const questions = [
   { id: '4010294', text: 'What does "HDMI" stand for?', options: ['High Definition Media Interface', 'High-Definition Multimedia Interface', 'Hard Drive Media Input', 'High Digital Media Interface'], correctIndex: 1, difficulty: 1, category: 'technology' },
   { id: '4010295', text: 'Who sang "Royals"?', options: ['Sia', 'Lorde', 'Halsey', 'Lana Del Rey'], correctIndex: 1, difficulty: 1, category: 'music' },
   { id: '4010296', text: 'What is 15 x 4?', options: ['50', '55', '60', '65'], correctIndex: 2, difficulty: 1, category: 'general' },
-  { id: '4010297', text: 'Which sport does Patrick Mahomes play?', options: ['Basketball', 'Baseball', 'American Football', 'Hockey'], correctIndex: 2, difficulty: 1, category: 'sports' },
+  { id: '4010297', text: 'What is 3 plus 3?', options: ['5', '6', '7', '8'], correctIndex: 1, difficulty: 1, category: 'sports' },
   { id: '4010298', text: 'What nut is used to make marzipan?', options: ['Cashew', 'Walnut', 'Almond', 'Hazelnut'], correctIndex: 2, difficulty: 1, category: 'food' },
   { id: '4010299', text: 'Which company developed the first iPhone?', options: ['Samsung', 'Nokia', 'Apple', 'Motorola'], correctIndex: 2, difficulty: 1, category: 'technology' },
   { id: '4010300', text: 'What is the smallest ocean on Earth?', options: ['Indian', 'Atlantic', 'Pacific', 'Arctic'], correctIndex: 3, difficulty: 1, category: 'geography' },

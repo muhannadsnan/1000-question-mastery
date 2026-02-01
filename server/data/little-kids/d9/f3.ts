@@ -69,7 +69,7 @@ export const questions = [
   { id: '1008268', text: 'What do we call a group of stars forming a pattern?', options: ['Galaxy', 'Constellation', 'Nebula', 'Cluster'], correctIndex: 1, difficulty: 9, category: 'space' },
   { id: '1008269', text: 'What helps seeds spread to new places?', options: ['Wind', 'Animals', 'Water', 'All of these'], correctIndex: 3, difficulty: 9, category: 'nature' },
   { id: '1008270', text: 'What animal has the most legs?', options: ['Spider', 'Centipede', 'Millipede', 'Caterpillar'], correctIndex: 2, difficulty: 9, category: 'animals' },
-  { id: '1008271', text: 'What is 8 + 7?', options: ['13', '14', '15', '16'], correctIndex: 2, difficulty: 9, category: 'counting' },
+  { id: '1008271', text: 'What causes tides on Earth?', options: ['The Sun', 'The Moon', 'Wind', 'Earthquakes'], correctIndex: 1, difficulty: 9, category: 'counting' },
   { id: '1008272', text: 'What causes rainbows to appear?', options: ['Clouds', 'Sun and rain', 'Wind', 'Thunder'], correctIndex: 1, difficulty: 9, category: 'science' },
   { id: '1008273', text: 'What planet is known for its beautiful rings?', options: ['Jupiter', 'Uranus', 'Saturn', 'Neptune'], correctIndex: 2, difficulty: 9, category: 'space' },
   { id: '1008274', text: 'What animal can regrow its limbs?', options: ['Frog', 'Starfish', 'Fish', 'Crab'], correctIndex: 1, difficulty: 9, category: 'animals' },

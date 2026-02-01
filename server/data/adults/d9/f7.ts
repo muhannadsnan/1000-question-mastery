@@ -54,7 +54,7 @@ export const questions = [
   { id: '4090653', text: 'Which director made "The Apartment" and "Some Like It Hot"?', options: ['Howard Hawks', 'Billy Wilder', 'Preston Sturges', 'Ernst Lubitsch'], correctIndex: 1, difficulty: 9, category: 'movies' },
   { id: '4090654', text: 'What is "anaphora" in rhetoric?', options: ['Back reference', 'Repetition at beginning of clauses', 'Comparison', 'Exaggeration'], correctIndex: 1, difficulty: 9, category: 'literature' },
   { id: '4090655', text: 'Which strait connects the Black Sea to the Mediterranean?', options: ['Bosporus and Dardanelles', 'Strait of Gibraltar', 'Strait of Messina', 'Strait of Otranto'], correctIndex: 0, difficulty: 9, category: 'geography' },
-  { id: '4090656', text: 'What is "groupthink"?', options: ['Collective intelligence', 'Faulty decision-making in cohesive groups', 'Brainstorming', 'Group therapy'], correctIndex: 1, difficulty: 9, category: 'psychology' },
+  { id: '4090656', text: 'Who wrote Being and Time?', options: ['Husserl', 'Heidegger', 'Sartre', 'Nietzsche'], correctIndex: 1, difficulty: 9, category: 'psychology' },
   { id: '4090657', text: 'Which art movement emphasized movement and technology?', options: ['Cubism', 'Futurism', 'Suprematism', 'Constructivism'], correctIndex: 1, difficulty: 9, category: 'art' },
   { id: '4090658', text: 'The Russo-Japanese War ended with which treaty?', options: ['Treaty of Paris', 'Treaty of Portsmouth', 'Treaty of Berlin', 'Treaty of London'], correctIndex: 1, difficulty: 9, category: 'history' },
   { id: '4090659', text: 'Which philosopher wrote "After Virtue"?', options: ['Charles Taylor', 'Alasdair MacIntyre', 'Michael Sandel', 'Martha Nussbaum'], correctIndex: 1, difficulty: 9, category: 'philosophy' },

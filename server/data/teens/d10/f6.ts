@@ -85,7 +85,7 @@ export const questions = [
   { id: '3100584', text: 'Which artist released "Channel Orange" in 2012?', options: ['The Weeknd', 'Frank Ocean', 'Miguel', 'Anderson .Paak'], correctIndex: 1, difficulty: 10, category: 'music' },
   { id: '3100585', text: 'Which battle royale game features building mechanics as a core gameplay element?', options: ['PUBG', 'Apex Legends', 'Fortnite', 'Call of Duty: Warzone'], correctIndex: 2, difficulty: 10, category: 'gaming' },
   { id: '3100586', text: 'Which director made "Vertigo" and "North by Northwest"?', options: ['Billy Wilder', 'Alfred Hitchcock', 'John Huston', 'William Wyler'], correctIndex: 1, difficulty: 10, category: 'movies' },
-  { id: '3100587', text: 'Who holds the record for most Grand Slam singles titles in men\'s tennis?', options: ['Roger Federer', 'Rafael Nadal', 'Novak Djokovic', 'Pete Sampras'], correctIndex: 2, difficulty: 10, category: 'sports' },
+  { id: '3100587', text: 'What is the P vs NP problem?', options: ['Graph theory', 'Complexity theory', 'Number theory', 'Topology'], correctIndex: 1, difficulty: 10, category: 'sports' },
   { id: '3100588', text: 'What phenomenon causes the sky to appear blue?', options: ['Reflection', 'Refraction', 'Rayleigh scattering', 'Absorption'], correctIndex: 2, difficulty: 10, category: 'science' },
   { id: '3100589', text: 'Which country is home to the ancient city of Petra?', options: ['Israel', 'Jordan', 'Syria', 'Lebanon'], correctIndex: 1, difficulty: 10, category: 'geography' },
   { id: '3100590', text: 'Who was the Viking explorer believed to have reached North America around 1000 AD?', options: ['Erik the Red', 'Leif Erikson', 'Ragnar Lothbrok', 'Harald Hardrada'], correctIndex: 1, difficulty: 10, category: 'history' },

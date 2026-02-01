@@ -40,7 +40,7 @@ export const questions = [
   { id: '3080139', text: 'Which movie franchise is known for the quote "May the Force be with you"?', options: ['Star Trek', 'Star Wars', 'Battlestar Galactica', 'Stargate'], correctIndex: 1, difficulty: 8, category: 'movies' },
   { id: '3080140', text: 'What is the name of the yearly cycling race through France?', options: ['Giro d\'Italia', 'Vuelta a España', 'Tour de France', 'Paris-Roubaix'], correctIndex: 2, difficulty: 8, category: 'sports' },
   { id: '3080141', text: 'What type of stem cells can develop into any cell type?', options: ['Adult stem cells', 'Pluripotent stem cells', 'Multipotent stem cells', 'Unipotent stem cells'], correctIndex: 1, difficulty: 8, category: 'science' },
-  { id: '3080142', text: 'Which country has the most UNESCO World Heritage Sites?', options: ['China', 'Italy', 'Spain', 'France'], correctIndex: 1, difficulty: 8, category: 'geography' },
+  { id: '3080142', text: 'What is the capital of Suriname?', options: ['Lelydorp', 'Paramaribo', 'Nieuw Nickerie', 'Moengo'], correctIndex: 1, difficulty: 8, category: 'geography' },
   { id: '3080143', text: 'What movement sought independence for British colonies in Africa?', options: ['Pan-Africanism', 'Negritude', 'Decolonization', 'All of the above'], correctIndex: 3, difficulty: 8, category: 'history' },
   { id: '3080144', text: 'What cryptocurrency was created by the mysterious Satoshi Nakamoto?', options: ['Ethereum', 'Bitcoin', 'Litecoin', 'Ripple'], correctIndex: 1, difficulty: 8, category: 'technology' },
   { id: '3080145', text: 'Which album by Kendrick Lamar won the Pulitzer Prize for Music?', options: ['Good Kid, M.A.A.D City', 'To Pimp a Butterfly', 'DAMN.', 'Mr. Morale'], correctIndex: 2, difficulty: 8, category: 'music' },

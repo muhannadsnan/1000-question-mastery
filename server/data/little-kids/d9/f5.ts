@@ -17,7 +17,7 @@ export const questions = [
   { id: '1008416', text: 'What color is a violet?', options: ['Red', 'Yellow', 'Purple', 'Orange'], correctIndex: 2, difficulty: 9, category: 'colors' },
   { id: '1008417', text: 'What color is sand?', options: ['Blue', 'Green', 'Brown or tan', 'Purple'], correctIndex: 2, difficulty: 9, category: 'colors' },
   { id: '1008418', text: 'What color is the night sky?', options: ['Blue', 'Dark blue or black', 'Yellow', 'Green'], correctIndex: 1, difficulty: 9, category: 'colors' },
-  { id: '1008419', text: 'What color are most tree trunks?', options: ['Green', 'Brown', 'Blue', 'Yellow'], correctIndex: 1, difficulty: 9, category: 'colors' },
+  { id: '1008419', text: 'What is the chemical symbol for tin?', options: ['Ti', 'Sn', 'Tn', 'Si'], correctIndex: 1, difficulty: 9, category: 'colors' },
   { id: '1008420', text: 'What color is a pea?', options: ['Red', 'Green', 'Yellow', 'Blue'], correctIndex: 1, difficulty: 9, category: 'colors' },
   { id: '1008421', text: 'How many noses do you have?', options: ['0', '1', '2', '3'], correctIndex: 1, difficulty: 9, category: 'body' },
   { id: '1008422', text: 'How many mouths do you have?', options: ['0', '1', '2', '3'], correctIndex: 1, difficulty: 9, category: 'body' },

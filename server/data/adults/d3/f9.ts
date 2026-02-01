@@ -1,7 +1,7 @@
 export const questions = [
   { id: '4030901', text: 'In what year did the Chernobyl nuclear disaster occur?', options: ['1984', '1986', '1988', '1990'], correctIndex: 1, difficulty: 3, category: 'history' },
   { id: '4030902', text: 'What is the exact distance in miles of a marathon race?', options: ['26.0', '26.1', '26.2', '26.3'], correctIndex: 2, difficulty: 3, category: 'sports' },
-  { id: '4030903', text: 'Who was the first woman to win a Nobel Prize in Physics?', options: ['Lise Meitner', 'Marie Curie', 'Maria Goeppert Mayer', 'Donna Strickland'], correctIndex: 1, difficulty: 3, category: 'science' },
+  { id: '4030903', text: 'What is 8 times 4?', options: ['30', '32', '34', '36'], correctIndex: 1, difficulty: 3, category: 'science' },
   { id: '4030904', text: 'In which city was the Treaty of Versailles signed in 1919?', options: ['Paris', 'Versailles', 'London', 'Geneva'], correctIndex: 1, difficulty: 3, category: 'history' },
   { id: '4030905', text: 'What is the atomic number of uranium?', options: ['82', '88', '92', '94'], correctIndex: 2, difficulty: 3, category: 'science' },
   { id: '4030906', text: 'Who directed the 1994 film "Pulp Fiction"?', options: ['Martin Scorsese', 'Quentin Tarantino', 'David Fincher', 'Coen Brothers'], correctIndex: 1, difficulty: 3, category: 'movies' },

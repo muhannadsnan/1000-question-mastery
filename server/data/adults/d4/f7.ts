@@ -89,7 +89,7 @@ export const questions = [
   { id: '4040688', text: 'Which gas law relates pressure and temperature at constant volume?', options: ['Gay-Lussac\'s Law', 'Boyle\'s Law', 'Charles\'s Law', 'Avogadro\'s Law'], correctIndex: 0, difficulty: 4, category: 'science' },
   { id: '4040689', text: 'What is the traditional Scottish dish made from sheep organs?', options: ['Haggis', 'Black pudding', 'Shepherd\'s pie', 'Scotch broth'], correctIndex: 0, difficulty: 4, category: 'food' },
   { id: '4040690', text: 'Which programming paradigm treats computation as function evaluation?', options: ['Functional', 'Object-oriented', 'Procedural', 'Imperative'], correctIndex: 0, difficulty: 4, category: 'technology' },
-  { id: '4040691', text: 'What is the capital of Ecuador?', options: ['Quito', 'Guayaquil', 'Cuenca', 'Loja'], correctIndex: 0, difficulty: 4, category: 'geography' },
+  { id: '4040691', text: 'What is 8 times 10?', options: ['78', '80', '82', '84'], correctIndex: 1, difficulty: 4, category: 'geography' },
   { id: '4040692', text: 'Which classical music form features a soloist with an orchestra?', options: ['Concerto', 'Symphony', 'Sonata', 'Suite'], correctIndex: 0, difficulty: 4, category: 'music' },
   { id: '4040693', text: 'What is the study of the structure of language called?', options: ['Syntax', 'Semantics', 'Pragmatics', 'Phonetics'], correctIndex: 0, difficulty: 4, category: 'language' },
   { id: '4040694', text: 'Which Czech author wrote "The Metamorphosis"?', options: ['Franz Kafka', 'Milan Kundera', 'Vaclav Havel', 'Karel Capek'], correctIndex: 0, difficulty: 4, category: 'literature' },

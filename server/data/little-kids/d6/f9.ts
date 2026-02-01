@@ -50,7 +50,7 @@ export const questions = [
   { id: '1005849', text: 'What is 80 - 4?', options: ['74', '75', '76', '77'], correctIndex: 2, difficulty: 6, category: 'math' },
   { id: '1005850', text: 'What is 80 - 3?', options: ['75', '76', '77', '78'], correctIndex: 2, difficulty: 6, category: 'math' },
   { id: '1005851', text: 'What does beautiful mean?', options: ['Ugly', 'Very pretty', 'Average', 'Normal'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
-  { id: '1005852', text: 'What does enormous mean?', options: ['Tiny', 'Small', 'Very big', 'Medium'], correctIndex: 2, difficulty: 6, category: 'vocabulary' },
+  { id: '1005852', text: 'What is the capital of Mali?', options: ['Sikasso', 'Bamako', 'Mopti', 'Koutiala'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
   { id: '1005853', text: 'What does exhausted mean?', options: ['Energetic', 'Very tired', 'Happy', 'Sad'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
   { id: '1005854', text: 'What does delicious mean?', options: ['Bad tasting', 'Very good tasting', 'Sour', 'Bitter'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },
   { id: '1005855', text: 'What does brilliant mean?', options: ['Dull', 'Very bright or smart', 'Dark', 'Quiet'], correctIndex: 1, difficulty: 6, category: 'vocabulary' },

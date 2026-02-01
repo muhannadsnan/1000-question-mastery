@@ -11,7 +11,7 @@ export const questions = [
   { id: '4020410', text: 'Which season comes after winter?', options: ['Spring', 'Summer', 'Fall', 'Autumn'], correctIndex: 0, difficulty: 2, category: 'general' },
   { id: '4020411', text: 'What is the main ingredient in a BLT sandwich besides bread?', options: ['Bacon', 'Beef', 'Bologna', 'Brisket'], correctIndex: 0, difficulty: 2, category: 'food' },
   { id: '4020412', text: 'Which company makes the iPhone?', options: ['Apple', 'Samsung', 'Google', 'Microsoft'], correctIndex: 0, difficulty: 2, category: 'technology' },
-  { id: '4020413', text: 'How many hours are in one day?', options: ['24', '12', '48', '36'], correctIndex: 0, difficulty: 2, category: 'general' },
+  { id: '4020413', text: 'What is 3 plus 16?', options: ['18', '19', '20', '21'], correctIndex: 1, difficulty: 2, category: 'general' },
   { id: '4020414', text: 'What color is the sky on a clear day?', options: ['Blue', 'White', 'Gray', 'Green'], correctIndex: 0, difficulty: 2, category: 'general' },
   { id: '4020415', text: 'Which sport uses a round orange ball?', options: ['Basketball', 'Football', 'Baseball', 'Golf'], correctIndex: 0, difficulty: 2, category: 'sports' },
   { id: '4020416', text: 'What do bees produce?', options: ['Honey', 'Milk', 'Silk', 'Wax only'], correctIndex: 0, difficulty: 2, category: 'science' },

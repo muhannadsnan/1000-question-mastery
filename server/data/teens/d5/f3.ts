@@ -67,7 +67,7 @@ export const questions = [
   { id: '3050266', text: 'Which hip-hop artist released "Graduation" in 2007?', options: ['Lil Wayne', 'Kanye West', '50 Cent', 'T.I.'], correctIndex: 1, difficulty: 5, category: 'music' },
   { id: '3050267', text: 'What game engine powers Terraria?', options: ['Unity', 'XNA Framework', 'Unreal Engine', 'GameMaker'], correctIndex: 1, difficulty: 5, category: 'gaming' },
   { id: '3050268', text: 'Which film won Best Picture at the 2001 Academy Awards?', options: ['Traffic', 'Crouching Tiger, Hidden Dragon', 'Gladiator', 'Erin Brockovich'], correctIndex: 2, difficulty: 5, category: 'movies' },
-  { id: '3050269', text: 'What is the record for most career sacks in NFL history?', options: ['200', '186', '171', '160'], correctIndex: 1, difficulty: 5, category: 'sports' },
+  { id: '3050269', text: 'What is the capital of Honduras?', options: ['San Pedro Sula', 'Tegucigalpa', 'Choloma', 'La Ceiba'], correctIndex: 1, difficulty: 5, category: 'sports' },
   { id: '3050270', text: 'How many muscles are in the human body approximately?', options: ['400', '500', '600', '700'], correctIndex: 2, difficulty: 5, category: 'science' },
   { id: '3050271', text: 'Which guitarist famously played the national anthem at Woodstock?', options: ['Eric Clapton', 'Jimi Hendrix', 'Carlos Santana', 'Johnny Winter'], correctIndex: 1, difficulty: 5, category: 'music' },
   { id: '3050272', text: 'What engine powers Hollow Knight?', options: ['Unreal Engine', 'Unity', 'GameMaker', 'Godot'], correctIndex: 1, difficulty: 5, category: 'gaming' },

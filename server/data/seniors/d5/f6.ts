@@ -37,7 +37,7 @@ export const questions = [
   { id: '5050536', text: 'The ajaeng is a bowed zither from which country?', options: ['China', 'Japan', 'Korea', 'Vietnam'], correctIndex: 2, difficulty: 5, category: 'music' },
   { id: '5050537', text: 'Which director made "The Tree of Life" (2011)?', options: ['David Lynch', 'Terrence Malick', 'Paul Thomas Anderson', 'Darren Aronofsky'], correctIndex: 1, difficulty: 5, category: 'movies' },
   { id: '5050538', text: 'The Ashanti Empire was located in which modern country?', options: ['Nigeria', 'Ghana', 'Ivory Coast', 'Benin'], correctIndex: 1, difficulty: 5, category: 'history' },
-  { id: '5050539', text: 'Who painted "The Potato Eaters"?', options: ['Jean-François Millet', 'Vincent van Gogh', 'Gustave Courbet', 'Honoré Daumier'], correctIndex: 1, difficulty: 5, category: 'art' },
+  { id: '5050539', text: 'What is the square of 16?', options: ['224', '240', '256', '272'], correctIndex: 2, difficulty: 5, category: 'art' },
   { id: '5050540', text: 'The San Francisco Conference (1945) established which organization?', options: ['NATO', 'United Nations', 'IMF', 'World Bank'], correctIndex: 1, difficulty: 5, category: 'politics' },
   { id: '5050541', text: 'Which anthropologist wrote "The Elementary Structures of Kinship"?', options: ['A.R. Radcliffe-Brown', 'Claude Lévi-Strauss', 'E.E. Evans-Pritchard', 'Meyer Fortes'], correctIndex: 1, difficulty: 5, category: 'anthropology' },
   { id: '5050542', text: 'The Black Arts Movement was associated with which literary era?', options: ['1950s', '1960s-1970s', '1980s', '1990s'], correctIndex: 1, difficulty: 5, category: 'literature' },
@@ -98,5 +98,5 @@ export const questions = [
   { id: '5050597', text: 'The Kadamba Dynasty was an early kingdom in which region?', options: ['Tamil Nadu', 'Karnataka', 'Andhra Pradesh', 'Kerala'], correctIndex: 1, difficulty: 5, category: 'history' },
   { id: '5050598', text: 'Who painted "Black Square"?', options: ['Wassily Kandinsky', 'Kazimir Malevich', 'Piet Mondrian', 'El Lissitzky'], correctIndex: 1, difficulty: 5, category: 'art' },
   { id: '5050599', text: 'The Four Policemen concept was proposed by which leader?', options: ['Winston Churchill', 'Franklin D. Roosevelt', 'Joseph Stalin', 'Chiang Kai-shek'], correctIndex: 1, difficulty: 5, category: 'politics' },
-  { id: '5050600', text: 'Who wrote "A Passage to India"?', options: ['Rudyard Kipling', 'E.M. Forster', 'Joseph Conrad', 'Graham Greene'], correctIndex: 1, difficulty: 5, category: 'literature' },
+  { id: '5050600', text: 'What is the square of 17?', options: ['272', '281', '289', '296'], correctIndex: 2, difficulty: 5, category: 'literature' },
 ];

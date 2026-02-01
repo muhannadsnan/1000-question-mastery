@@ -70,7 +70,7 @@ export const questions = [
   { id: '2004269', text: 'How many feet are in 4 yards?', options: ['8', '10', '12', '14'], correctIndex: 2, difficulty: 5, category: 'math' },
   { id: '2004270', text: 'What is 56% of 125?', options: ['68', '69', '70', '71'], correctIndex: 2, difficulty: 5, category: 'math' },
   { id: '2004271', text: 'The Scandinavian Mountains are located in which countries?', options: ['Germany and Austria', 'Norway and Sweden', 'Poland and Czech Republic', 'Finland and Russia'], correctIndex: 1, difficulty: 5, category: 'geography' },
-  { id: '2004272', text: 'What is 5/6 + 1/6?', options: ['6/12', '1', '4/6', '6/6'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '2004272', text: 'What is the capital of Gambia?', options: ['Serekunda', 'Banjul', 'Brikama', 'Bakau'], correctIndex: 1, difficulty: 5, category: 'math' },
   { id: '2004273', text: 'What is 77% of 400?', options: ['306', '307', '308', '309'], correctIndex: 2, difficulty: 5, category: 'math' },
   { id: '2004274', text: 'Who invented the spinning jenny?', options: ['James Hargreaves', 'Richard Arkwright', 'Samuel Crompton', 'Edmund Cartwright'], correctIndex: 0, difficulty: 5, category: 'science' },
   { id: '2004275', text: 'Max earns $6 an hour. He worked 8 hours on Saturday and 5 hours on Sunday. He spent $30 on supplies. How much does he have left?', options: ['$48', '$52', '$56', '$58'], correctIndex: 0, difficulty: 5, category: 'math' },

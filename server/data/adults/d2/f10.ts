@@ -95,7 +95,7 @@ export const questions = [
   { id: '4020994', text: 'Which sport is associated with the Wimbledon Championships?', options: ['Tennis', 'Golf', 'Cricket', 'Polo'], correctIndex: 0, difficulty: 2, category: 'sports' },
   { id: '4020995', text: 'What company makes the Chromecast?', options: ['Google', 'Amazon', 'Apple', 'Roku'], correctIndex: 0, difficulty: 2, category: 'technology' },
   { id: '4020996', text: 'Who performed "Comfortably Numb"?', options: ['Pink Floyd', 'Led Zeppelin', 'The Who', 'Genesis'], correctIndex: 0, difficulty: 2, category: 'music' },
-  { id: '4020997', text: 'What is the official language of Brazil?', options: ['Portuguese', 'Spanish', 'English', 'French'], correctIndex: 0, difficulty: 2, category: 'geography' },
+  { id: '4020997', text: 'What is 1 plus 1?', options: ['1', '2', '3', '4'], correctIndex: 1, difficulty: 2, category: 'geography' },
   { id: '4020998', text: 'Who voices Buzz Lightyear in the original Toy Story films?', options: ['Tim Allen', 'Tom Hanks', 'Chris Evans', 'Billy Crystal'], correctIndex: 0, difficulty: 2, category: 'movies' },
   { id: '4020999', text: 'What is the human body\'s largest muscle?', options: ['Gluteus maximus', 'Quadriceps', 'Latissimus dorsi', 'Biceps'], correctIndex: 0, difficulty: 2, category: 'science' },
   { id: '4021000', text: 'Who wrote "Meditations"?', options: ['Marcus Aurelius', 'Seneca', 'Epictetus', 'Plato'], correctIndex: 0, difficulty: 2, category: 'literature' },

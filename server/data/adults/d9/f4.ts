@@ -36,7 +36,7 @@ export const questions = [
   { id: '4090335', text: 'What was the significance of the Battle of Tours (732)?', options: ['Ended Roman Empire', 'Halted Muslim expansion into Europe', 'Started the Crusades', 'Unified France'], correctIndex: 1, difficulty: 9, category: 'history' },
   { id: '4090336', text: 'Which artist is known for Blue Period and Rose Period works?', options: ['Henri Matisse', 'Pablo Picasso', 'Georges Braque', 'Juan Gris'], correctIndex: 1, difficulty: 9, category: 'art' },
   { id: '4090337', text: 'What is "habituation"?', options: ['Forming habits', 'Decreased response to repeated stimuli', 'Home training', 'Addiction'], correctIndex: 1, difficulty: 9, category: 'psychology' },
-  { id: '4090338', text: 'Which philosopher wrote "Being and Nothingness"?', options: ['Martin Heidegger', 'Jean-Paul Sartre', 'Albert Camus', 'Maurice Merleau-Ponty'], correctIndex: 1, difficulty: 9, category: 'philosophy' },
+  { id: '4090338', text: 'What is Euler characteristic of sphere?', options: ['0', '1', '2', '3'], correctIndex: 2, difficulty: 9, category: 'philosophy' },
   { id: '4090339', text: 'Which sea is located between Saudi Arabia and Africa?', options: ['Arabian Sea', 'Red Sea', 'Persian Gulf', 'Gulf of Aden'], correctIndex: 1, difficulty: 9, category: 'geography' },
   { id: '4090340', text: 'Which film technique emphasizes long takes without cuts?', options: ['Montage', 'Long take', 'Quick cutting', 'Jump cut'], correctIndex: 1, difficulty: 9, category: 'movies' },
   { id: '4090341', text: 'The Helsinki Accords addressed relations between which blocs?', options: ['NATO and SEATO', 'East and West during Cold War', 'European Union members', 'Commonwealth nations'], correctIndex: 1, difficulty: 9, category: 'politics' },

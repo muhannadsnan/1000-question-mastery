@@ -1,5 +1,5 @@
 export const questions = [
-  { id: '4050701', text: 'Who painted "The Arnolfini Portrait"?', options: ['Hieronymus Bosch', 'Jan van Eyck', 'Rogier van der Weyden', 'Hans Memling'], correctIndex: 1, difficulty: 5, category: 'art' },
+  { id: '4050701', text: 'What is the GCD of 30 and 45?', options: ['5', '10', '15', '20'], correctIndex: 2, difficulty: 5, category: 'art' },
   { id: '4050702', text: 'Which country has won the most Commonwealth Games medals?', options: ['United Kingdom', 'Australia', 'Canada', 'India'], correctIndex: 1, difficulty: 5, category: 'sports' },
   { id: '4050703', text: 'Who wrote "Margin of Safety"?', options: ['Benjamin Graham', 'Seth Klarman', 'Joel Greenblatt', 'Howard Marks'], correctIndex: 1, difficulty: 5, category: 'business' },
   { id: '4050704', text: 'What is the term for the actor-observer bias?', options: ['Attribution Asymmetry', 'Perspective Difference', 'Self-Other Divergence', 'Situational Attribution'], correctIndex: 0, difficulty: 5, category: 'psychology' },
@@ -51,7 +51,7 @@ export const questions = [
   { id: '4050750', text: 'Who wrote "The Metamorphosis"?', options: ['Hermann Hesse', 'Franz Kafka', 'Thomas Mann', 'Robert Musil'], correctIndex: 1, difficulty: 5, category: 'literature' },
   { id: '4050751', text: 'Which actor won the Oscar for Best Actor in "Amadeus"?', options: ['Tom Hulce', 'F. Murray Abraham', 'Sam Waterston', 'Albert Finney'], correctIndex: 1, difficulty: 5, category: 'movies' },
   { id: '4050752', text: 'Who composed "Pomp and Circumstance"?', options: ['Ralph Vaughan Williams', 'Edward Elgar', 'Gustav Holst', 'Benjamin Britten'], correctIndex: 1, difficulty: 5, category: 'music' },
-  { id: '4050753', text: 'Which country has the most active volcanoes?', options: ['Japan', 'Indonesia', 'United States', 'Russia'], correctIndex: 1, difficulty: 5, category: 'geography' },
+  { id: '4050753', text: 'What is 19 squared?', options: ['359', '361', '363', '365'], correctIndex: 1, difficulty: 5, category: 'geography' },
   { id: '4050754', text: 'Who discovered the Zeeman effect?', options: ['Hendrik Lorentz', 'Pieter Zeeman', 'Max Planck', 'Albert Einstein'], correctIndex: 1, difficulty: 5, category: 'science' },
   { id: '4050755', text: 'Which war featured the Battle of Gettysburg?', options: ['War of 1812', 'American Civil War', 'Mexican-American War', 'Spanish-American War'], correctIndex: 1, difficulty: 5, category: 'history' },
   { id: '4050756', text: 'Who said "Money is the root of all evil"?', options: ['Adam Smith', 'Bible (misquoted)', 'Karl Marx', 'John Maynard Keynes'], correctIndex: 1, difficulty: 5, category: 'general' },
@@ -96,7 +96,7 @@ export const questions = [
   { id: '4050795', text: 'Which company developed Ethernet?', options: ['IBM', 'Xerox', 'Intel', 'DEC'], correctIndex: 1, difficulty: 5, category: 'technology' },
   { id: '4050796', text: 'Who painted "The Lady of Shalott"?', options: ['John Everett Millais', 'John William Waterhouse', 'Dante Gabriel Rossetti', 'Edward Burne-Jones'], correctIndex: 1, difficulty: 5, category: 'art' },
   { id: '4050797', text: 'Which country has won the most Olympic gold medals in sailing?', options: ['United States', 'Great Britain', 'France', 'Australia'], correctIndex: 1, difficulty: 5, category: 'sports' },
-  { id: '4050798', text: 'Who wrote "The Essays of Warren Buffett"?', options: ['Warren Buffett', 'Lawrence Cunningham', 'Carol Loomis', 'Roger Lowenstein'], correctIndex: 1, difficulty: 5, category: 'business' },
+  { id: '4050798', text: 'What is 3 to the power of 4?', options: ['64', '72', '81', '90'], correctIndex: 2, difficulty: 5, category: 'business' },
   { id: '4050799', text: 'What is the term for the self-serving bias?', options: ['Attribution Error', 'Ego Protection', 'Success Internalization', 'Motivational Attribution'], correctIndex: 2, difficulty: 5, category: 'psychology' },
   { id: '4050800', text: 'Which film won the Academy Award for Best Picture in 1983?', options: ['E.T. the Extra-Terrestrial', 'Gandhi', 'Tootsie', 'The Verdict'], correctIndex: 1, difficulty: 5, category: 'movies' },
 ];

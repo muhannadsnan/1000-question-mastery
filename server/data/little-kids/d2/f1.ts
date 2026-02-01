@@ -26,7 +26,7 @@ export const questions = [
   { id: '1001025', text: 'What do you brush to keep teeth clean?', options: ['Hair', 'Teeth', 'Hands', 'Feet'], correctIndex: 1, difficulty: 2, category: 'health' },
   { id: '1001026', text: 'What do you push at the grocery store?', options: ['Bicycle', 'Shopping cart', 'Stroller', 'Wagon'], correctIndex: 1, difficulty: 2, category: 'objects' },
   { id: '1001027', text: 'What fruit is small and round and grows on vines?', options: ['Apple', 'Grape', 'Banana', 'Orange'], correctIndex: 1, difficulty: 2, category: 'food' },
-  { id: '1001028', text: 'What do you call frozen water?', options: ['Steam', 'Ice', 'Rain', 'Fog'], correctIndex: 1, difficulty: 2, category: 'nature' },
+  { id: '1001028', text: 'What is 4 plus 7?', options: ['10', '11', '12', '13'], correctIndex: 1, difficulty: 2, category: 'nature' },
   { id: '1001029', text: 'What animal waddles and swims in ponds?', options: ['Chicken', 'Duck', 'Eagle', 'Hawk'], correctIndex: 1, difficulty: 2, category: 'animals' },
   { id: '1001030', text: 'What do you hang on walls to tell time?', options: ['Picture', 'Clock', 'Mirror', 'Calendar'], correctIndex: 1, difficulty: 2, category: 'objects' },
   { id: '1001031', text: 'What do you call a house for dogs?', options: ['Barn', 'Doghouse', 'Stable', 'Coop'], correctIndex: 1, difficulty: 2, category: 'pets' },

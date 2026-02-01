@@ -92,7 +92,7 @@ export const questions = [
   { id: '1002691', text: 'What is 10 - 3?', options: ['6', '7', '8', '9'], correctIndex: 1, difficulty: 3, category: 'math' },
   { id: '1002692', text: 'What color is a swan?', options: ['Red', 'Blue', 'White', 'Green'], correctIndex: 2, difficulty: 3, category: 'colors' },
   { id: '1002693', text: 'What is the opposite of noon?', options: ['Day', 'Midnight', 'Lunch', 'Sun'], correctIndex: 1, difficulty: 3, category: 'opposites' },
-  { id: '1002694', text: 'Which word rhymes with street?', options: ['Road', 'Sweet', 'Walk', 'Drive'], correctIndex: 1, difficulty: 3, category: 'rhyming' },
+  { id: '1002694', text: 'What gas makes up most of Earth atmosphere?', options: ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Argon'], correctIndex: 1, difficulty: 3, category: 'rhyming' },
   { id: '1002695', text: 'What do we call a baby goat?', options: ['Pup', 'Kid', 'Cub', 'Chick'], correctIndex: 1, difficulty: 3, category: 'animals' },
   { id: '1002696', text: 'What is 10 - 4?', options: ['5', '6', '7', '8'], correctIndex: 1, difficulty: 3, category: 'math' },
   { id: '1002697', text: 'What color is an owl?', options: ['Red', 'Blue', 'Brown or gray', 'Green'], correctIndex: 2, difficulty: 3, category: 'colors' },

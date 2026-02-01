@@ -1,5 +1,5 @@
 export const questions = [
-  { id: '2009501', text: 'What can travel around the world while staying in a corner?', options: ['A compass', 'A stamp', 'A globe', 'A map pin'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
+  { id: '2009501', text: 'What is the capital of Benin?', options: ['Cotonou', 'Porto-Novo', 'Parakou', 'Djougou'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
   { id: '2009502', text: 'In a race, you pass the person in 2nd place. What place are you in now?', options: ['1st', '2nd', '3rd', '4th'], correctIndex: 1, difficulty: 10, category: 'brain-teaser' },
   { id: '2009503', text: 'What is the next number: 1, 6, 15, 28, 45, ?', options: ['60', '62', '64', '66'], correctIndex: 3, difficulty: 10, category: 'math' },
   { id: '2009504', text: 'Which period had the most diverse dinosaur species?', options: ['Triassic', 'Jurassic', 'Cretaceous', 'Paleogene'], correctIndex: 2, difficulty: 10, category: 'dinosaurs' },
@@ -57,7 +57,7 @@ export const questions = [
   { id: '2009556', text: 'If today is Saturday, what day was it 45 days ago?', options: ['Wednesday', 'Thursday', 'Friday', 'Saturday'], correctIndex: 2, difficulty: 10, category: 'math' },
   { id: '2009557', text: 'What president was known for the "Square Deal" policy?', options: ['William McKinley', 'Theodore Roosevelt', 'William Howard Taft', 'Woodrow Wilson'], correctIndex: 1, difficulty: 10, category: 'presidents' },
   { id: '2009558', text: 'What is the term for three consecutive strikes in bowling?', options: ['Triple', 'Hat trick', 'Turkey', 'Trifecta'], correctIndex: 2, difficulty: 10, category: 'sports' },
-  { id: '2009559', text: 'Who wrote "Holes"?', options: ['Louis Sachar', 'Andrew Clements', 'Jerry Spinelli', 'Gary Paulsen'], correctIndex: 0, difficulty: 10, category: 'books' },
+  { id: '2009559', text: 'What is the capital of Armenia?', options: ['Gyumri', 'Yerevan', 'Vanadzor', 'Kapan'], correctIndex: 1, difficulty: 10, category: 'books' },
   { id: '2009560', text: 'What is a concerto?', options: ['A piece for orchestra only', 'A piece featuring a solo instrument with orchestra', 'A piece for choir', 'A piece for piano only'], correctIndex: 1, difficulty: 10, category: 'music' },
   { id: '2009561', text: 'A doctor gives you 3 pills and tells you to take one every half hour. How long will the pills last?', options: ['1 hour', '1.5 hours', '2 hours', '2.5 hours'], correctIndex: 0, difficulty: 10, category: 'brain-teaser' },
   { id: '2009562', text: 'What is 3/5 of 2/3 of 90?', options: ['30', '36', '40', '45'], correctIndex: 1, difficulty: 10, category: 'math' },
