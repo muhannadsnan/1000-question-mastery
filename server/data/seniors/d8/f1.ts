@@ -81,5 +81,22 @@ export const questions = [
   { id: '5080080', text: 'The First Council of Constantinople (381 CE) addressed which theological issue?', options: ['Nature of Christ', 'Divinity of the Holy Spirit', 'Canon of Scripture', 'Papal authority'], correctIndex: 1, difficulty: 8, category: 'religion' },
   { id: '5080081', text: 'What is the name of the theoretical surface of a black hole from which no light can escape?', options: ['Photon sphere', 'Ergosphere', 'Event horizon', 'Singularity boundary'], correctIndex: 2, difficulty: 8, category: 'science' },
   { id: '5080082', text: 'Which case established the doctrine of executive privilege but also limited its scope?', options: ['United States v. Nixon', 'Nixon v. Fitzgerald', 'Clinton v. Jones', 'Morrison v. Olson'], correctIndex: 0, difficulty: 8, category: 'law' },
-  { id: '5080083', text: 'The Terracotta Army was discovered near the mausoleum of which Chinese emperor?', options: ['Emperor Wu of Han', 'Qin Shi Huang', 'Emperor Taizong of Tang', 'Kangxi Emperor'], correctIndex: 1, difficulty: 8, category: 'archaeology' }
+  { id: '5080083', text: 'The Terracotta Army was discovered near the mausoleum of which Chinese emperor?', options: ['Emperor Wu of Han', 'Qin Shi Huang', 'Emperor Taizong of Tang', 'Kangxi Emperor'], correctIndex: 1, difficulty: 8, category: 'archaeology' },
+  { id: '5080084', text: 'What is 187 + 63?', options: ['250', '253', '248', '234'], correctIndex: 0, difficulty: 8, category: 'math' },
+  { id: '5080085', text: 'What is 191 + 98?', options: ['303', '284', '260', '289'], correctIndex: 3, difficulty: 8, category: 'math' },
+  { id: '5080086', text: 'What is 141 + 87?', options: ['218', '249', '257', '228'], correctIndex: 3, difficulty: 8, category: 'math' },
+  { id: '5080087', text: 'What is 155 + 24?', options: ['177', '180', '175', '179'], correctIndex: 3, difficulty: 8, category: 'math' },
+  { id: '5080088', text: 'What is 198 + 100?', options: ['328', '298', '314', '271'], correctIndex: 1, difficulty: 8, category: 'math' },
+  { id: '5080089', text: 'What is 109 + 58?', options: ['156', '155', '167', '181'], correctIndex: 2, difficulty: 8, category: 'math' },
+  { id: '5080090', text: 'What is 115 + 44?', options: ['137', '142', '159', '147'], correctIndex: 2, difficulty: 8, category: 'math' },
+  { id: '5080091', text: 'What is 108 + 46?', options: ['156', '139', '154', '134'], correctIndex: 2, difficulty: 8, category: 'math' },
+  { id: '5080092', text: 'What is 51 + 78?', options: ['129', '117', '148', '130'], correctIndex: 0, difficulty: 8, category: 'math' },
+  { id: '5080093', text: 'What is 155 + 63?', options: ['190', '200', '192', '218'], correctIndex: 3, difficulty: 8, category: 'math' },
+  { id: '5080094', text: 'What is 110 + 33?', options: ['160', '131', '156', '143'], correctIndex: 3, difficulty: 8, category: 'math' },
+  { id: '5080095', text: 'What is 50 + 81?', options: ['158', '145', '131', '107'], correctIndex: 2, difficulty: 8, category: 'math' },
+  { id: '5080096', text: 'What is 89 + 90?', options: ['200', '162', '165', '179'], correctIndex: 3, difficulty: 8, category: 'math' },
+  { id: '5080097', text: 'What is 66 + 100?', options: ['191', '152', '166', '189'], correctIndex: 2, difficulty: 8, category: 'math' },
+  { id: '5080098', text: 'What is 62 + 52?', options: ['139', '114', '138', '121'], correctIndex: 1, difficulty: 8, category: 'math' },
+  { id: '5080099', text: 'What is 159 + 45?', options: ['190', '199', '180', '204'], correctIndex: 3, difficulty: 8, category: 'math' },
+  { id: '5080100', text: 'What is 155 + 35?', options: ['179', '194', '207', '190'], correctIndex: 3, difficulty: 8, category: 'math' }
 ]

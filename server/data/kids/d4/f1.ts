@@ -88,5 +88,15 @@ export const questions = [
   { id: '2040087', text: 'Calculate: 228 + 124 = ?', options: ['359', '372', '345', '352'], correctIndex: 3, difficulty: 4, category: 'science' },
   { id: '2040088', text: 'What is the main function of platelets in blood?', options: ['Carry oxygen', 'Fight infection', 'Clot blood', 'Carry nutrients'], correctIndex: 2, difficulty: 4, category: 'science' },
   { id: '2040089', text: 'What do we call the study of birds?', options: ['Entomology', 'Ornithology', 'Herpetology', 'Ichthyology'], correctIndex: 1, difficulty: 4, category: 'science' },
-  { id: '2040090', text: 'Which planet has the most moons in our solar system?', options: ['Jupiter', 'Saturn', 'Uranus', 'Neptune'], correctIndex: 1, difficulty: 4, category: 'science' }
+  { id: '2040090', text: 'Which planet has the most moons in our solar system?', options: ['Jupiter', 'Saturn', 'Uranus', 'Neptune'], correctIndex: 1, difficulty: 4, category: 'science' },
+  { id: '2040091', text: 'What is 9599 + 7963?', options: ['17622', '17543', '17610', '17562'], correctIndex: 3, difficulty: 4, category: 'math' },
+  { id: '2040092', text: 'What is 5917 + 8529?', options: ['14533', '14446', '14498', '14366'], correctIndex: 1, difficulty: 4, category: 'math' },
+  { id: '2040093', text: 'What is 3558 + 3835?', options: ['7468', '7439', '7321', '7393'], correctIndex: 3, difficulty: 4, category: 'math' },
+  { id: '2040094', text: 'What is 7075 + 2674?', options: ['9651', '9729', '9749', '9815'], correctIndex: 2, difficulty: 4, category: 'math' },
+  { id: '2040095', text: 'What is 4583 + 4111?', options: ['8642', '8610', '8596', '8694'], correctIndex: 3, difficulty: 4, category: 'math' },
+  { id: '2040096', text: 'What is 5291 + 7855?', options: ['13146', '13055', '13071', '13228'], correctIndex: 0, difficulty: 4, category: 'math' },
+  { id: '2040097', text: 'What is 5056 + 4413?', options: ['9456', '9469', '9483', '9392'], correctIndex: 1, difficulty: 4, category: 'math' },
+  { id: '2040098', text: 'What is 2922 + 617?', options: ['3551', '3593', '3478', '3539'], correctIndex: 3, difficulty: 4, category: 'math' },
+  { id: '2040099', text: 'What is 7961 + 3091?', options: ['11052', '11066', '10958', '10954'], correctIndex: 0, difficulty: 4, category: 'math' },
+  { id: '2040100', text: 'What is 9564 + 9016?', options: ['18499', '18494', '18516', '18580'], correctIndex: 3, difficulty: 4, category: 'math' }
 ]

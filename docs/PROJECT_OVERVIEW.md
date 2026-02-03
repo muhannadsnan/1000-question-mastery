@@ -65,6 +65,15 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.12.0
+- Completed question database: exactly 50,000 unique questions
+- Structure: 5 age groups × 10 difficulties × 10 files × 100 questions each
+- Generated 10,939 new questions to fill all gaps
+- Every file now has exactly 100 age-appropriate questions
+- All IDs reassigned to ensure uniqueness
+- Zero duplicate texts (within-age or cross-age)
+- Added question generation script for future expansion
+
 ### v1.11.0
 - Fixed all duplicate questions across the entire database
 - Reassigned 37,783 unique IDs using new format: `{age_prefix}{difficulty:02d}{sequence:04d}`

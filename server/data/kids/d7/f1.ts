@@ -88,5 +88,15 @@ export const questions = [
   { id: '2070087', text: 'How many lungs do humans have?', options: ['2', '1', '3', '4'], correctIndex: 0, difficulty: 7, category: 'science' },
   { id: '2070088', text: 'A candy store has 11 jars with 15 candies in each jar. The owner adds 33 more candies. How many candies are there now?', options: ['198 candies', '165 candies', '188 candies', '208 candies'], correctIndex: 0, difficulty: 7, category: 'math' },
   { id: '2070089', text: 'Which continent is Thailand located on?', options: ['Asia', 'Europe', 'Africa', 'Australia'], correctIndex: 0, difficulty: 7, category: 'geography' },
-  { id: '2070090', text: 'What is 9 x 13?', options: ['117', '107', '127', '118'], correctIndex: 0, difficulty: 7, category: 'math' }
+  { id: '2070090', text: 'What is 9 x 13?', options: ['117', '107', '127', '118'], correctIndex: 0, difficulty: 7, category: 'math' },
+  { id: '2070091', text: 'What is 8542 + 1895?', options: ['10509', '10344', '10437', '10443'], correctIndex: 2, difficulty: 7, category: 'math' },
+  { id: '2070092', text: 'What is 1047 + 3222?', options: ['4269', '4318', '4245', '4179'], correctIndex: 0, difficulty: 7, category: 'math' },
+  { id: '2070093', text: 'What is 912 + 8745?', options: ['9744', '9659', '9652', '9657'], correctIndex: 3, difficulty: 7, category: 'math' },
+  { id: '2070094', text: 'What is 476 + 531?', options: ['1007', '919', '916', '1089'], correctIndex: 0, difficulty: 7, category: 'math' },
+  { id: '2070095', text: 'What is 535 + 5704?', options: ['6307', '6239', '6154', '6316'], correctIndex: 1, difficulty: 7, category: 'math' },
+  { id: '2070096', text: 'What is 5194 + 662?', options: ['5856', '5775', '5763', '5785'], correctIndex: 0, difficulty: 7, category: 'math' },
+  { id: '2070097', text: 'What is 1699 + 4309?', options: ['6060', '6008', '5913', '6083'], correctIndex: 1, difficulty: 7, category: 'math' },
+  { id: '2070098', text: 'What is 4003 + 587?', options: ['4495', '4606', '4531', '4590'], correctIndex: 3, difficulty: 7, category: 'math' },
+  { id: '2070099', text: 'What is 6146 + 2309?', options: ['8503', '8455', '8478', '8414'], correctIndex: 1, difficulty: 7, category: 'math' },
+  { id: '2070100', text: 'What is 5196 + 8313?', options: ['13509', '13490', '13536', '13578'], correctIndex: 0, difficulty: 7, category: 'math' }
 ]

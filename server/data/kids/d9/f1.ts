@@ -82,5 +82,21 @@ export const questions = [
   { id: '2090081', text: 'Calculate: 580 + 832 = ?', options: ['1418', '1430', '1412', '1410'], correctIndex: 2, difficulty: 9, category: 'geography' },
   { id: '2090082', text: 'A toad is classified as which type of animal?', options: ['Reptile', 'Amphibian', 'Mammal', 'Fish'], correctIndex: 1, difficulty: 9, category: 'science' },
   { id: '2090083', text: 'What is the next number in the pattern: 1, 4, 9, 16, 25, ?', options: ['30', '36', '34', '32'], correctIndex: 1, difficulty: 9, category: 'math' },
-  { id: '2090084', text: 'If you divide $84.00 equally among 7 people, how much does each person get?', options: ['$11.00', '$12.00', '$13.00', '$14.00'], correctIndex: 1, difficulty: 9, category: 'math' }
+  { id: '2090084', text: 'If you divide $84.00 equally among 7 people, how much does each person get?', options: ['$11.00', '$12.00', '$13.00', '$14.00'], correctIndex: 1, difficulty: 9, category: 'math' },
+  { id: '2090085', text: 'What is 67 + 16?', options: ['83', '93', '82', '84'], correctIndex: 0, difficulty: 9, category: 'math' },
+  { id: '2090086', text: 'What is 59 + 32?', options: ['90', '91', '101', '92'], correctIndex: 1, difficulty: 9, category: 'math' },
+  { id: '2090087', text: 'What is 79 + 38?', options: ['127', '117', '116', '118'], correctIndex: 1, difficulty: 9, category: 'math' },
+  { id: '2090088', text: 'What is 93 + 20?', options: ['123', '112', '113', '114'], correctIndex: 2, difficulty: 9, category: 'math' },
+  { id: '2090089', text: 'What is 45 + 62?', options: ['117', '107', '108', '106'], correctIndex: 1, difficulty: 9, category: 'math' },
+  { id: '2090090', text: 'What is 83 + 19?', options: ['112', '103', '101', '102'], correctIndex: 3, difficulty: 9, category: 'math' },
+  { id: '2090091', text: 'What is 27 + 24?', options: ['61', '51', '52', '50'], correctIndex: 1, difficulty: 9, category: 'math' },
+  { id: '2090092', text: 'What is 46 + 55?', options: ['101', '102', '100', '111'], correctIndex: 0, difficulty: 9, category: 'math' },
+  { id: '2090093', text: 'What is 82 + 29?', options: ['112', '121', '111', '110'], correctIndex: 2, difficulty: 9, category: 'math' },
+  { id: '2090094', text: 'What is 61 + 67?', options: ['127', '129', '128', '138'], correctIndex: 2, difficulty: 9, category: 'math' },
+  { id: '2090095', text: 'What is 30 + 99?', options: ['129', '130', '128', '139'], correctIndex: 0, difficulty: 9, category: 'math' },
+  { id: '2090096', text: 'What is 71 + 62?', options: ['134', '143', '132', '133'], correctIndex: 3, difficulty: 9, category: 'math' },
+  { id: '2090097', text: 'What is 66 + 24?', options: ['89', '100', '91', '90'], correctIndex: 3, difficulty: 9, category: 'math' },
+  { id: '2090098', text: 'What is 89 + 81?', options: ['169', '171', '180', '170'], correctIndex: 3, difficulty: 9, category: 'math' },
+  { id: '2090099', text: 'What is 65 + 32?', options: ['98', '107', '96', '97'], correctIndex: 3, difficulty: 9, category: 'math' },
+  { id: '2090100', text: 'What is 72 + 89?', options: ['171', '162', '161', '160'], correctIndex: 2, difficulty: 9, category: 'math' }
 ]

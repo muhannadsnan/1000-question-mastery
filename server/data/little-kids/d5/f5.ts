@@ -97,5 +97,6 @@ export const questions = [
   { id: '1050496', text: 'What do you use to vacuum floors?', options: ['Mop', 'Broom', 'Vacuum cleaner', 'Towel'], correctIndex: 2, difficulty: 5, category: 'home' },
   { id: '1050497', text: 'What do you use to mop floors?', options: ['Vacuum', 'Broom', 'Mop', 'Towel'], correctIndex: 2, difficulty: 5, category: 'home' },
   { id: '1050498', text: 'What do you use to sweep floors?', options: ['Vacuum', 'Mop', 'Broom', 'Towel'], correctIndex: 2, difficulty: 5, category: 'home' },
-  { id: '1050499', text: 'Where do you put your pillow?', options: ['Floor', 'Bed', 'Chair', 'Table'], correctIndex: 1, difficulty: 5, category: 'home' }
+  { id: '1050499', text: 'Where do you put your pillow?', options: ['Floor', 'Bed', 'Chair', 'Table'], correctIndex: 1, difficulty: 5, category: 'home' },
+  { id: '1050500', text: 'How many mouth do you have?', options: ['3', '2', '0', '1'], correctIndex: 3, difficulty: 5, category: 'body' }
 ]

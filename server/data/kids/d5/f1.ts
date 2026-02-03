@@ -89,5 +89,14 @@ export const questions = [
   { id: '2050088', text: 'How many quarts are in 1 gallon?', options: ['2', '4', '6', '8'], correctIndex: 1, difficulty: 5, category: 'math' },
   { id: '2050089', text: 'What is 8/9 - 5/9?', options: ['3/9', '13/9', '3/18', '13/18'], correctIndex: 0, difficulty: 5, category: 'math' },
   { id: '2050090', text: 'The Volga River is the longest river in which continent?', options: ['Asia', 'Europe', 'Africa', 'North America'], correctIndex: 1, difficulty: 5, category: 'geography' },
-  { id: '2050091', text: 'A recipe needs 3/4 cup of flour. If you want to make half the recipe, how much flour do you need?', options: ['1/4 cup', '3/8 cup', '1/2 cup', '2/4 cup'], correctIndex: 1, difficulty: 5, category: 'math' }
+  { id: '2050091', text: 'A recipe needs 3/4 cup of flour. If you want to make half the recipe, how much flour do you need?', options: ['1/4 cup', '3/8 cup', '1/2 cup', '2/4 cup'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '2050092', text: 'What is 8 ÷ 2?', options: ['3', '4', '5', '6'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '2050093', text: 'What is 24 ÷ 6?', options: ['5', '6', '4', '3'], correctIndex: 2, difficulty: 5, category: 'math' },
+  { id: '2050094', text: 'What is 21 ÷ 7?', options: ['3', '4', '2', '5'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '2050095', text: 'What is 8 ÷ 4?', options: ['2', '1', '4', '3'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '2050096', text: 'What is 18 ÷ 6?', options: ['2', '3', '5', '4'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '2050097', text: 'What is 6 ÷ 3?', options: ['1', '2', '3', '4'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '2050098', text: 'What is 96 ÷ 12?', options: ['7', '10', '9', '8'], correctIndex: 3, difficulty: 5, category: 'math' },
+  { id: '2050099', text: 'What is 120 ÷ 12?', options: ['12', '10', '9', '11'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '2050100', text: 'What is 12 ÷ 2?', options: ['8', '5', '7', '6'], correctIndex: 3, difficulty: 5, category: 'math' }
 ]

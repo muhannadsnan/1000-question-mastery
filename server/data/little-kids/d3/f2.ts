@@ -96,5 +96,7 @@ export const questions = [
   { id: '1030195', text: 'What animal changes color to hide?', options: ['Dog', 'Chameleon', 'Cat', 'Bird'], correctIndex: 1, difficulty: 3, category: 'animals' },
   { id: '1030196', text: 'What do you use to stick paper together?', options: ['Tape', 'Glue', 'String', 'Pin'], correctIndex: 1, difficulty: 3, category: 'objects' },
   { id: '1030197', text: 'What do you ride on water that has a sail?', options: ['Car', 'Sailboat', 'Plane', 'Train'], correctIndex: 1, difficulty: 3, category: 'vehicles' },
-  { id: '1030198', text: 'What sweet treat has frosting on top?', options: ['Bread', 'Cupcake', 'Rice', 'Pasta'], correctIndex: 1, difficulty: 3, category: 'food' }
+  { id: '1030198', text: 'What sweet treat has frosting on top?', options: ['Bread', 'Cupcake', 'Rice', 'Pasta'], correctIndex: 1, difficulty: 3, category: 'food' },
+  { id: '1030199', text: 'A baby butterfly is called a...', options: ['Fry', 'Caterpillar', 'Foal', 'Chick'], correctIndex: 1, difficulty: 3, category: 'animals' },
+  { id: '1030200', text: 'What is 4 - 5?', options: ['-1', '3', '0', '1'], correctIndex: 0, difficulty: 3, category: 'numbers' }
 ]

@@ -97,5 +97,6 @@ export const questions = [
   { id: '1060196', text: 'Calculate: 501 + 217 = ?', options: ['728', '717', '733', '718'], correctIndex: 3, difficulty: 6, category: 'colors' },
   { id: '1060197', text: 'What body part do we nod up and down?', options: ['Hand', 'Foot', 'Head', 'Arm'], correctIndex: 2, difficulty: 6, category: 'body' },
   { id: '1060198', text: 'What round fruit has many seeds inside?', options: ['Apple', 'Banana', 'Watermelon', 'Grape'], correctIndex: 2, difficulty: 6, category: 'food' },
-  { id: '1060199', text: 'What toy do we throw and catch?', options: ['Puzzle', 'Ball', 'Doll', 'Block'], correctIndex: 1, difficulty: 6, category: 'toys' }
+  { id: '1060199', text: 'What toy do we throw and catch?', options: ['Puzzle', 'Ball', 'Doll', 'Block'], correctIndex: 1, difficulty: 6, category: 'toys' },
+  { id: '1060200', text: 'What is 7 - 8?', options: ['1', '0', '-1', '3'], correctIndex: 2, difficulty: 6, category: 'numbers' }
 ]

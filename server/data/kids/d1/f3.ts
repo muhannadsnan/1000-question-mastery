@@ -97,5 +97,6 @@ export const questions = [
   { id: '2010296', text: 'In music notation, a term indicates to play softly. What Italian word means soft or quiet in music?', options: ['Piano', 'Forte', 'Mezzo', 'Allegro'], correctIndex: 0, difficulty: 1, category: 'music' },
   { id: '2010297', text: 'Sophie added 76 and 85 for her math problem. What is the sum?', options: ['161', '160', '162', '159'], correctIndex: 0, difficulty: 1, category: 'math' },
   { id: '2010298', text: 'Burning fossil fuels releases this greenhouse gas that traps heat in the atmosphere. What gas is the main cause of global warming?', options: ['Carbon Dioxide', 'Oxygen', 'Nitrogen', 'Methane'], correctIndex: 0, difficulty: 1, category: 'science' },
-  { id: '2010299', text: 'The electronics store had 105 tablets but sold 58 during the promotion. How many tablets are left?', options: ['47', '46', '48', '45'], correctIndex: 0, difficulty: 1, category: 'math' }
+  { id: '2010299', text: 'The electronics store had 105 tablets but sold 58 during the promotion. How many tablets are left?', options: ['47', '46', '48', '45'], correctIndex: 0, difficulty: 1, category: 'math' },
+  { id: '2010300', text: 'What desert is the largest?', options: ['Kalahari', 'Sahara', 'Mojave', 'Gobi'], correctIndex: 1, difficulty: 1, category: 'geography' }
 ]

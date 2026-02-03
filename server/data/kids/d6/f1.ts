@@ -86,5 +86,17 @@ export const questions = [
   { id: '2060085', text: 'What is 7² + 3 × 4?', options: ['61', '196', '112', '85'], correctIndex: 0, difficulty: 6, category: 'math' },
   { id: '2060086', text: 'What is 5 2/3 + 3 1/6?', options: ['8 1/2', '8 5/6', '9', '8 1/6'], correctIndex: 1, difficulty: 6, category: 'math' },
   { id: '2060087', text: 'The scale on a map is 1:1000. If a road is 5 cm on the map, how long is it in real life?', options: ['50 m', '500 m', '5000 m', '5 m'], correctIndex: 0, difficulty: 6, category: 'math' },
-  { id: '2060088', text: 'Which layer of the atmosphere do we live in?', options: ['Stratosphere', 'Mesosphere', 'Troposphere', 'Thermosphere'], correctIndex: 2, difficulty: 6, category: 'science' }
+  { id: '2060088', text: 'Which layer of the atmosphere do we live in?', options: ['Stratosphere', 'Mesosphere', 'Troposphere', 'Thermosphere'], correctIndex: 2, difficulty: 6, category: 'science' },
+  { id: '2060089', text: 'What is 5069 + 1735?', options: ['6831', '6764', '6804', '6716'], correctIndex: 2, difficulty: 6, category: 'math' },
+  { id: '2060090', text: 'What is 4023 + 1837?', options: ['5860', '5840', '5779', '5828'], correctIndex: 0, difficulty: 6, category: 'math' },
+  { id: '2060091', text: 'What is 2068 + 6067?', options: ['8060', '8120', '8135', '8235'], correctIndex: 2, difficulty: 6, category: 'math' },
+  { id: '2060092', text: 'What is 120 + 3001?', options: ['3195', '3121', '3166', '3115'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '2060093', text: 'What is 2771 + 9229?', options: ['12000', '11987', '11975', '11996'], correctIndex: 0, difficulty: 6, category: 'math' },
+  { id: '2060094', text: 'What is 1249 + 9853?', options: ['11095', '11102', '11130', '11175'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '2060095', text: 'What is 6922 + 8291?', options: ['15146', '15305', '15301', '15213'], correctIndex: 3, difficulty: 6, category: 'math' },
+  { id: '2060096', text: 'What is 1674 + 656?', options: ['2330', '2420', '2383', '2250'], correctIndex: 0, difficulty: 6, category: 'math' },
+  { id: '2060097', text: 'What is 5601 + 1707?', options: ['7343', '7222', '7317', '7308'], correctIndex: 3, difficulty: 6, category: 'math' },
+  { id: '2060098', text: 'What is 5428 + 2548?', options: ['8041', '7911', '7998', '7976'], correctIndex: 3, difficulty: 6, category: 'math' },
+  { id: '2060099', text: 'What is 2716 + 8526?', options: ['11341', '11242', '11228', '11246'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '2060100', text: 'What is 3974 + 3345?', options: ['7269', '7295', '7319', '7267'], correctIndex: 2, difficulty: 6, category: 'math' }
 ]

@@ -83,5 +83,20 @@ export const questions = [
   { id: '4060082', text: 'The Fjords are most famously associated with which Scandinavian country?', options: ['Norway', 'Sweden', 'Denmark', 'Finland'], correctIndex: 0, difficulty: 6, category: 'geography' },
   { id: '4060083', text: 'Which Spanish architect designed the Sagrada Família in Barcelona?', options: ['Antoni Gaudí', 'Santiago Calatrava', 'Rafael Moneo', 'Ricardo Bofill'], correctIndex: 0, difficulty: 6, category: 'art' },
   { id: '4060084', text: 'The War of the Roses was a civil war in which country during the 15th century?', options: ['England', 'France', 'Spain', 'Italy'], correctIndex: 0, difficulty: 6, category: 'history' },
-  { id: '4060085', text: 'What is the term for the number of protons in an atom\'s nucleus?', options: ['Atomic number', 'Mass number', 'Isotope number', 'Valence number'], correctIndex: 0, difficulty: 6, category: 'science' }
+  { id: '4060085', text: 'What is the term for the number of protons in an atom\'s nucleus?', options: ['Atomic number', 'Mass number', 'Isotope number', 'Valence number'], correctIndex: 0, difficulty: 6, category: 'science' },
+  { id: '4060086', text: 'What is 361 + 12?', options: ['408', '384', '373', '396'], correctIndex: 2, difficulty: 6, category: 'math' },
+  { id: '4060087', text: 'What is 324 + 12?', options: ['291', '326', '336', '367'], correctIndex: 2, difficulty: 6, category: 'math' },
+  { id: '4060088', text: 'What is 453 + 49?', options: ['514', '487', '502', '536'], correctIndex: 2, difficulty: 6, category: 'math' },
+  { id: '4060089', text: 'What is 137 + 12?', options: ['124', '149', '188', '168'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '4060090', text: 'What is 458 + 41?', options: ['532', '499', '498', '512'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '4060091', text: 'What is 444 + 41?', options: ['501', '461', '440', '485'], correctIndex: 3, difficulty: 6, category: 'math' },
+  { id: '4060092', text: 'What is 147 + 49?', options: ['219', '196', '190', '228'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '4060093', text: 'What is 327 + 12?', options: ['341', '339', '368', '329'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '4060094', text: 'What is 485 + 18?', options: ['503', '501', '507', '476'], correctIndex: 0, difficulty: 6, category: 'math' },
+  { id: '4060095', text: 'What is 346 + 28?', options: ['390', '374', '407', '328'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '4060096', text: 'What is 175 + 46?', options: ['185', '221', '215', '194'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '4060097', text: 'What is 328 + 39?', options: ['401', '367', '410', '360'], correctIndex: 1, difficulty: 6, category: 'math' },
+  { id: '4060098', text: 'What is 234 + 27?', options: ['301', '281', '257', '261'], correctIndex: 3, difficulty: 6, category: 'math' },
+  { id: '4060099', text: 'What is 202 + 50?', options: ['252', '298', '293', '205'], correctIndex: 0, difficulty: 6, category: 'math' },
+  { id: '4060100', text: 'What is 347 + 11?', options: ['384', '329', '358', '315'], correctIndex: 2, difficulty: 6, category: 'math' }
 ]

@@ -97,5 +97,6 @@ export const questions = [
   { id: '1080696', text: 'What color is a green grape?', options: ['Purple', 'Red', 'Green', 'Yellow'], correctIndex: 2, difficulty: 8, category: 'colors' },
   { id: '1080697', text: 'What color is a red grape?', options: ['Purple', 'Red', 'Green', 'Yellow'], correctIndex: 1, difficulty: 8, category: 'colors' },
   { id: '1080698', text: 'What are your teeth for?', options: ['Seeing', 'Hearing', 'Chewing food', 'Smelling'], correctIndex: 2, difficulty: 8, category: 'body' },
-  { id: '1080699', text: 'What are your ears for?', options: ['Seeing', 'Hearing', 'Tasting', 'Smelling'], correctIndex: 1, difficulty: 8, category: 'body' }
+  { id: '1080699', text: 'What are your ears for?', options: ['Seeing', 'Hearing', 'Tasting', 'Smelling'], correctIndex: 1, difficulty: 8, category: 'body' },
+  { id: '1080700', text: 'A baby cat is called a...', options: ['Chick', 'Kitten', 'Lamb', 'Chick'], correctIndex: 1, difficulty: 8, category: 'animals' }
 ]

@@ -96,5 +96,7 @@ export const questions = [
   { id: '1020095', text: 'What animal carries its baby in a pouch?', options: ['Bear', 'Kangaroo', 'Dog', 'Cat'], correctIndex: 1, difficulty: 2, category: 'animals' },
   { id: '1020096', text: 'What do you call a frozen treat on a stick?', options: ['Cake', 'Popsicle', 'Cookie', 'Pie'], correctIndex: 1, difficulty: 2, category: 'food' },
   { id: '1020097', text: 'What do you use to stir soup?', options: ['Fork', 'Spoon', 'Knife', 'Plate'], correctIndex: 1, difficulty: 2, category: 'objects' },
-  { id: '1020098', text: 'What striped insect makes honey?', options: ['Fly', 'Bee', 'Ant', 'Spider'], correctIndex: 1, difficulty: 2, category: 'nature' }
+  { id: '1020098', text: 'What striped insect makes honey?', options: ['Fly', 'Bee', 'Ant', 'Spider'], correctIndex: 1, difficulty: 2, category: 'nature' },
+  { id: '1020099', text: 'How many sides does a diamond have?', options: ['3', '5', '4', '6'], correctIndex: 2, difficulty: 2, category: 'shapes' },
+  { id: '1020100', text: 'Where does a sheep live?', options: ['Space', 'Moon', 'Farm', 'Cloud'], correctIndex: 2, difficulty: 2, category: 'animals' }
 ]

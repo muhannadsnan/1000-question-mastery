@@ -93,5 +93,10 @@ export const questions = [
   { id: '1010092', text: 'What do you rub on hands to clean them?', options: ['Soap', 'Food', 'Toy', 'Book'], correctIndex: 0, difficulty: 1, category: 'objects' },
   { id: '1010093', text: 'What soft cloth dries wet hands?', options: ['Soap', 'Towel', 'Book', 'Toy'], correctIndex: 1, difficulty: 1, category: 'objects' },
   { id: '1010094', text: 'What animals do you see at the zoo?', options: ['Cars', 'Wild animals', 'Books', 'Shoes'], correctIndex: 1, difficulty: 1, category: 'animals' },
-  { id: '1010095', text: 'What bright thing do you see in the blue daytime sky?', options: ['Moon', 'Stars', 'Sun', 'Night'], correctIndex: 2, difficulty: 1, category: 'nature' }
+  { id: '1010095', text: 'What bright thing do you see in the blue daytime sky?', options: ['Moon', 'Stars', 'Sun', 'Night'], correctIndex: 2, difficulty: 1, category: 'nature' },
+  { id: '1010096', text: 'What body part helps you hug?', options: ['M', 'Arms', 'H', 'E'], correctIndex: 1, difficulty: 1, category: 'body' },
+  { id: '1010097', text: 'Where does a horse live?', options: ['Farm', 'Space', 'Moon', 'Cloud'], correctIndex: 0, difficulty: 1, category: 'animals' },
+  { id: '1010098', text: 'What body part helps you eat and talk?', options: ['F', 'Mouth', 'F', 'E'], correctIndex: 1, difficulty: 1, category: 'body' },
+  { id: '1010099', text: 'What color is the color of grapes?', options: ['Pink', 'Black', 'Purple', 'Blue'], correctIndex: 2, difficulty: 1, category: 'colors' },
+  { id: '1010100', text: 'Which color is brown?', options: ['Brown', 'Yellow', 'Orange', 'Pink'], correctIndex: 0, difficulty: 1, category: 'colors' }
 ]

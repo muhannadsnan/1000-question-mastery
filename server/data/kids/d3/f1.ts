@@ -95,5 +95,8 @@ export const questions = [
   { id: '2030094', text: 'What is the name of the solid inner core of Earth?', options: ['Mantle', 'Crust', 'Outer Core', 'Inner Core'], correctIndex: 3, difficulty: 3, category: 'science' },
   { id: '2030095', text: 'What is 16 x 9?', options: ['142', '143', '144', '145'], correctIndex: 2, difficulty: 3, category: 'math' },
   { id: '2030096', text: 'Which explorer discovered the Pacific Ocean?', options: ['Columbus', 'Magellan', 'Balboa', 'Cook'], correctIndex: 2, difficulty: 3, category: 'history' },
-  { id: '2030097', text: 'What is 178 - 111?', options: ['65', '66', '67', '68'], correctIndex: 2, difficulty: 3, category: 'math' }
+  { id: '2030097', text: 'What is 178 - 111?', options: ['65', '66', '67', '68'], correctIndex: 2, difficulty: 3, category: 'math' },
+  { id: '2030098', text: 'What is 9213 + 1366?', options: ['10553', '10483', '10579', '10602'], correctIndex: 2, difficulty: 3, category: 'math' },
+  { id: '2030099', text: 'What is 6131 + 9539?', options: ['15607', '15579', '15691', '15670'], correctIndex: 3, difficulty: 3, category: 'math' },
+  { id: '2030100', text: 'What is 6964 + 2900?', options: ['9822', '9864', '9917', '9864'], correctIndex: 1, difficulty: 3, category: 'math' }
 ]

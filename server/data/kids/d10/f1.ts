@@ -86,5 +86,17 @@ export const questions = [
   { id: '2100085', text: 'Which sea creature can regenerate its arms if they are cut off?', options: ['Jellyfish', 'Starfish', 'Crab', 'Lobster'], correctIndex: 1, difficulty: 10, category: 'oceans' },
   { id: '2100086', text: 'A store sells apples for $0.50 each or 3 for $1.25. How much do you save by buying 12 apples in groups of 3?', options: ['$0.75', '$1.00', '$1.25', '$1.50'], correctIndex: 1, difficulty: 10, category: 'math' },
   { id: '2100087', text: 'What is the only Grand Slam tennis tournament played on grass?', options: ['US Open', 'French Open', 'Australian Open', 'Wimbledon'], correctIndex: 3, difficulty: 10, category: 'sports' },
-  { id: '2100088', text: 'What famous painting shows melting clocks?', options: ['The Starry Night', 'The Persistence of Memory', 'Guernica', 'The Scream'], correctIndex: 1, difficulty: 10, category: 'art' }
+  { id: '2100088', text: 'What famous painting shows melting clocks?', options: ['The Starry Night', 'The Persistence of Memory', 'Guernica', 'The Scream'], correctIndex: 1, difficulty: 10, category: 'art' },
+  { id: '2100089', text: 'What is 90 + 34?', options: ['134', '124', '123', '125'], correctIndex: 1, difficulty: 10, category: 'math' },
+  { id: '2100090', text: 'What is 21 + 59?', options: ['80', '79', '81', '90'], correctIndex: 0, difficulty: 10, category: 'math' },
+  { id: '2100091', text: 'What is 73 + 62?', options: ['135', '134', '145', '136'], correctIndex: 0, difficulty: 10, category: 'math' },
+  { id: '2100092', text: 'What is 57 + 72?', options: ['128', '130', '139', '129'], correctIndex: 3, difficulty: 10, category: 'math' },
+  { id: '2100093', text: 'What is 93 + 79?', options: ['171', '172', '182', '173'], correctIndex: 1, difficulty: 10, category: 'math' },
+  { id: '2100094', text: 'What is 84 + 96?', options: ['181', '179', '180', '190'], correctIndex: 2, difficulty: 10, category: 'math' },
+  { id: '2100095', text: 'What is 70 + 60?', options: ['131', '130', '140', '129'], correctIndex: 1, difficulty: 10, category: 'math' },
+  { id: '2100096', text: 'What is 17 + 88?', options: ['104', '115', '106', '105'], correctIndex: 3, difficulty: 10, category: 'math' },
+  { id: '2100097', text: 'What is 70 + 73?', options: ['144', '143', '142', '153'], correctIndex: 1, difficulty: 10, category: 'math' },
+  { id: '2100098', text: 'What is 68 + 53?', options: ['131', '122', '120', '121'], correctIndex: 3, difficulty: 10, category: 'math' },
+  { id: '2100099', text: 'What is 49 + 69?', options: ['117', '118', '128', '119'], correctIndex: 1, difficulty: 10, category: 'math' },
+  { id: '2100100', text: 'What is 76 + 85?', options: ['160', '171', '162', '161'], correctIndex: 3, difficulty: 10, category: 'math' }
 ]

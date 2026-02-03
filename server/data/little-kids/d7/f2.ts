@@ -96,5 +96,7 @@ export const questions = [
   { id: '1070195', text: 'What gets bigger the more you take away?', options: ['Cake', 'Hole', 'Ball', 'Cookie'], correctIndex: 1, difficulty: 7, category: 'riddles' },
   { id: '1070196', text: 'What has words but never speaks?', options: ['TV', 'Book', 'Radio', 'Phone'], correctIndex: 1, difficulty: 7, category: 'riddles' },
   { id: '1070197', text: 'What can travel around the world while staying in a corner?', options: ['Airplane', 'Stamp', 'Bird', 'Boat'], correctIndex: 1, difficulty: 7, category: 'riddles' },
-  { id: '1070198', text: 'What has a ring but no finger?', options: ['Hand', 'Telephone', 'Bell', 'Glove'], correctIndex: 1, difficulty: 7, category: 'riddles' }
+  { id: '1070198', text: 'What has a ring but no finger?', options: ['Hand', 'Telephone', 'Bell', 'Glove'], correctIndex: 1, difficulty: 7, category: 'riddles' },
+  { id: '1070199', text: 'What is 14 + 7?', options: ['21', '23', '22', '20'], correctIndex: 0, difficulty: 7, category: 'numbers' },
+  { id: '1070200', text: 'What is 12 + 4?', options: ['16', '18', '17', '15'], correctIndex: 0, difficulty: 7, category: 'numbers' }
 ]

@@ -96,5 +96,7 @@ export const questions = [
   { id: '4050195', text: 'What genre blends elements of detective fiction and science fiction?', options: ['Noir', 'Tech noir', 'Hard-boiled', 'Cozy mystery'], correctIndex: 1, difficulty: 5, category: 'movies' },
   { id: '4050196', text: 'Which metalworking technique shapes metal by hammering?', options: ['Casting', 'Forging', 'Welding', 'Machining'], correctIndex: 1, difficulty: 5, category: 'art' },
   { id: '4050197', text: 'What philosophical view holds that free will is compatible with determinism?', options: ['Hard determinism', 'Compatibilism', 'Libertarianism', 'Fatalism'], correctIndex: 1, difficulty: 5, category: 'philosophy' },
-  { id: '4050198', text: 'Which research method studies behavior in natural settings?', options: ['Laboratory experiment', 'Naturalistic observation', 'Survey research', 'Case study'], correctIndex: 1, difficulty: 5, category: 'science' }
+  { id: '4050198', text: 'Which research method studies behavior in natural settings?', options: ['Laboratory experiment', 'Naturalistic observation', 'Survey research', 'Case study'], correctIndex: 1, difficulty: 5, category: 'science' },
+  { id: '4050199', text: 'What is 49 × 63?', options: ['3104', '3075', '3087', '3097'], correctIndex: 2, difficulty: 5, category: 'math' },
+  { id: '4050200', text: 'What is 59 × 36?', options: ['2144', '2101', '2124', '2153'], correctIndex: 2, difficulty: 5, category: 'math' }
 ]

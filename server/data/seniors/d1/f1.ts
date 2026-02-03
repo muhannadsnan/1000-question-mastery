@@ -97,5 +97,6 @@ export const questions = [
   { id: '5010096', text: 'What is a story that teaches a moral lesson called?', options: ['Fable', 'Myth', 'Legend', 'Folktale'], correctIndex: 0, difficulty: 1, category: 'literature' },
   { id: '5010097', text: 'Which hormone regulates blood sugar levels?', options: ['Insulin', 'Adrenaline', 'Cortisol', 'Glucagon'], correctIndex: 0, difficulty: 1, category: 'medicine' },
   { id: '5010098', text: 'What ancient wonder was located in Egypt?', options: ['Great Pyramid of Giza', 'Colossus of Rhodes', 'Hanging Gardens', 'Temple of Artemis'], correctIndex: 0, difficulty: 1, category: 'history' },
-  { id: '5010099', text: 'Which measurement describes how fast an object changes position?', options: ['Speed', 'Velocity', 'Acceleration', 'Distance'], correctIndex: 0, difficulty: 1, category: 'science' }
+  { id: '5010099', text: 'Which measurement describes how fast an object changes position?', options: ['Speed', 'Velocity', 'Acceleration', 'Distance'], correctIndex: 0, difficulty: 1, category: 'science' },
+  { id: '5010100', text: 'Who composed \'Swan Lake\'?', options: ['Rachmaninoff', 'Tchaikovsky', 'Prokofiev', 'Stravinsky'], correctIndex: 1, difficulty: 1, category: 'classical' }
 ]

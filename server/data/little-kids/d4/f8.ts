@@ -92,5 +92,11 @@ export const questions = [
   { id: '1040791', text: 'What is 15 - 15?', options: ['0', '1', '2', '3'], correctIndex: 0, difficulty: 4, category: 'math' },
   { id: '1040792', text: 'What do flowers need to bloom?', options: ['Ice', 'Sunlight and water', 'Snow', 'Night'], correctIndex: 1, difficulty: 4, category: 'nature' },
   { id: '1040793', text: 'What is 14 - 14?', options: ['0', '1', '2', '3'], correctIndex: 0, difficulty: 4, category: 'math' },
-  { id: '1040794', text: 'Which food is dry?', options: ['Soup', 'Crackers', 'Yogurt', 'Pudding'], correctIndex: 1, difficulty: 4, category: 'food' }
+  { id: '1040794', text: 'Which food is dry?', options: ['Soup', 'Crackers', 'Yogurt', 'Pudding'], correctIndex: 1, difficulty: 4, category: 'food' },
+  { id: '1040795', text: 'Where does a cow live?', options: ['Moon', 'Cloud', 'Farm', 'Space'], correctIndex: 2, difficulty: 4, category: 'animals' },
+  { id: '1040796', text: 'What is 2 - 8?', options: ['-4', '-2', '-3', '-6'], correctIndex: 3, difficulty: 4, category: 'numbers' },
+  { id: '1040797', text: 'Where does a fish live?', options: ['Cloud', 'Moon', 'Space', 'Water'], correctIndex: 3, difficulty: 4, category: 'animals' },
+  { id: '1040798', text: 'A baby bear is called a...', options: ['Cub', 'Foal', 'Piglet', 'Caterpillar'], correctIndex: 0, difficulty: 4, category: 'animals' },
+  { id: '1040799', text: 'Where does a lion live?', options: ['Zoo', 'Moon', 'Cloud', 'Space'], correctIndex: 0, difficulty: 4, category: 'animals' },
+  { id: '1040800', text: 'What is 4 - 9?', options: ['-5', '-1', '-2', '-3'], correctIndex: 0, difficulty: 4, category: 'numbers' }
 ]

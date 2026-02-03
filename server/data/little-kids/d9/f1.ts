@@ -97,5 +97,6 @@ export const questions = [
   { id: '1090096', text: 'Calculate: 287 + 189 = ?', options: ['470', '476', '477', '490'], correctIndex: 1, difficulty: 9, category: 'animals' },
   { id: '1090097', text: 'Which is the longest river in the world?', options: ['Amazon', 'Mississippi', 'Nile', 'Yangtze'], correctIndex: 2, difficulty: 9, category: 'world-knowledge' },
   { id: '1090098', text: 'What comes next: 1, 2, 3, 5, 8, __?', options: ['10', '11', '12', '13'], correctIndex: 3, difficulty: 9, category: 'patterns' },
-  { id: '1090099', text: 'Which animal has the most powerful venom?', options: ['Snake', 'Spider', 'Box Jellyfish', 'Scorpion'], correctIndex: 2, difficulty: 9, category: 'animals' }
+  { id: '1090099', text: 'Which animal has the most powerful venom?', options: ['Snake', 'Spider', 'Box Jellyfish', 'Scorpion'], correctIndex: 2, difficulty: 9, category: 'animals' },
+  { id: '1090100', text: 'What is 12 + 10?', options: ['23', '21', '22', '24'], correctIndex: 2, difficulty: 9, category: 'numbers' }
 ]

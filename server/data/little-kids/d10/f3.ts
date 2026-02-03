@@ -96,5 +96,7 @@ export const questions = [
   { id: '1100295', text: 'Yosef counted legs on a dog. How many legs does a dog have?', options: ['2', '3', '4', '5'], correctIndex: 2, difficulty: 10, category: 'math' },
   { id: '1100296', text: 'Zuri had 8 cookies and ate 2. How many cookies remain?', options: ['5', '6', '7', '8'], correctIndex: 1, difficulty: 10, category: 'math' },
   { id: '1100297', text: 'Arlo counted corners on a rectangle. How many corners does a rectangle have?', options: ['3', '4', '5', '6'], correctIndex: 1, difficulty: 10, category: 'math' },
-  { id: '1100298', text: 'Beth put together 4 blocks and 5 more blocks. How many blocks altogether?', options: ['8', '9', '10', '11'], correctIndex: 1, difficulty: 10, category: 'math' }
+  { id: '1100298', text: 'Beth put together 4 blocks and 5 more blocks. How many blocks altogether?', options: ['8', '9', '10', '11'], correctIndex: 1, difficulty: 10, category: 'math' },
+  { id: '1100299', text: 'Which animal barks?', options: ['Bird', 'Dog', 'Pig', 'Cow'], correctIndex: 1, difficulty: 10, category: 'animals' },
+  { id: '1100300', text: 'What is 14 + 2?', options: ['17', '16', '18', '15'], correctIndex: 1, difficulty: 10, category: 'numbers' }
 ]

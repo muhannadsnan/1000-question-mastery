@@ -94,5 +94,9 @@ export const questions = [
   { id: '5050093', text: 'Which ancient civilization built the city of Great Zimbabwe?', options: ['Swahili', 'Shona', 'Zulu', 'Bantu'], correctIndex: 1, difficulty: 5, category: 'history' },
   { id: '5050094', text: 'The Camp David Accords were mediated by which US president?', options: ['Richard Nixon', 'Gerald Ford', 'Jimmy Carter', 'Ronald Reagan'], correctIndex: 2, difficulty: 5, category: 'diplomacy' },
   { id: '5050095', text: 'Which literary school emphasized the study of deep structures underlying narratives?', options: ['Formalism', 'Structuralism', 'Deconstruction', 'New Historicism'], correctIndex: 1, difficulty: 5, category: 'literature' },
-  { id: '5050096', text: 'The Mitanni kingdom was located in which region of the ancient world?', options: ['Anatolia', 'Northern Mesopotamia', 'Levant', 'Egypt'], correctIndex: 1, difficulty: 5, category: 'history' }
+  { id: '5050096', text: 'The Mitanni kingdom was located in which region of the ancient world?', options: ['Anatolia', 'Northern Mesopotamia', 'Levant', 'Egypt'], correctIndex: 1, difficulty: 5, category: 'history' },
+  { id: '5050097', text: 'What is 134 + 85?', options: ['213', '219', '232', '241'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '5050098', text: 'What is 106 + 80?', options: ['199', '190', '182', '186'], correctIndex: 3, difficulty: 5, category: 'math' },
+  { id: '5050099', text: 'What is 188 + 90?', options: ['278', '282', '304', '307'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '5050100', text: 'What is 104 + 30?', options: ['133', '144', '134', '136'], correctIndex: 2, difficulty: 5, category: 'math' }
 ]

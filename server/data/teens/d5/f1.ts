@@ -83,5 +83,20 @@ export const questions = [
   { id: '3050082', text: 'What game engine was created by id Software for Doom (2016)?', options: ['Unreal Engine 4', 'id Tech 6', 'CryEngine', 'Frostbite'], correctIndex: 1, difficulty: 5, category: 'gaming' },
   { id: '3050083', text: 'Which film won Best Picture at the 2023 Academy Awards?', options: ['Everything Everywhere All at Once', 'The Banshees of Inisherin', 'Top Gun: Maverick', 'All Quiet on the Western Front'], correctIndex: 0, difficulty: 5, category: 'movies' },
   { id: '3050084', text: 'Who holds the record for most career home runs in MLB?', options: ['Hank Aaron', 'Babe Ruth', 'Barry Bonds', 'Alex Rodriguez'], correctIndex: 2, difficulty: 5, category: 'sports' },
-  { id: '3050085', text: 'How many bones does a human baby have at birth?', options: ['206', '270', '300', '350'], correctIndex: 2, difficulty: 5, category: 'science' }
+  { id: '3050085', text: 'How many bones does a human baby have at birth?', options: ['206', '270', '300', '350'], correctIndex: 2, difficulty: 5, category: 'science' },
+  { id: '3050086', text: 'What is 49 × 38?', options: ['1872', '1882', '1858', '1862'], correctIndex: 3, difficulty: 5, category: 'math' },
+  { id: '3050087', text: 'What is 12 × 43?', options: ['516', '513', '505', '531'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '3050088', text: 'What is 12 × 41?', options: ['479', '484', '492', '487'], correctIndex: 2, difficulty: 5, category: 'math' },
+  { id: '3050089', text: 'What is 18 × 35?', options: ['633', '648', '630', '635'], correctIndex: 2, difficulty: 5, category: 'math' },
+  { id: '3050090', text: 'What is 50 × 19?', options: ['950', '947', '963', '930'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '3050091', text: 'What is 20 × 29?', options: ['570', '588', '580', '593'], correctIndex: 2, difficulty: 5, category: 'math' },
+  { id: '3050092', text: 'What is 50 × 10?', options: ['504', '500', '512', '492'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '3050093', text: 'What is 35 × 15?', options: ['525', '530', '522', '533'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '3050094', text: 'What is 36 × 30?', options: ['1065', '1065', '1073', '1080'], correctIndex: 3, difficulty: 5, category: 'math' },
+  { id: '3050095', text: 'What is 49 × 31?', options: ['1519', '1520', '1509', '1513'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '3050096', text: 'What is 23 × 23?', options: ['529', '515', '531', '535'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '3050097', text: 'What is 13 × 31?', options: ['418', '403', '403', '396'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '3050098', text: 'What is 43 × 27?', options: ['1156', '1161', '1146', '1166'], correctIndex: 1, difficulty: 5, category: 'math' },
+  { id: '3050099', text: 'What is 13 × 48?', options: ['624', '607', '623', '614'], correctIndex: 0, difficulty: 5, category: 'math' },
+  { id: '3050100', text: 'What is 47 × 49?', options: ['2311', '2322', '2293', '2303'], correctIndex: 3, difficulty: 5, category: 'math' }
 ]
