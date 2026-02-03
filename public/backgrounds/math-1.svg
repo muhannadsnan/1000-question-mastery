@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" opacity="0.08">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3B82F6" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#grid)"/>
+  <text x="50" y="80" font-family="serif" font-size="48" fill="#3B82F6">+</text>
+  <text x="150" y="150" font-family="serif" font-size="36" fill="#3B82F6">-</text>
+  <text x="280" y="100" font-family="serif" font-size="42" fill="#3B82F6">=</text>
+  <text x="320" y="200" font-family="serif" font-size="38" fill="#3B82F6">%</text>
+  <text x="80" y="280" font-family="serif" font-size="44" fill="#3B82F6">x</text>
+  <text x="200" y="320" font-family="serif" font-size="40" fill="#3B82F6">÷</text>
+  <text x="100" y="180" font-family="serif" font-size="32" fill="#3B82F6">π</text>
+  <text x="250" y="260" font-family="serif" font-size="36" fill="#3B82F6">∑</text>
+</svg>

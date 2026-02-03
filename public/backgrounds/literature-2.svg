@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" opacity="0.08">
+  <path d="M100,300 L100,100 C100,60 200,60 200,100 C200,60 300,60 300,100 L300,300" fill="none" stroke="#F43F5E" stroke-width="2"/>
+  <path d="M100,100 L100,300 M300,100 L300,300 M200,100 L200,300" stroke="#F43F5E" stroke-width="1"/>
+  <text x="60" y="70" font-family="serif" font-size="28" fill="#F43F5E">Aa</text>
+  <text x="300" y="70" font-family="serif" font-size="28" fill="#F43F5E">Bb</text>
+  <path d="M120,340 L180,340" stroke="#F43F5E" stroke-width="2"/>
+  <path d="M150,330 L150,350" stroke="#F43F5E" stroke-width="2"/>
+</svg>
