@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" opacity="0.15">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" opacity="0.30">
   <rect x="60" y="100" width="180" height="120" rx="5" fill="none" stroke="#8B5CF6" stroke-width="2.5"/>
   <path d="M60,130 L240,130" stroke="#8B5CF6" stroke-width="2.5"/>
   <rect x="60" y="220" width="180" height="20" fill="none" stroke="#8B5CF6" stroke-width="2.5"/>
