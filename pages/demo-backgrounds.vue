@@ -27,12 +27,11 @@
             <div
               v-for="(bg, idx) in [1, 2]"
               :key="idx"
-              class="relative rounded-xl p-6 min-h-[200px] flex flex-col"
+              class="relative rounded-xl p-6 min-h-[280px] flex flex-col"
               :style="{
                 backgroundImage: `url('/backgrounds/${topic.bgKey}-${bg}.svg')`,
-                backgroundSize: '300px',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
+                backgroundSize: '150px',
+                backgroundRepeat: 'repeat',
                 backgroundColor: topic.bgColor
               }"
             >

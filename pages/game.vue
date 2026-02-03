@@ -39,7 +39,10 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-1 flex flex-col items-center px-4 py-6 pt-4">
+    <main
+      class="flex-1 flex flex-col items-center px-4 py-6 pt-4 transition-all duration-500"
+      :style="currentQuestionData ? currentBackground : {}"
+    >
       <!-- Loading State -->
       <div v-if="isLoading" class="text-center">
         <div class="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
@@ -64,11 +67,8 @@
         v-else-if="currentQuestionData"
         class="w-full max-w-xl"
       >
-        <!-- Question Area with Background -->
-        <div
-          class="rounded-3xl p-4 mb-4 transition-all duration-500"
-          :style="currentBackground"
-        >
+        <!-- Question Area -->
+        <div class="mb-4">
           <!-- Category Badge -->
           <div class="text-center mb-4">
             <span
@@ -372,9 +372,8 @@ const getBackgroundStyle = (category: string) => {
   const bgNum = Math.random() > 0.5 ? 1 : 2
   return {
     backgroundImage: `url('/backgrounds/${theme.key}-${bgNum}.svg')`,
-    backgroundSize: '280px',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
+    backgroundSize: '200px',
+    backgroundRepeat: 'repeat',
     backgroundColor: theme.bgColor
   }
 }
