@@ -65,6 +65,14 @@ Questions span all aspects of life and knowledge:
 
 ## Changelog
 
+### v1.11.0
+- Fixed all duplicate questions across the entire database
+- Reassigned 37,783 unique IDs using new format: `{age_prefix}{difficulty:02d}{sequence:04d}`
+- Replaced 2,157 within-age duplicate texts with new unique questions
+- Replaced 2,544 cross-age duplicate texts with new unique questions
+- All 39,061 questions now have unique IDs and unique text
+- Added duplicate analysis and fix scripts in `/scripts`
+
 ### v1.10.1
 - Fixed question skip exploit: quitting and continuing now restores the same question
 - Pending question is saved in session until answered

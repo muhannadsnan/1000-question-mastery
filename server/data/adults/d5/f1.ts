@@ -98,5 +98,5 @@ export const questions = [
   { id: '4050097', text: 'Which philosophical position denies the existence of abstract objects?', options: ['Platonism', 'Nominalism', 'Realism', 'Conceptualism'], correctIndex: 1, difficulty: 5, category: 'philosophy' },
   { id: '4050098', text: 'What film technique uses slow motion for emotional emphasis?', options: ['Fast motion', 'Slow motion', 'Freeze frame', 'Time-lapse'], correctIndex: 1, difficulty: 5, category: 'movies' },
   { id: '4050099', text: 'Which behavioral finance concept describes herd behavior?', options: ['Contrarian investing', 'Herding behavior', 'Momentum investing', 'Value investing'], correctIndex: 1, difficulty: 5, category: 'business' },
-  { id: '4050100', text: 'What developmental concept describes critical periods?', options: ['Sensitive periods', 'Critical periods', 'Developmental windows', 'Growth spurts'], correctIndex: 1, difficulty: 5, category: 'science' },
-];
+  { id: '4050100', text: 'What developmental concept describes critical periods?', options: ['Sensitive periods', 'Critical periods', 'Developmental windows', 'Growth spurts'], correctIndex: 1, difficulty: 5, category: 'science' }
+]

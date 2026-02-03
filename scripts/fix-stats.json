@@ -1,0 +1,38 @@
+{
+  "total_questions": 39061,
+  "fixed_ids": 37783,
+  "fixed_within_age": 2157,
+  "fixed_cross_age": 2544,
+  "by_age_group": {
+    "little-kids": {
+      "questions": 9889,
+      "fixed_ids": 9204,
+      "fixed_within": 1254,
+      "fixed_cross": 108
+    },
+    "kids": {
+      "questions": 8896,
+      "fixed_ids": 8654,
+      "fixed_within": 527,
+      "fixed_cross": 451
+    },
+    "teens": {
+      "questions": 6071,
+      "fixed_ids": 6059,
+      "fixed_within": 116,
+      "fixed_cross": 514
+    },
+    "adults": {
+      "questions": 6987,
+      "fixed_ids": 6856,
+      "fixed_within": 208,
+      "fixed_cross": 1030
+    },
+    "seniors": {
+      "questions": 7218,
+      "fixed_ids": 7010,
+      "fixed_within": 52,
+      "fixed_cross": 441
+    }
+  }
+}

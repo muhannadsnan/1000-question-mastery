@@ -98,5 +98,5 @@ export const questions = [
   { id: '1040097', text: 'If a cactus lives in the desert, does it need a lot of water?', options: ['Yes, daily', 'No, very little', 'Only at night', 'Tons of water'], correctIndex: 1, difficulty: 4, category: 'nature' },
   { id: '1040098', text: 'If you subtract 4 from 12, what do you get?', options: ['7', '8', '9', '10'], correctIndex: 1, difficulty: 4, category: 'math' },
   { id: '1040099', text: 'If fireflies glow at night, what makes them light up?', options: ['Batteries', 'Chemicals in their body', 'The moon', 'Electricity'], correctIndex: 1, difficulty: 4, category: 'animals' },
-  { id: '1040100', text: 'If you have 2 groups of 6 books each, how many books total?', options: ['10', '11', '12', '13'], correctIndex: 2, difficulty: 4, category: 'math' },
-];
+  { id: '1040100', text: 'If you have 2 groups of 6 books each, how many books total?', options: ['10', '11', '12', '13'], correctIndex: 2, difficulty: 4, category: 'math' }
+]

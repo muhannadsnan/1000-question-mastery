@@ -98,5 +98,5 @@ export const questions = [
   { id: '1030097', text: 'If you count the wheels on a tricycle, how many are there?', options: ['2', '3', '4', '5'], correctIndex: 1, difficulty: 3, category: 'counting' },
   { id: '1030098', text: 'If you use a straw to drink, where does the liquid go?', options: ['Back in the cup', 'Into your mouth', 'On the floor', 'Into the straw'], correctIndex: 1, difficulty: 3, category: 'food' },
   { id: '1030099', text: 'If you read a book from start to finish, what did you do?', options: ['Started it', 'Finished it', 'Lost it', 'Closed it'], correctIndex: 1, difficulty: 3, category: 'learning' },
-  { id: '1030100', text: 'If you have 7 grapes and eat 7, how many are left?', options: ['0', '1', '2', '7'], correctIndex: 0, difficulty: 3, category: 'math' },
-];
+  { id: '1030100', text: 'If you have 7 grapes and eat 7, how many are left?', options: ['0', '1', '2', '7'], correctIndex: 0, difficulty: 3, category: 'math' }
+]

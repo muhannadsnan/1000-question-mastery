@@ -1,10 +1,9 @@
 export const questions = [
-  // Pattern Recognition (1-15)
   { id: '1080001', text: 'What comes next: Clap, Stomp, Clap, Stomp, Clap, ?', options: ['Clap', 'Stomp', 'Jump', 'Spin'], correctIndex: 1, difficulty: 8, category: 'patterns' },
   { id: '1080002', text: 'What comes next: 2, 3, 4, 5, 6, ?', options: ['5', '6', '7', '8'], correctIndex: 2, difficulty: 8, category: 'patterns' },
-  { id: '1080003', text: 'What comes next: Heart, Star, Heart, Star, Heart, ?', options: ['Heart', 'Circle', 'Star', 'Diamond'], correctIndex: 2, difficulty: 8, category: 'patterns' },
+  { id: '1080003', text: 'Calculate: 656 + 806 = ?', options: ['1457', '1479', '1462', '1463'], correctIndex: 2, difficulty: 8, category: 'patterns' },
   { id: '1080004', text: 'What comes next: Loud, Quiet, Loud, Quiet, Loud, ?', options: ['Loud', 'Quiet', 'Medium', 'Silent'], correctIndex: 1, difficulty: 8, category: 'patterns' },
-  { id: '1080005', text: 'What comes next: 1, 3, 5, 7, ?', options: ['8', '9', '10', '11'], correctIndex: 1, difficulty: 8, category: 'patterns' },
+  { id: '1080005', text: 'Calculate: 152 + 436 = ?', options: ['580', '605', '596', '588'], correctIndex: 3, difficulty: 8, category: 'patterns' },
   { id: '1080006', text: 'What comes next: Rain, Shine, Rain, Shine, Rain, ?', options: ['Snow', 'Rain', 'Shine', 'Cloud'], correctIndex: 2, difficulty: 8, category: 'patterns' },
   { id: '1080007', text: 'What comes next: Hop, Skip, Hop, Skip, Hop, ?', options: ['Hop', 'Jump', 'Skip', 'Run'], correctIndex: 2, difficulty: 8, category: 'patterns' },
   { id: '1080008', text: 'What comes next: Laugh, Cry, Laugh, Cry, Laugh, ?', options: ['Smile', 'Laugh', 'Cry', 'Frown'], correctIndex: 2, difficulty: 8, category: 'patterns' },
@@ -15,31 +14,27 @@ export const questions = [
   { id: '1080013', text: 'What comes next: Fast, Slow, Fast, Slow, Fast, ?', options: ['Medium', 'Fast', 'Slow', 'Stop'], correctIndex: 2, difficulty: 8, category: 'patterns' },
   { id: '1080014', text: 'What comes next: 10, 20, 30, ?', options: ['35', '40', '45', '50'], correctIndex: 1, difficulty: 8, category: 'patterns' },
   { id: '1080015', text: 'What comes next: Blue, Blue, Green, Blue, Blue, ?', options: ['Blue', 'Green', 'Red', 'Yellow'], correctIndex: 1, difficulty: 8, category: 'patterns' },
-
-  // Harder Counting (16-35)
-  { id: '1080016', text: 'What is 9 + 8?', options: ['15', '16', '17', '18'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080017', text: 'What is 7 + 9?', options: ['14', '15', '16', '17'], correctIndex: 2, difficulty: 8, category: 'counting' },
+  { id: '1080016', text: 'Calculate: 197 + 209 = ?', options: ['406', '418', '404', '416'], correctIndex: 0, difficulty: 8, category: 'counting' },
+  { id: '1080017', text: 'Calculate: 715 + 155 = ?', options: ['876', '860', '885', '870'], correctIndex: 3, difficulty: 8, category: 'counting' },
   { id: '1080018', text: 'What is 8 + 9?', options: ['15', '16', '17', '18'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080019', text: 'What is 6 + 7?', options: ['11', '12', '13', '14'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080020', text: 'What is 11 + 6?', options: ['15', '16', '17', '18'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080021', text: 'What is 8 + 6?', options: ['12', '13', '14', '15'], correctIndex: 2, difficulty: 8, category: 'counting' },
+  { id: '1080019', text: 'Calculate: 539 + 576 = ?', options: ['1129', '1106', '1119', '1115'], correctIndex: 3, difficulty: 8, category: 'counting' },
+  { id: '1080020', text: 'Calculate: 610 + 313 = ?', options: ['929', '923', '934', '920'], correctIndex: 1, difficulty: 8, category: 'counting' },
+  { id: '1080021', text: 'Calculate: 465 + 725 = ?', options: ['1190', '1199', '1205', '1188'], correctIndex: 0, difficulty: 8, category: 'counting' },
   { id: '1080022', text: 'Count by 5s: 5, 10, 15, 20, what comes next?', options: ['21', '22', '25', '30'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080023', text: 'What is 12 + 6?', options: ['16', '17', '18', '19'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080024', text: 'What is 9 + 7?', options: ['14', '15', '16', '17'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080025', text: 'What is 11 + 8?', options: ['17', '18', '19', '20'], correctIndex: 2, difficulty: 8, category: 'counting' },
+  { id: '1080023', text: 'Calculate: 200 + 684 = ?', options: ['904', '874', '891', '884'], correctIndex: 3, difficulty: 8, category: 'counting' },
+  { id: '1080024', text: 'Calculate: 952 + 163 = ?', options: ['1114', '1123', '1115', '1135'], correctIndex: 2, difficulty: 8, category: 'counting' },
+  { id: '1080025', text: 'Calculate: 506 + 243 = ?', options: ['756', '748', '749', '765'], correctIndex: 2, difficulty: 8, category: 'counting' },
   { id: '1080026', text: 'If you have 12 grapes and eat 4, how many grapes are left?', options: ['6', '7', '8', '9'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080027', text: 'What is 8 + 10?', options: ['16', '17', '18', '19'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080028', text: 'What is 14 + 5?', options: ['17', '18', '19', '20'], correctIndex: 2, difficulty: 8, category: 'counting' },
+  { id: '1080027', text: 'Calculate: 816 + 883 = ?', options: ['1700', '1699', '1694', '1717'], correctIndex: 1, difficulty: 8, category: 'counting' },
+  { id: '1080028', text: 'Calculate: 580 + 310 = ?', options: ['890', '895', '884', '902'], correctIndex: 0, difficulty: 8, category: 'counting' },
   { id: '1080029', text: 'What number comes after 29?', options: ['28', '29', '30', '31'], correctIndex: 2, difficulty: 8, category: 'counting' },
   { id: '1080030', text: 'What is 15 + 4?', options: ['17', '18', '19', '20'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080031', text: 'What is 6 + 6?', options: ['10', '11', '12', '13'], correctIndex: 2, difficulty: 8, category: 'counting' },
+  { id: '1080031', text: 'Calculate: 864 + 206 = ?', options: ['1089', '1062', '1070', '1077'], correctIndex: 2, difficulty: 8, category: 'counting' },
   { id: '1080032', text: 'If you count by 10s: 10, 20, 30, what comes next?', options: ['31', '35', '40', '50'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080033', text: 'What is 7 + 6?', options: ['11', '12', '13', '14'], correctIndex: 2, difficulty: 8, category: 'counting' },
-  { id: '1080034', text: 'What number comes before 20?', options: ['18', '19', '20', '21'], correctIndex: 1, difficulty: 8, category: 'counting' },
-  { id: '1080035', text: 'What is 9 + 9?', options: ['16', '17', '18', '19'], correctIndex: 2, difficulty: 8, category: 'counting' },
-
-  // Nature and Animal Facts (36-55)
-  { id: '1080036', text: 'How many legs does a centipede have?', options: ['6', '8', 'Many (about 100)', '4'], correctIndex: 2, difficulty: 8, category: 'nature' },
+  { id: '1080033', text: 'Calculate: 634 + 851 = ?', options: ['1487', '1476', '1497', '1485'], correctIndex: 3, difficulty: 8, category: 'counting' },
+  { id: '1080034', text: 'Calculate: 993 + 665 = ?', options: ['1672', '1651', '1662', '1658'], correctIndex: 3, difficulty: 8, category: 'counting' },
+  { id: '1080035', text: 'Calculate: 189 + 214 = ?', options: ['414', '403', '402', '411'], correctIndex: 1, difficulty: 8, category: 'counting' },
+  { id: '1080036', text: 'Calculate: 463 + 211 = ?', options: ['674', '673', '684', '693'], correctIndex: 0, difficulty: 8, category: 'nature' },
   { id: '1080037', text: 'Which fuzzy mammal hangs upside down in caves?', options: ['Bird', 'Squirrel', 'Bat', 'Mouse'], correctIndex: 2, difficulty: 8, category: 'animals' },
   { id: '1080038', text: 'What wiggly insect transforms into a moth or butterfly?', options: ['Ant', 'Caterpillar', 'Beetle', 'Grasshopper'], correctIndex: 1, difficulty: 8, category: 'nature' },
   { id: '1080039', text: 'How many legs does a grasshopper have?', options: ['4', '6', '8', '10'], correctIndex: 1, difficulty: 8, category: 'nature' },
@@ -56,11 +51,9 @@ export const questions = [
   { id: '1080050', text: 'Which slow creature carries a hard protective shell?', options: ['Slug', 'Worm', 'Turtle', 'Snail'], correctIndex: 2, difficulty: 8, category: 'animals' },
   { id: '1080051', text: 'What season follows chilly winter?', options: ['Autumn', 'Summer', 'Spring', 'More winter'], correctIndex: 2, difficulty: 8, category: 'nature' },
   { id: '1080052', text: 'Which lizard can camouflage by changing colors?', options: ['Gecko', 'Iguana', 'Chameleon', 'Komodo'], correctIndex: 2, difficulty: 8, category: 'animals' },
-  { id: '1080053', text: 'How many wings does a dragonfly have?', options: ['2', '4', '6', '8'], correctIndex: 1, difficulty: 8, category: 'nature' },
+  { id: '1080053', text: 'Calculate: 890 + 919 = ?', options: ['1809', '1802', '1819', '1822'], correctIndex: 0, difficulty: 8, category: 'nature' },
   { id: '1080054', text: 'Which spotted cat runs faster than any other land animal?', options: ['Leopard', 'Jaguar', 'Cheetah', 'Cougar'], correctIndex: 2, difficulty: 8, category: 'animals' },
   { id: '1080055', text: 'What do nocturnal owls do during sunny daytime hours?', options: ['Hunt mice', 'Sleep', 'Swim', 'Fly south'], correctIndex: 1, difficulty: 8, category: 'animals' },
-
-  // Which Doesn't Belong (56-75)
   { id: '1080056', text: 'Which does NOT belong: Strawberry, Blueberry, Potato, Raspberry?', options: ['Strawberry', 'Blueberry', 'Potato', 'Raspberry'], correctIndex: 2, difficulty: 8, category: 'logic' },
   { id: '1080057', text: 'Which does NOT belong: Goldfish, Shark, Dolphin, Lamp?', options: ['Goldfish', 'Shark', 'Dolphin', 'Lamp'], correctIndex: 3, difficulty: 8, category: 'logic' },
   { id: '1080058', text: 'Which does NOT belong: Yellow, Purple, Triangle, Orange?', options: ['Yellow', 'Purple', 'Triangle', 'Orange'], correctIndex: 2, difficulty: 8, category: 'logic' },
@@ -81,8 +74,6 @@ export const questions = [
   { id: '1080073', text: 'Which does NOT belong: Saturday, Sunday, Carrot, Monday?', options: ['Saturday', 'Sunday', 'Carrot', 'Monday'], correctIndex: 2, difficulty: 8, category: 'logic' },
   { id: '1080074', text: 'Which does NOT belong: Horse, Donkey, Pony, Goldfish?', options: ['Horse', 'Donkey', 'Pony', 'Goldfish'], correctIndex: 3, difficulty: 8, category: 'logic' },
   { id: '1080075', text: 'Which does NOT belong: Tongue, Tooth, Lip, Clock?', options: ['Tongue', 'Tooth', 'Lip', 'Clock'], correctIndex: 3, difficulty: 8, category: 'logic' },
-
-  // Simple Logic Puzzles (76-90)
   { id: '1080076', text: 'If today is Friday, what day was yesterday?', options: ['Wednesday', 'Thursday', 'Saturday', 'Sunday'], correctIndex: 1, difficulty: 8, category: 'logic' },
   { id: '1080077', text: 'If a mouse is smaller than a cat, and a cat is smaller than a horse, which is smallest?', options: ['Horse', 'Cat', 'Mouse', 'All same'], correctIndex: 2, difficulty: 8, category: 'logic' },
   { id: '1080078', text: 'You have 4 red blocks and 3 blue blocks. How many blocks altogether?', options: ['5', '6', '7', '8'], correctIndex: 2, difficulty: 8, category: 'logic' },
@@ -98,18 +89,14 @@ export const questions = [
   { id: '1080088', text: 'You have 8 stickers and give 2 to a friend. How many stickers remain?', options: ['4', '5', '6', '7'], correctIndex: 2, difficulty: 8, category: 'logic' },
   { id: '1080089', text: 'If Saturday comes after Friday, what comes after Saturday?', options: ['Friday', 'Saturday', 'Sunday', 'Monday'], correctIndex: 2, difficulty: 8, category: 'logic' },
   { id: '1080090', text: 'A basket has 9 oranges. 3 get eaten. How many oranges are left?', options: ['4', '5', '6', '7'], correctIndex: 2, difficulty: 8, category: 'logic' },
-
-  // Shapes Advanced (91-95)
   { id: '1080091', text: 'How many corners does a pentagon have?', options: ['3', '4', '5', '6'], correctIndex: 2, difficulty: 8, category: 'shapes' },
   { id: '1080092', text: 'Which shape rolls smoothly without any flat sides?', options: ['Cube', 'Pyramid', 'Sphere', 'Rectangular prism'], correctIndex: 2, difficulty: 8, category: 'shapes' },
-  { id: '1080093', text: 'How many sides does a hexagon have?', options: ['4', '5', '6', '7'], correctIndex: 2, difficulty: 8, category: 'shapes' },
+  { id: '1080093', text: 'Calculate: 671 + 687 = ?', options: ['1363', '1358', '1350', '1374'], correctIndex: 1, difficulty: 8, category: 'shapes' },
   { id: '1080094', text: 'What shape has 4 equal sides and 4 square corners?', options: ['Rectangle', 'Square', 'Triangle', 'Circle'], correctIndex: 1, difficulty: 8, category: 'shapes' },
   { id: '1080095', text: 'Which shape looks like an ice cream cone without the ice cream?', options: ['Cylinder', 'Cube', 'Cone', 'Sphere'], correctIndex: 2, difficulty: 8, category: 'shapes' },
-
-  // Colors Advanced (96-100)
   { id: '1080096', text: 'What color do you get when you mix red and white?', options: ['Purple', 'Orange', 'Pink', 'Gray'], correctIndex: 2, difficulty: 8, category: 'colors' },
   { id: '1080097', text: 'What color do you get when you mix blue and white?', options: ['Light blue', 'Purple', 'Green', 'Pink'], correctIndex: 0, difficulty: 8, category: 'colors' },
   { id: '1080098', text: 'What color do you get when you mix yellow and red?', options: ['Green', 'Orange', 'Purple', 'Brown'], correctIndex: 1, difficulty: 8, category: 'colors' },
   { id: '1080099', text: 'What color is the peel of a ripe avocado?', options: ['Bright green', 'Dark green or black', 'Yellow', 'Orange'], correctIndex: 1, difficulty: 8, category: 'colors' },
-  { id: '1080100', text: 'What bright color is a school bus?', options: ['Red', 'Blue', 'Yellow', 'Green'], correctIndex: 2, difficulty: 8, category: 'colors' },
-];
+  { id: '1080100', text: 'What bright color is a school bus?', options: ['Red', 'Blue', 'Yellow', 'Green'], correctIndex: 2, difficulty: 8, category: 'colors' }
+]
