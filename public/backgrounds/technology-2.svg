@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" opacity="0.08">
-  <circle cx="100" cy="100" r="30" fill="none" stroke="#0EA5E9" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" opacity="0.15">
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#0EA5E9" stroke-width="2.5"/>
   <circle cx="100" cy="100" r="10" fill="#0EA5E9"/>
-  <path d="M130,100 L200,100 L200,200 L280,200" stroke="#0EA5E9" stroke-width="2"/>
-  <circle cx="310" cy="200" r="30" fill="none" stroke="#0EA5E9" stroke-width="2"/>
+  <path d="M130,100 L200,100 L200,200 L280,200" stroke="#0EA5E9" stroke-width="2.5"/>
+  <circle cx="310" cy="200" r="30" fill="none" stroke="#0EA5E9" stroke-width="2.5"/>
   <circle cx="310" cy="200" r="10" fill="#0EA5E9"/>
-  <path d="M100,130 L100,250" stroke="#0EA5E9" stroke-width="2"/>
-  <circle cx="100" cy="280" r="30" fill="none" stroke="#0EA5E9" stroke-width="2"/>
+  <path d="M100,130 L100,250" stroke="#0EA5E9" stroke-width="2.5"/>
+  <circle cx="100" cy="280" r="30" fill="none" stroke="#0EA5E9" stroke-width="2.5"/>
   <circle cx="100" cy="280" r="10" fill="#0EA5E9"/>
-  <path d="M130,280 L250,280 L250,200" stroke="#0EA5E9" stroke-width="2"/>
+  <path d="M130,280 L250,280 L250,200" stroke="#0EA5E9" stroke-width="2.5"/>
   <rect x="60" y="60" width="10" height="10" fill="#0EA5E9"/>
   <rect x="310" y="310" width="10" height="10" fill="#0EA5E9"/>
 </svg>

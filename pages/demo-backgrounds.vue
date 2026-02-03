@@ -30,7 +30,7 @@
               class="relative rounded-xl p-6 min-h-[280px] flex flex-col"
               :style="{
                 backgroundImage: `url('/backgrounds/${topic.bgKey}-${bg}.svg')`,
-                backgroundSize: '150px',
+                backgroundSize: '280px auto',
                 backgroundRepeat: 'repeat',
                 backgroundColor: topic.bgColor
               }"

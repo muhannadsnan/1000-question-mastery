@@ -372,7 +372,7 @@ const getBackgroundStyle = (category: string) => {
   const bgNum = Math.random() > 0.5 ? 1 : 2
   return {
     backgroundImage: `url('/backgrounds/${theme.key}-${bgNum}.svg')`,
-    backgroundSize: '200px',
+    backgroundSize: '320px auto',
     backgroundRepeat: 'repeat',
     backgroundColor: theme.bgColor
   }
