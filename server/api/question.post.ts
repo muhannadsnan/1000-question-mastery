@@ -9,11 +9,8 @@ interface RequestBody {
 
 // Map age group names to folder names
 const ageGroupFolders: Record<string, string> = {
-  littleKids: 'little-kids',
   kids: 'kids',
-  teens: 'teens',
   adults: 'adults',
-  seniors: 'seniors',
 }
 
 export default defineEventHandler(async (event) => {

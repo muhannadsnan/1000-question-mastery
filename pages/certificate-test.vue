@@ -114,7 +114,7 @@
           <!-- Achievement Text -->
           <p class="text-slate-500 mb-6 max-w-sm mx-auto">
             has successfully completed the<br />
-            <span class="font-semibold text-slate-700">1000 Question Mastery Challenge</span>
+            <span class="font-semibold text-slate-700">{{ certificate?.totalQuestions || 300 }} Question Mastery Challenge</span>
           </p>
 
           <!-- Stats Section -->
@@ -149,7 +149,7 @@
 
           <!-- Footer -->
           <div class="mt-6 pt-4 border-t border-slate-200">
-            <p class="text-xs text-slate-400">1000 Question Mastery</p>
+            <p class="text-xs text-slate-400">{{ certificate?.totalQuestions || 300 }} Question Mastery</p>
           </div>
         </div>
       </div>

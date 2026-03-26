@@ -16,7 +16,7 @@
 
       <!-- Tagline -->
       <p class="text-lg md:text-xl text-slate-600 text-center max-w-md mb-10 animate-slide-up">
-        Challenge yourself with 1000 questions across all topics.
+        Challenge yourself with questions across all topics.
         <span class="text-primary-600 font-semibold">Earn your certificate!</span>
       </p>
 
@@ -76,10 +76,10 @@
           <div class="h-2 w-32 bg-slate-200 rounded-full overflow-hidden">
             <div
               class="h-full bg-gradient-to-r from-primary-500 to-purple-500 rounded-full transition-all"
-              :style="{ width: `${(existingSession.currentQuestion / 1000) * 100}%` }"
+              :style="{ width: `${(existingSession.currentQuestion / sessionTotalQuestions) * 100}%` }"
             />
           </div>
-          <span class="text-xs font-medium">{{ existingSession.currentQuestion }}/1000</span>
+          <span class="text-xs font-medium">{{ existingSession.currentQuestion }}/{{ sessionTotalQuestions }}</span>
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </div>
-          <div class="text-base font-medium text-slate-700">All Ages</div>
+          <div class="text-base font-medium text-slate-700">2 Modes</div>
         </div>
         <div class="feature-card animate-slide-up" style="animation-delay: 600ms;">
           <div class="feature-icon bg-purple-100">
@@ -125,12 +125,21 @@
 </template>
 
 <script setup lang="ts">
+import { getTotalQuestionsForAgeGroup } from '~/composables/useGameSession'
+
 const router = useRouter()
 const sound = useSound()
 const { loadSession, session, clearSession } = useGameSession()
 
 const existingSession = ref<ReturnType<typeof loadSession>>(null)
-const hasExistingSession = computed(() => existingSession.value !== null && existingSession.value.currentQuestion <= 1000)
+
+// Get total questions for the existing session's age group
+const sessionTotalQuestions = computed(() => {
+  if (!existingSession.value) return 300
+  return getTotalQuestionsForAgeGroup(existingSession.value.ageGroup)
+})
+
+const hasExistingSession = computed(() => existingSession.value !== null && existingSession.value.currentQuestion <= sessionTotalQuestions.value)
 
 onMounted(() => {
   existingSession.value = loadSession()

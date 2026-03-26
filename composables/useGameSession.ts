@@ -23,6 +23,32 @@ export interface GameSession {
   pendingQuestion?: Question | null // Store the current unanswered question
 }
 
+// Total questions per age group
+const TOTAL_QUESTIONS: Record<AgeGroup, number> = {
+  kids: 100,
+  adults: 300,
+}
+
+// Questions per level: L1-3: 10ea, L4-6: 15ea, L7-9: 6ea, L10: 7  (=100 for kids)
+// Grown ups: same ratio x3  (=300 for adults)
+const LEVEL_SIZES_BASE = [10, 10, 10, 15, 15, 15, 6, 6, 6, 7] // sums to 100
+
+// Build cumulative breakpoints for each age group
+function buildLevelBreakpoints(multiplier: number): number[] {
+  const cumulative: number[] = []
+  let sum = 0
+  for (const size of LEVEL_SIZES_BASE) {
+    sum += size * multiplier
+    cumulative.push(sum)
+  }
+  return cumulative
+}
+
+const LEVEL_BREAKPOINTS: Record<AgeGroup, number[]> = {
+  kids: buildLevelBreakpoints(1),   // [10,20,30,45,60,75,81,87,93,100]
+  adults: buildLevelBreakpoints(3), // [30,60,90,135,180,225,243,261,279,300]
+}
+
 const STORAGE_KEY = 'quiz-mastery-session'
 
 export const useGameSession = () => {
@@ -34,10 +60,21 @@ export const useGameSession = () => {
   const lastAnswerCorrect = useState<boolean | null>('lastAnswerCorrect', () => null)
   const previousLevel = useState<number>('previousLevel', () => 1)
 
-  // Calculate current difficulty level based on progress
+  // Get total questions for current age group
+  const totalQuestions = computed(() => {
+    if (!session.value) return 300 // default
+    return TOTAL_QUESTIONS[session.value.ageGroup] || 300
+  })
+
+  // Calculate current difficulty level based on progress using custom breakpoints
   const currentLevel = computed(() => {
     if (!session.value) return 1
-    return Math.min(10, Math.ceil(session.value.currentQuestion / 100)) as Difficulty
+    const breakpoints = LEVEL_BREAKPOINTS[session.value.ageGroup] || LEVEL_BREAKPOINTS.adults
+    const q = session.value.currentQuestion
+    for (let i = 0; i < breakpoints.length; i++) {
+      if (q <= breakpoints[i]) return (i + 1) as Difficulty
+    }
+    return 10 as Difficulty
   })
 
   // Check if player leveled up
@@ -48,7 +85,7 @@ export const useGameSession = () => {
   // Progress percentage
   const progressPercent = computed(() => {
     if (!session.value) return 0
-    return ((session.value.currentQuestion - 1) / 1000) * 100
+    return ((session.value.currentQuestion - 1) / totalQuestions.value) * 100
   })
 
   // Accuracy percentage
@@ -111,10 +148,19 @@ export const useGameSession = () => {
 
     try {
       // Check if there's a pending question (player quit without answering)
+      // Only use pending question if it hasn't been answered yet (not in askedQuestionIds)
       if (session.value.pendingQuestion) {
-        currentQuestionData.value = session.value.pendingQuestion
-        isLoading.value = false
-        return session.value.pendingQuestion
+        const pendingId = session.value.pendingQuestion.id
+        const alreadyAnswered = session.value.askedQuestionIds.includes(pendingId)
+
+        if (!alreadyAnswered) {
+          currentQuestionData.value = session.value.pendingQuestion
+          isLoading.value = false
+          return session.value.pendingQuestion
+        } else {
+          // Clear the stale pending question
+          session.value.pendingQuestion = null
+        }
       }
 
       const { getQuestion } = useQuestions()
@@ -175,12 +221,15 @@ export const useGameSession = () => {
   const nextQuestion = async () => {
     if (!session.value) return
 
+    // Ensure pendingQuestion is cleared - defensive check in case submitAnswer didn't clear it
+    session.value.pendingQuestion = null
+
     previousLevel.value = currentLevel.value
     session.value.currentQuestion++
     saveSession()
 
     // Check if game is complete
-    if (session.value.currentQuestion > 1000) {
+    if (session.value.currentQuestion > totalQuestions.value) {
       return null
     }
 
@@ -189,7 +238,7 @@ export const useGameSession = () => {
 
   // Check if game is complete
   const isGameComplete = computed(() => {
-    return session.value && session.value.currentQuestion > 1000
+    return session.value && session.value.currentQuestion > totalQuestions.value
   })
 
   // Clear session
@@ -204,8 +253,9 @@ export const useGameSession = () => {
   // Get certificate data
   const getCertificateData = () => {
     if (!session.value) return null
+    const total = TOTAL_QUESTIONS[session.value.ageGroup] || 300
     const score = session.value.correctAnswers
-    const percentage = (score / 1000) * 100
+    const percentage = (score / total) * 100
     let tier: 'gold' | 'silver' | 'bronze' | 'standard' = 'standard'
     if (percentage >= 90) tier = 'gold'
     else if (percentage >= 75) tier = 'silver'
@@ -215,6 +265,7 @@ export const useGameSession = () => {
       playerName: session.value.playerName,
       ageGroup: session.value.ageGroup,
       score,
+      totalQuestions: total,
       percentage,
       tier,
       completedAt: new Date().toISOString(),
@@ -233,6 +284,7 @@ export const useGameSession = () => {
     didLevelUp,
     progressPercent,
     accuracy,
+    totalQuestions,
     isGameComplete,
     loadSession,
     saveSession,
@@ -243,4 +295,9 @@ export const useGameSession = () => {
     clearSession,
     getCertificateData,
   }
+}
+
+// Export for use in other components
+export const getTotalQuestionsForAgeGroup = (ageGroup: AgeGroup): number => {
+  return TOTAL_QUESTIONS[ageGroup] || 300
 }

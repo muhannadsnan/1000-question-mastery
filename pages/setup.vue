@@ -36,7 +36,7 @@
               maxlength="30"
               class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/20 outline-none transition-all text-lg pr-10"
               @keyup.enter="startGame"
-              @focus="showNameDropdown = savedNames.length > 0"
+              @focus="showNameDropdown = savedPlayers.length > 0"
               @blur="hideDropdownDelayed"
             />
             <!-- Clear input button -->
@@ -51,24 +51,30 @@
             </button>
           </div>
 
-          <!-- Saved Names Dropdown -->
+          <!-- Saved Players Dropdown -->
           <div
-            v-if="showNameDropdown && savedNames.length > 0"
+            v-if="showNameDropdown && savedPlayers.length > 0"
             class="mt-2 bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden z-10"
           >
             <div class="px-3 py-2 bg-slate-50 border-b border-slate-100">
-              <span class="text-xs font-medium text-slate-500">Recent names</span>
+              <span class="text-xs font-medium text-slate-500">Recent players</span>
             </div>
-            <div class="max-h-40 overflow-y-auto">
+            <div class="max-h-48 overflow-y-auto">
               <div
-                v-for="name in savedNames"
-                :key="name"
+                v-for="player in savedPlayers"
+                :key="player.name"
                 class="flex items-center justify-between px-4 py-3 hover:bg-slate-50 cursor-pointer group"
-                @mousedown.prevent="selectName(name)"
+                @mousedown.prevent="selectName(player.name)"
               >
-                <span class="text-slate-700">{{ name }}</span>
+                <div class="flex-1">
+                  <div class="text-slate-700 font-medium">{{ player.name }}</div>
+                  <div class="text-xs text-slate-500 flex items-center gap-2">
+                    <span v-if="player.gamesPlayed">{{ player.gamesPlayed }} games</span>
+                    <span v-if="player.certificates" class="text-amber-600">{{ player.certificates }} 🏆</span>
+                  </div>
+                </div>
                 <button
-                  @mousedown.prevent.stop="removeName(name)"
+                  @mousedown.prevent.stop="removeSavedPlayer(player.name)"
                   class="text-slate-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,12 +84,22 @@
               </div>
             </div>
           </div>
+
+          <!-- Selected Player Stats -->
+          <div v-if="selectedPlayerStats && selectedPlayerStats.gamesPlayed > 0" class="mt-3 p-3 bg-slate-50 rounded-lg">
+            <div class="text-xs text-slate-500 mb-1">Player Stats</div>
+            <div class="flex items-center gap-4 text-sm">
+              <span class="text-slate-700">{{ selectedPlayerStats.gamesPlayed }} games</span>
+              <span class="text-amber-600">{{ selectedPlayerStats.certificates }} 🏆</span>
+              <span v-if="selectedPlayerStats.bestPercentage" class="text-green-600">Best: {{ selectedPlayerStats.bestPercentage }}%</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Age Group Selection -->
+        <!-- Mastery Level Selection -->
         <div class="mb-8">
           <label class="block text-sm font-medium text-slate-700 mb-3">
-            Select Your Age Group
+            Select Mastery Level
           </label>
           <div class="grid grid-cols-2 gap-3">
             <button
@@ -126,7 +142,7 @@
 
       <!-- Info -->
       <p class="text-center text-sm text-slate-400 mt-6 animate-slide-up" style="animation-delay: 200ms;">
-        Complete 1000 questions to earn your certificate
+        Complete {{ selectedAgeGroup ? questionCountForAge : 'all' }} questions to earn your certificate
       </p>
     </div>
   </div>
@@ -134,53 +150,45 @@
 
 <script setup lang="ts">
 import type { AgeGroup } from '~/types'
+import { getTotalQuestionsForAgeGroup } from '~/composables/useGameSession'
+import { usePlayerProgress } from '~/composables/usePlayerProgress'
 
 const router = useRouter()
 const sound = useSound()
 const { createSession } = useGameSession()
+const { getPlayersWithStats, getPlayerStats, removePlayer } = usePlayerProgress()
 
-const NAMES_STORAGE_KEY = 'quiz-mastery-names'
+// Get question count for selected age group
+const questionCountForAge = computed(() => {
+  if (!selectedAgeGroup.value) return 0
+  return getTotalQuestionsForAgeGroup(selectedAgeGroup.value)
+})
 
 const playerName = ref('')
 const selectedAgeGroup = ref<AgeGroup | null>(null)
-const savedNames = ref<string[]>([])
+const savedPlayers = ref<{ name: string; gamesPlayed: number; certificates: number; lastPlayed: string }[]>([])
 const showNameDropdown = ref(false)
 const nameInputRef = ref<HTMLInputElement | null>(null)
 
+// Selected player stats
+const selectedPlayerStats = computed(() => {
+  if (!playerName.value.trim()) return null
+  return getPlayerStats(playerName.value)
+})
+
 const ageGroups = [
   {
-    id: 'littleKids' as AgeGroup,
-    label: 'Little Kids',
-    ageRange: '3-7 years',
-    emoji: '👶',
-    iconBg: 'bg-pink-100',
-  },
-  {
     id: 'kids' as AgeGroup,
-    label: 'Kids',
-    ageRange: '8-12 years',
-    emoji: '🧒',
+    label: 'Kid',
+    ageRange: '100 Questions',
+    emoji: '🎈',
     iconBg: 'bg-blue-100',
   },
   {
-    id: 'teens' as AgeGroup,
-    label: 'Teens',
-    ageRange: '13-17 years',
-    emoji: '🎮',
-    iconBg: 'bg-purple-100',
-  },
-  {
     id: 'adults' as AgeGroup,
-    label: 'Adults',
-    ageRange: '18-35 years',
-    emoji: '👨‍💼',
-    iconBg: 'bg-emerald-100',
-  },
-  {
-    id: 'seniors' as AgeGroup,
-    label: 'Seniors',
-    ageRange: '35+ years',
-    emoji: '🎓',
+    label: 'Grown Up',
+    ageRange: '300 Questions',
+    emoji: '🏆',
     iconBg: 'bg-amber-100',
   },
 ]
@@ -189,34 +197,16 @@ const canStart = computed(() => {
   return playerName.value.trim().length >= 2 && selectedAgeGroup.value !== null
 })
 
-// Load saved names from localStorage
-const loadSavedNames = () => {
+// Load saved players from progress storage
+const loadSavedPlayers = () => {
   if (typeof window === 'undefined') return
-  try {
-    const stored = localStorage.getItem(NAMES_STORAGE_KEY)
-    if (stored) {
-      savedNames.value = JSON.parse(stored)
-    }
-  } catch {
-    savedNames.value = []
-  }
+  savedPlayers.value = getPlayersWithStats()
 }
 
-// Save name to localStorage
-const saveName = (name: string) => {
-  if (typeof window === 'undefined') return
-  const trimmed = name.trim()
-  if (!trimmed || savedNames.value.includes(trimmed)) return
-
-  // Add to beginning, limit to 5 names
-  savedNames.value = [trimmed, ...savedNames.value.filter(n => n !== trimmed)].slice(0, 5)
-  localStorage.setItem(NAMES_STORAGE_KEY, JSON.stringify(savedNames.value))
-}
-
-// Remove name from saved list
-const removeName = (name: string) => {
-  savedNames.value = savedNames.value.filter(n => n !== name)
-  localStorage.setItem(NAMES_STORAGE_KEY, JSON.stringify(savedNames.value))
+// Remove a player from saved list
+const removeSavedPlayer = (name: string) => {
+  removePlayer(name)
+  savedPlayers.value = getPlayersWithStats()
 }
 
 // Select a name from dropdown
@@ -247,9 +237,6 @@ const startGame = () => {
 
   sound.matchStart()
 
-  // Save the name for future use
-  saveName(playerName.value)
-
   createSession(playerName.value.trim(), selectedAgeGroup.value!)
 
   setTimeout(() => {
@@ -258,10 +245,10 @@ const startGame = () => {
 }
 
 onMounted(() => {
-  loadSavedNames()
-  // Pre-fill with last used name if available
-  if (savedNames.value.length > 0) {
-    playerName.value = savedNames.value[0]
+  loadSavedPlayers()
+  // Pre-fill with last used player name if available
+  if (savedPlayers.value.length > 0) {
+    playerName.value = savedPlayers.value[0].name
   }
 })
 </script>

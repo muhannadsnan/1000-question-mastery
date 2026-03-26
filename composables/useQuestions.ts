@@ -11,18 +11,8 @@ interface Question {
 }
 
 // Use import.meta.glob to pre-bundle all question files at build time
-const littleKidsModules = import.meta.glob<{ questions: Question[] }>(
-  '../server/data/little-kids/d*/f*.ts',
-  { eager: false }
-)
-
 const kidsModules = import.meta.glob<{ questions: Question[] }>(
   '../server/data/kids/d*/f*.ts',
-  { eager: false }
-)
-
-const teensModules = import.meta.glob<{ questions: Question[] }>(
-  '../server/data/teens/d*/f*.ts',
   { eager: false }
 )
 
@@ -31,27 +21,16 @@ const adultsModules = import.meta.glob<{ questions: Question[] }>(
   { eager: false }
 )
 
-const seniorsModules = import.meta.glob<{ questions: Question[] }>(
-  '../server/data/seniors/d*/f*.ts',
-  { eager: false }
-)
-
 // Map age group to their question modules
 const ageGroupModules: Record<string, Record<string, () => Promise<{ questions: Question[] }>>> = {
-  'little-kids': littleKidsModules,
   'kids': kidsModules,
-  'teens': teensModules,
   'adults': adultsModules,
-  'seniors': seniorsModules,
 }
 
 // Map age group to folder names
 const ageGroupFolders: Record<string, string> = {
-  littleKids: 'little-kids',
   kids: 'kids',
-  teens: 'teens',
   adults: 'adults',
-  seniors: 'seniors',
 }
 
 // Fisher-Yates shuffle
@@ -80,7 +59,7 @@ export const useQuestions = () => {
 
     let foundAnyFile = false
 
-    // Try folder-based structure first (little-kids and kids have files)
+    // Try folder-based structure first
     const questionModules = ageGroupModules[folder]
     if (questionModules) {
       for (const fileNum of fileOrder) {
@@ -142,7 +121,7 @@ export const useQuestions = () => {
       }
     }
 
-    // Fallback: static questions for other age groups
+    // Fallback: static questions
     const ageQuestions = staticQuestions[ageGroup] || staticQuestions.adults
     const questionsForDifficulty = ageQuestions.filter((q: any) => q.difficulty === difficulty)
 

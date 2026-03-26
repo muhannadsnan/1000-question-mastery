@@ -6,7 +6,7 @@
         <!-- Progress Bar -->
         <div class="flex items-center gap-3 mb-2">
           <span class="text-sm font-medium text-slate-600 whitespace-nowrap">
-            Q {{ session?.currentQuestion || 1 }}/1000
+            Q {{ session?.currentQuestion || 1 }}/{{ totalQuestions }}
           </span>
           <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
             <div
@@ -19,9 +19,12 @@
 
         <!-- Stats Row -->
         <div class="flex items-center justify-between text-sm">
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 md:gap-4">
+            <span :class="ageGroupDisplay.color" class="px-2 py-0.5 rounded-full text-xs font-semibold">
+              {{ ageGroupDisplay.name }}
+            </span>
             <span :class="difficultyColor" class="px-2 py-0.5 rounded-full text-xs font-semibold">
-              Level {{ currentLevel }}
+              Lvl {{ currentLevel }}
             </span>
             <span class="text-green-600 font-medium">✓ {{ session?.correctAnswers || 0 }}</span>
             <span class="text-red-500 font-medium">✗ {{ session?.wrongAnswers || 0 }}</span>
@@ -130,7 +133,7 @@
             @click="goToNext"
             class="btn-primary btn-lg"
           >
-            {{ session?.currentQuestion === 1000 ? 'Finish!' : 'Next Question' }}
+            {{ session?.currentQuestion === totalQuestions ? 'Finish!' : 'Next Question' }}
             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -191,6 +194,7 @@ const {
   currentLevel,
   didLevelUp,
   progressPercent,
+  totalQuestions,
   loadSession,
   fetchQuestion,
   submitAnswer,
@@ -213,17 +217,41 @@ const difficultyColor = computed(() => {
   return 'bg-red-100 text-red-700'
 })
 
+// Colorful badge colors for young age groups (A=red, B=blue, C=green, D=yellow)
+const colorfulBadges = [
+  'bg-red-500',
+  'bg-blue-500',
+  'bg-green-500',
+  'bg-yellow-500',
+]
+
+// Check if age group should have colorful letter badges
+const isColorfulAgeGroup = computed(() => {
+  const ageGroup = session.value?.ageGroup
+  return ageGroup === 'kids'
+})
+
+// Mastery level display name and color
+const ageGroupDisplay = computed(() => {
+  const ageGroup = session.value?.ageGroup
+  const displays: Record<string, { name: string, color: string }> = {
+    kids: { name: 'Kid', color: 'bg-blue-100 text-blue-700' },
+    adults: { name: 'Grown Up', color: 'bg-amber-100 text-amber-700' },
+  }
+  return displays[ageGroup || 'adults'] || displays.adults
+})
+
 const getOptionClass = (index: number) => {
   if (!isAnswerRevealed.value) {
     if (selectedAnswer.value === index) {
-      return 'border-primary-500 bg-primary-50/90 shadow-sm'
+      return 'border-primary-500 bg-primary-50/90 shadow-md ring-2 ring-offset-1 ring-primary-300'
     }
-    return 'border-slate-200 bg-white/80 hover:border-primary-300 hover:bg-white/95 shadow-sm'
+    return 'border-slate-200 bg-white/80 hover:border-slate-300 hover:bg-white/95 shadow-sm'
   }
 
   // Answer revealed
   if (index === currentQuestionData.value?.correctIndex) {
-    return 'border-green-500 bg-green-50/90 shadow-sm'
+    return 'border-green-500 bg-green-50/90 shadow-sm ring-2 ring-green-300'
   }
   if (index === selectedAnswer.value) {
     return 'border-red-500 bg-red-50/90 shadow-sm'
@@ -232,13 +260,18 @@ const getOptionClass = (index: number) => {
 }
 
 const getOptionBadgeClass = (index: number) => {
+  const colorful = isColorfulAgeGroup.value
+
   if (!isAnswerRevealed.value) {
     if (selectedAnswer.value === index) {
-      return 'bg-primary-500 text-white'
+      // Selected state - use the colorful badge for young groups, primary for adults
+      return colorful ? `${colorfulBadges[index]} text-white` : 'bg-primary-500 text-white'
     }
-    return 'bg-slate-100 text-slate-600'
+    // Default state - colorful badges for kids, gray for grown ups
+    return colorful ? `${colorfulBadges[index]} text-white` : 'bg-slate-100 text-slate-600'
   }
 
+  // Answer revealed states
   if (index === currentQuestionData.value?.correctIndex) {
     return 'bg-green-500 text-white'
   }

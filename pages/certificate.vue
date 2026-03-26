@@ -13,7 +13,7 @@
     <div class="text-center mb-8 animate-bounce-in relative z-20">
       <div class="text-6xl mb-4">🎉</div>
       <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Congratulations!</h1>
-      <p class="text-slate-300">You've completed the 1000 Question Mastery Challenge!</p>
+      <p class="text-slate-300">You've completed the {{ certificate?.totalQuestions || 300 }} Question Mastery Challenge!</p>
     </div>
 
     <!-- Premium Certificate -->
@@ -99,29 +99,35 @@
           <!-- Achievement Text -->
           <p class="text-slate-500 mb-6 max-w-sm mx-auto">
             has successfully completed the<br />
-            <span class="font-semibold text-slate-700">1000 Question Mastery Challenge</span>
+            <span class="font-semibold text-slate-700">{{ certificate?.totalQuestions || 300 }} Question Mastery Challenge</span>
           </p>
 
           <!-- Stats Section -->
           <div :class="['rounded-xl p-5 mb-6', tierStyles[certificate?.tier || 'standard'].statsBg]">
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-4 gap-3">
               <div>
-                <div :class="['text-3xl font-bold', tierStyles[certificate?.tier || 'standard'].statsText]">
+                <div :class="['text-2xl font-bold', tierStyles[certificate?.tier || 'standard'].statsText]">
                   {{ certificate?.score }}
                 </div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider mt-2">Correct</div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Correct</div>
               </div>
               <div>
-                <div class="text-3xl font-bold text-slate-800">
-                  {{ certificate?.percentage?.toFixed(1) }}%
+                <div class="text-2xl font-bold text-slate-800">
+                  {{ certificate?.percentage?.toFixed(0) }}%
                 </div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider mt-2">Accuracy</div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Accuracy</div>
               </div>
               <div>
-                <div :class="['text-3xl font-bold capitalize', tierStyles[certificate?.tier || 'standard'].statsText]">
+                <div :class="['text-2xl font-bold capitalize', tierStyles[certificate?.tier || 'standard'].statsText]">
                   {{ certificate?.tier }}
                 </div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider mt-2">Tier</div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Tier</div>
+              </div>
+              <div>
+                <div :class="['text-2xl font-bold', tierStyles[certificate?.tier || 'standard'].statsText]">
+                  {{ masteryLevel }}
+                </div>
+                <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Difficulty</div>
               </div>
             </div>
           </div>
@@ -134,7 +140,7 @@
 
           <!-- Footer -->
           <div class="mt-6 pt-4 border-t border-slate-200">
-            <p class="text-xs text-slate-400">1000 Question Mastery</p>
+            <p class="text-xs text-slate-400">{{ certificate?.totalQuestions || 300 }} Question Mastery</p>
           </div>
         </div>
       </div>
@@ -187,9 +193,12 @@
 </template>
 
 <script setup lang="ts">
+import { usePlayerProgress } from '~/composables/usePlayerProgress'
+
 const router = useRouter()
 const sound = useSound()
 const { getCertificateData, clearSession, loadSession } = useGameSession()
+const { saveGameCompletion } = usePlayerProgress()
 
 const fireworksCanvas = ref<HTMLCanvasElement | null>(null)
 const certificate = ref<ReturnType<typeof getCertificateData>>(null)
@@ -271,6 +280,15 @@ const formattedDate = computed(() => {
     month: 'long',
     day: 'numeric',
   })
+})
+
+// Mastery level display
+const masteryLevel = computed(() => {
+  const levels: Record<string, string> = {
+    kids: 'Kid',
+    adults: 'Grown Up',
+  }
+  return levels[certificate.value?.ageGroup || 'adults'] || 'Grown Up'
 })
 
 const toast = (message: string) => {
@@ -426,6 +444,15 @@ onMounted(() => {
     router.push('/')
     return
   }
+
+  // Save player progress
+  saveGameCompletion(
+    certificate.value.playerName,
+    certificate.value.ageGroup,
+    certificate.value.score,
+    certificate.value.totalQuestions,
+    certificate.value.tier
+  )
 
   // Play victory sound and launch fireworks
   setTimeout(() => {
